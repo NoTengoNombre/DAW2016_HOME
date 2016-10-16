@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-oct-2016, 15:37:34
+    Author     : Portatil_Bot
+*/
+
+#blogPosts {
+  -moz-column-count: 3;
+  -moz-column-gap: 10px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 10px;
+  column-count: 3;
+  column-gap: 10px;
+
+}
+.blogPost {
+  display: inline-block;
+  margin-bottom: 20px;
+  width: 32.1%;
+  position: absolute;
+}
+
+.blogPost:nth-child(1){
+  left: 34.2%;
+}
+.blogPost:nth-child(2){
+  left: 67.1%;
+}

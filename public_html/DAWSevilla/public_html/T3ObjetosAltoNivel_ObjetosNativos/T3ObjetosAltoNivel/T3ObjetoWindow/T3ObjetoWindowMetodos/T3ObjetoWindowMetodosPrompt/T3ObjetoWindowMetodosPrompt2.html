@@ -1,0 +1,45 @@
+<!--
+    @Created on : 16-oct-2016, 21:26:16
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+
+    <p>Click the button to demonstrate the prompt box which will ask for your 
+      favorite drink .</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        var text;
+        var favDrink = prompt("What´s your favorite cocktail drink ?", "Daiquiri");
+        switch (favDrink) {
+          case "Martini":
+            text = "Excellent choice";
+            break;
+          case "Daiquiri":
+            text = "Daiquiri is my favorite too!";
+            break;
+          case "Cosmopolitan":
+            text = "Really? Are you sure the Cosmopolitan is your favorite?";
+            break;
+          default:
+            text = "I have never heard of that one...";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>

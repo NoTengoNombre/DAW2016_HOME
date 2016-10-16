@@ -1,0 +1,33 @@
+<!--
+    @Created on : 16-oct-2016, 21:26:16
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+
+  </head>
+  <body>
+    <p>Click the button to demonstrate the prompt box.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        var person = prompt("Please enter your name", "");
+        if (person != null) {
+          document.getElementById("demo").innerHTML =
+                  "Hello " + person + "! How are you today?";
+        }
+      }
+    </script>
+  </body>
+</html>
