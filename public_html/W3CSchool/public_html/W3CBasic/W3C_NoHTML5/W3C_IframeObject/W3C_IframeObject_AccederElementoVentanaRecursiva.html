@@ -1,0 +1,28 @@
+<!--
+    @Created on : 15-oct-2016, 13:40:59
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_iframe_get
+    @version    :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>t</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myFrame").src;
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Demostracion de como acceder al elemento Iframe </h3>
+    <iframe id="myFrame" src="../W3C_DateBasic/W3C_DateBasic.html"></iframe>
+    <p>Click the button to get the URL of the iframe</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+  </body>
+</html>

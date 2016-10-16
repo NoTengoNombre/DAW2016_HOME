@@ -1,0 +1,34 @@
+<!--
+    @Created on : 15-oct-2016, 14:09:14
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>t</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      function recarga() {
+        window.location.reload();
+      }
+    </script>
+  </head>
+  <body>
+    <p>The name attribute specifies a name for the iframe </p>
+    <p>This name attribute can be used to reference the element in a JS 
+      or as the value of the target attribute of an &lt;a&gt; or &lt;form&gt; element or
+      the formatarget attribute of an &lt;input&gt; or &lt;button&gt; </p>
+    
+    <iframe src="https://duckduckgo.com/?q=1&t=h_&ia=web" name="iframe_a">
+      <p>Your browser does not support iframe</p>
+    </iframe>
+    <br />
+    <a href="http://www.duckduckgo.com" target="iframe_a">W3Schools.com</a>
+    <p>Note: Because the target of the link matches the name of the iframe, the link will open in the iframe.</p>
+    <button onclick="recarga()">R</button>
+  </body>
+</html>
