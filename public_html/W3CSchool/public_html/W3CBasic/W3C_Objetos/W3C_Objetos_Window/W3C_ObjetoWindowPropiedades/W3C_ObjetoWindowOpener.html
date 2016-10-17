@@ -1,0 +1,32 @@
+<!--
+    @Created on : 17-oct-2016, 18:20:08
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      function myFunction() {
+        var myWindow = window.open("", "myWindow", "width=200,heigth=100");
+        myWindow.document.write("<p>This is 'myWindow'</p>");
+        myWindow.opener.document.write("<p>This is the source window!</p>");
+      }
+    </script>
+  </head>
+  <body>
+
+    <p>Click the button to write some text in the new window
+      and the source (parent) window </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+
+  </body>
+</html>

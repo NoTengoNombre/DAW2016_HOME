@@ -1,0 +1,47 @@
+<!--
+    @Created on : 17-oct-2016, 20:21:51
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://librosweb.es/libro/javascript/capitulo_7/utilidades_basicas_para_formularios.html
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+// El siguiente código permite determinar si cada radiobutton ha sido seleccionado o no:
+// La propiedad checked devuelve true para el radiobutton seleccionado y false en cualquier otro caso
+
+      function mifuncion() {
+
+        var elementos = document.getElementsByName("pregunta")[0].value;
+
+        for (var i = 0; i < elementos.length; i++) {
+          alert(" Elemento: " + elementos[i].value + "\n Seleccionado: " + elementos[i].checked);
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <form>
+      <!--grupo de radiobuttons-->
+      <input type="radio" value="si" name="pregunta" id="pregunta_si" />SI
+      <br />
+      <input type="radio" value="no" name="pregunta" id="pregunta_no" />NO
+      <br />
+      <input type="radio" value="nsnc" name="pregunta" id="pregunta_nsnc" /> NS/NC
+      <br />
+    </form>
+
+    <p id="demo"></p>
+
+  </body>
+</html>
+
+
+

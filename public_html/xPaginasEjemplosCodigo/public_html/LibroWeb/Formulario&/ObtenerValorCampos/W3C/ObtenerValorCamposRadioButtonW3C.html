@@ -1,0 +1,38 @@
+<!--
+    @Created on : 17-oct-2016, 20:21:51
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://librosweb.es/libro/javascript/capitulo_7/utilidades_basicas_para_formularios.html
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      function check() {
+        document.getElementById("red").checked = true;
+      }
+      function uncheck() {
+        document.getElementById("red").checked = false;
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      What color do you prefer ? 
+      <br />
+      <input type="radio" name="colors" id="red">RED<br />
+      <input type="radio" name="colors" id="blue">BLUE
+    </form>
+    <br />
+    <button onclick="check()">Check "Red"</button>
+    <button onclick="uncheck()">UnCheck "Red"</button>
+  </body>
+</html>
+
+
+
