@@ -41,16 +41,13 @@ Posicion : 5 -> 09
 
       var carrera = 0;
       var piloto = 0;
-      var pole;
 
       while (carrera < 1) {
         for (var i = 0, y = 2; i < 20; i += 2, y += 2) {
           var posicion = c1.substring(i, y);
-          piloto++;
-          document.write("<br /> " + piloto + "º piloto : " + posicion);
+          document.write(posicion);
         }
         document.write("<br /> ----- ");
-        carrera++;
       }
 
 
