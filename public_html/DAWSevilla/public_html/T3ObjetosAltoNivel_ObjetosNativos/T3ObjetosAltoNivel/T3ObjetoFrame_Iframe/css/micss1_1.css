@@ -11,6 +11,6 @@ and open the template in the editor.
 
 iframe[seamless]{
   display: block;
-   outline-color: blueviolet;
+  outline-color: blueviolet;
   background-color: yellow;
 }

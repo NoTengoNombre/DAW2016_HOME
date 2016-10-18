@@ -1,0 +1,29 @@
+<!--
+    @Created on : 18-oct-2016, 22:20:40
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       : Sirve para volver al principio del bucle en cualquier momento, 
+                  sin ejecutar las líneas que haya por debajo de la palabra continue. 
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var i = 0;
+      while (i < 7) {
+        var incrementar = prompt("La cuenta esta en : " + i + " , dime si incremento", "si");
+        if (incrementar === "no") { // Si escribes 'no' el continue vuelve
+          continue; // al principio del while , no ejecuta el incremento de abajo i++
+        }
+        i++;
+      }
+
+    </script>
+  </head>
+</html>

@@ -1,0 +1,38 @@
+<!--
+    @Created on : 18-oct-2016, 22:20:40
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.desarrolloweb.com/articulos/568.php
+    @version    :
+    @TODO       :    
+
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var c = 0;
+      for (var i = 0; i < 8; i++) {
+        comparisonLoop:
+                for (var k = 0; k < 8; k++) {
+          for (var m = 0; m < 8; m++) {
+            if (k % 2 == 0 && m % 2 == 0 && i % 2 == 0)
+              c++;
+            document.write("<br />" + i + ", " + k + ", " + m + " --> " + c);
+            if (c % 7 == 0)
+              continue comparisonLoop;
+            else if (c % 8 == 0)
+              break comparisonLoop;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
