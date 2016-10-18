@@ -34,19 +34,22 @@ Posicion : 5 -> 09
 //              12345678901234567890  
       var c1 = "01020304050607080910";
       var c2 = "10090807060504030201";
-      var c3 = "01020304050607080910";
-      var c4 = "01020304050607080910";
+      var c3 = "03080901021005060407";
+      var c4 = "06070405080910010203";
       var c = 0;
       document.write("Longitud cadena : " + c1.length);
 
-      var piloto = 0;
       var carrera = 0;
+      var piloto = 0;
 
-      while (carrera < 4) {
+      while (carrera < 1) {
         for (var i = 0, y = 2; i < 20; i += 2, y += 2) {
           var posicion = c1.substring(i, y);
           piloto++;
           document.write("<br /> " + piloto + "º piloto : " + posicion);
+          if (expr) {
+
+          }
         }
         document.write("<br /> ----- ");
         carrera++;
