@@ -15,20 +15,20 @@
     <script>
 
       var cadenaAnalizar = "01020304050607080910";
-      
-      for (var i = 0; i < cadenaAnalizar.length; i++) {
-        var posicion0 = cadenaAnalizar.charAt(i);
-        var posicion1 = cadenaAnalizar.charAt(i + 1);
 
-        var total_caracter = posicion0 + posicion1;
+      for (var i = 0, y = 2; i < cadenaAnalizar.length; i += 2, y += 2) {
+        var posicion0 = cadenaAnalizar.substr(i, y);
 
-        if (posicion1 === "1") {
-          document.write("<br /> Posicion : " + posicion1);
-        } else if (posicion1 === "2") {
-          document.write("<br /> Posicion : " + posicion1);
-        }
+        document.write("|" + posicion0);
 
-        document.write("<br /> total_caracter : " + total_caracter);
+
+//        if (posicion1 === "1") {
+//          document.write("<br /> Posicion : " + posicion1);
+//        } else if (posicion1 === "2") {
+//          document.write("<br /> Posicion : " + posicion1);
+//        }
+
+//        document.write("|posicion_final: " + posicion_final);
       }
 
     </script>
