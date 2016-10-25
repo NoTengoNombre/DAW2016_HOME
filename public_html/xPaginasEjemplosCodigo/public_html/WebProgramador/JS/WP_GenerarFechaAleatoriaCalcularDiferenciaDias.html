@@ -1,0 +1,83 @@
+<!--
+    @Created on : 25-oct-2016, 14:08:35
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      /**
+       * Funcion que dadas 2 fechas , nos devuelve la diferencia en dias
+       * 
+       * @param {type} fechaInicial
+       * @param {type} fechaFinal
+       * @returns {undefined}
+       */
+      function calcularDias(fechaInicial, fechaFinal) {
+        var resultado = "";
+        inicial = fechaInicial.split("/");
+        final = fechaFinal.split("/");
+//        obtenemos las fechas en milisegundos
+        var dateStart = new Date(inicial[0], (inicial[1] - 1), inicial[2]);
+        document.write("<br><strong>fecha comienzo : </strong>" + dateStart);
+        var dateEnd = new Date(final[0], (final[1] - 1), final[2]);
+        document.write("<br><strong>fecha final : </strong>" + dateEnd);
+
+        if (dateStart < dateEnd) {
+//          La diferencia entre las 2 fechas , la dividimos entre 86400 segundos
+//          que tiene un dia y posteriormente entre 1000 ya que estamos trabajando
+//          en milisegundos.
+          resultado = "<br>La diferencia es de  : " + parseInt(((dateEnd - dateStart) / 86400) / 1000) + " dias ";
+        } else {
+          resultado = "<br>La fecha inicial es posterior a la fecha final ";
+        }
+        return resultado;
+      } // ♦ fin 
+
+      /**
+       * Recargar la pagina
+       * @returns {undefined}
+       */
+      function recarga() {
+        window.location.reload();
+      }
+
+//      Obtenemos la fecha actual
+      var date = new Date();
+      var new_date = new Date(date);
+
+//     Obtenemos un numero aleatorio entre 1 y 60
+      var add_days = Math.floor((Math.random() * 60) + 1);
+
+//      Obtenemos un numero aleatorio entre 1 y 13
+      var add_months = Math.floor((Math.random() * 13) + 1);
+
+//      Incrementamos los dias
+//    Objeto Date
+      new_date.setDate(date.getDate() + add_days);
+
+//      Incrementamos los meses
+//    Objeto Date
+      new_date.setMonth(new_date.getMonth() + add_months);
+
+      document.write('Fecha actual <strong> : ' + date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate() + '</strong><br>');
+      document.write('Dias aleatorios a sumarse : ' + add_days + '<br>');
+      document.write('Meses aleatorios a sumarse : ' + add_months + '<br>');
+      document.write('Fecha aleatoria : ' + new_date.getFullYear() + '/' + (new_date.getMonth() + 1) + '/' + new_date.getDate());
+      document.write(calcularDias(date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate(), new_date.getFullYear() + '/' + (new_date.getMonth() + 1) + '/' + new_date.getDate()));
+
+    </script>
+  </head>
+  <body>
+    <br><br>
+    <button onclick="recarga()">B</button>
+
+  </body>
+</html>

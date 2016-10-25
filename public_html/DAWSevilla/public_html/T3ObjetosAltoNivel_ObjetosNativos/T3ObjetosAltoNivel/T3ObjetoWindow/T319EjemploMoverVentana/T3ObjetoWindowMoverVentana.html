@@ -1,0 +1,37 @@
+<!--
+    @Created on : 24-oct-2016, 20:01:10
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      function moverVentana() {
+        mi_ventana.moveBy(5, 5);
+        i++;
+        if (i < 20) {
+          setTimeout('moverVentana()', 100);
+        } else {
+          mi_ventana.close();
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <script>
+      var opciones = "left=100,top=100,width=100,height=100", i = 0;
+      mi_ventana = window.open("", "", opciones);
+      mi_ventana.document.write("Una prueba de abrir ventanas");
+      mi_ventana.moveTo(400, 100);
+      moverVentanas();
+    </script>
+  </body>
+</html>
