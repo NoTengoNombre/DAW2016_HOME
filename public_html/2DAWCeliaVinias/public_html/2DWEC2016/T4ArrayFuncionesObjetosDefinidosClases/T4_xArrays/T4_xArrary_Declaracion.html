@@ -1,0 +1,47 @@
+<!--
+    @Created on : 03-nov-2016, 23:55:28
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var nombre_array = new Array(10);
+      nombre_array[0] = '0';
+      nombre_array[1] = '0';
+      nombre_array[2] = '0';
+      nombre_array[3] = '0';
+      nombre_array[4] = '0';
+      nombre_array[5] = '0';
+
+      var numero_elementos = new Array('0', '1', '2', '3', '4', '5');
+
+      var almacenar_array = new Array();
+      for (var i = 0; i < 10; i++) {
+        var numeracion = almacenar_array[i] = " numero del array " + i;
+        document.write('<hr>' + numeracion);
+      }
+
+      for (var i = 0; i < nombre_array.length; i++) {
+        document.write('<hr> posicion - ' + i + ' - valor : ' + nombre_array[i]);
+      }
+
+
+      document.write("<p>La cadena tiene el valor de : <strong> " + nombre_array.length + "</strong></p>");
+      document.write(nombre_array.length - 1);
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

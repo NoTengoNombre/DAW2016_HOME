@@ -1,0 +1,36 @@
+<!--
+    @Created on : 03-nov-2016, 22:58:51
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function aplicar_IVA(valorProducto) {
+        var productoConIVA = valorProducto * 1.04;
+        document.write("El precio del producto con IVA es : " + productoConIVA);
+      }
+
+      function aplicar_IVA1(valorProducto, IVA) {
+        var productoConIVA = valorProducto * IVA;
+        document.write("El precio del producto , aplicando el IVA del " + IVA + " es : " + productoConIVA);
+      }
+
+    </script>
+  </head>
+  <body>
+    <script>
+      aplicar_IVA(Math.random(1 + 10) + 1);
+      document.write("<hr>");
+      aplicar_IVA1(300, 1.18);
+    </script>
+  </body>
+</html>

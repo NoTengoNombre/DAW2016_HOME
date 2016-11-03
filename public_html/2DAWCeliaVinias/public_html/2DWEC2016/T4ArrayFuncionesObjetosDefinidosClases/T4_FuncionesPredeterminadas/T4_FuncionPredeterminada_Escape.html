@@ -1,0 +1,32 @@
+<!--
+    @Created on : 03-nov-2016, 21:26:17
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+ 
+      function metodo() {
+        var input = prompt("Introduce una cadena", " ");
+        var inputCodificado = escape(input);
+        document.getElementById("cadena").innerHTML = inputCodificado;
+      }
+
+    </script>
+  </head>
+  <body>
+    <p> Argumento una cadena de texto y devuelve dicha cadena utilizando la codificacion hexadecimal
+      en el conjunto de caracteres latinos </p>
+    <button onclick="metodo()">B</button>
+    <p id="cadena">Cadena cambia</p>
+
+  </body>
+</html>

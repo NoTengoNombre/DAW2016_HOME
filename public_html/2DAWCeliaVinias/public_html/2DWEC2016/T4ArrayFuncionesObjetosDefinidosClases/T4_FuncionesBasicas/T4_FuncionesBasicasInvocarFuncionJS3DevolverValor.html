@@ -1,0 +1,46 @@
+<!--
+    @Created on : 03-nov-2016, 22:58:51
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function comprobarHumano() {
+        var resultado = prompt("Introduce el resultado de 144/12");
+        var humano = funcion_verifica(resultado);
+        if (humano == true) {
+          document.write("Has ingresado el resultado correcto y podras ver el contenido");
+          document.write("<p><a href='src/inicio.html'>Enlace 1</a></p>");
+        } else {
+          document.write("No has introducido el valor correcto");
+          document.write("<p><a href='src/final.html'>Enlace 2</a></sp>");
+        }
+      }
+
+      function funcion_verifica(res) {
+        var comprobarResultado;
+        if (res == 12) {
+          comprobarResultado = true;
+        } else {
+          comprobarResultado = false;
+        }
+        return  comprobarResultado;
+      }
+
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      comprobarHumano();
+    </script>
+  </body>
+</html>
