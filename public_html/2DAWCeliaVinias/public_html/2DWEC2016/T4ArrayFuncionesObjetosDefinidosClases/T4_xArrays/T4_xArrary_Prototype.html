@@ -13,10 +13,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="">
     <script>
+//                    Propiedad
+//      Array.prototype.nueva_propiedad = valor;
+//                    Metodo
+//      Array.prototype.nuevo_metodo = nombre_de_la_funcion;
+//
+//      Crear una nueva propiedad
+//      Array.prototype.dominio = ".com";
 
-      Array.prototype.nueva_propiedad = valor;
-      Array.prototype.nuevo_metodo = nombre_de_la_funcion;
-      
+//      Crear nuevo array : definida propiedad -> cambiar el valor de esta propiedad
+      var pagina_comerciales = new Array();
+      Array.prototype.dominio = ".com";
+
+      var paginas_gubernamentales = new Array();
+      paginas_gubernamentales.dominio = ".gov";
+
+      document.write("Extension de la paginas comerciales: " + paginas_comerciales.dominio);
+
+
 
     </script>
   </head>

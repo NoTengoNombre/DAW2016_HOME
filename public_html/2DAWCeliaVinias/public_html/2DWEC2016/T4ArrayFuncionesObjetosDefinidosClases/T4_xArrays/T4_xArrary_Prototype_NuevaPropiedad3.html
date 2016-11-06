@@ -1,0 +1,38 @@
+<!--
+    @Created on : 03-nov-2016, 23:55:28
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+// 1º crea el Array con la propiedad prototype y el nombre del atributo
+      Array.prototype.formato = ".ogg";
+
+//2º crea el objeto Arrray
+      var audio1 = new Array();
+
+//3º crea el objeto Array
+      var audio2 = new Array();
+//4º añade al objeto 'audio2' la propiedad del 'prototype' anteriormente creado
+      audio2.formato = ".mp3";
+
+      document.write("Formato audio 1 <b>" + audio1.formato + "</b>");
+      document.write("<br>");
+      document.write("Formato audio 2 <b>" + audio2.formato + "</b>");
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

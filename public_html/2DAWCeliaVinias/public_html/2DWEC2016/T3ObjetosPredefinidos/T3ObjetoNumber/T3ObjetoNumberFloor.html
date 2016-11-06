@@ -1,0 +1,40 @@
+<!--
+    @Created on : 05-nov-2016, 17:12:19
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.w3schools.com/jsref/jsref_floor.asp
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function mifuncion() {
+        var x = document.getElementById("caja1").value;
+        var re = getFloor(x);
+        document.getElementById("demo").innerHTML = re;
+      }
+
+      function getFloor(x) {
+        xx = (Math.random() * 10) * x;
+        return Math.floor(xx);
+      }
+
+
+    </script>
+  </head>
+  <body>
+    <br> Introduce un numero <br><br>
+    <input type="text" value="" id="caja1">
+
+    <button type="button" onclick="mifuncion()">B</button>
+
+    <p id="demo">Valor</p>
+
+  </body>
+</html>

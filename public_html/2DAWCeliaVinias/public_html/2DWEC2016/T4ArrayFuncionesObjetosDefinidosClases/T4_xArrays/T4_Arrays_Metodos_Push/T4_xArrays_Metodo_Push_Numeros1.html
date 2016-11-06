@@ -1,0 +1,45 @@
+<!--
+    @Created on : 05-nov-2016, 23:20:00
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+
+  </head>
+  <body>
+    <p>Click the button to add a new element to the array</p>
+
+    <button onclick="myFunctions()">B</button>
+    <br>
+    <br>
+    <button onclick="recarga()">R</button>
+
+    <p id="demo"></p>
+
+    <script>
+      var num = 0;
+      var numeros = ["0", "1", "2", "3"];
+
+      function myFunctions() {
+        numeros.push((numeros.length - 1) + 1);
+        if (numeros.length % 10 == 0) {
+          numeros.push('<hr>');
+        }
+        document.getElementById("demo").innerHTML = numeros;
+      }
+
+      function recarga() {
+        location.reload();
+      }
+
+    </script>
+  </body>
+</html>

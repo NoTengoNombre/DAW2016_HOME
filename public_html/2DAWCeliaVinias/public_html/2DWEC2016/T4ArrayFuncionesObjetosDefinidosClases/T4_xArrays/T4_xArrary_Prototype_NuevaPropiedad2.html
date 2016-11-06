@@ -1,0 +1,48 @@
+<!--
+    @Created on : 03-nov-2016, 23:55:28
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+
+//1º Crear un array
+      var paginas_comerciales = new Array();
+//2º Invocar a la propiedad 'prototype' 
+      Array.prototype.dominio = ".com";
+//3º Crear otro array
+      var paginas_gubernamentales = new Array();
+//4º Invocar la propiedad dominio anteriormente creada y modificar su contenido      
+      paginas_gubernamentales.dominio = ".gov";
+
+      document.write("<br>Extension de las paginas comerciales : " + paginas_comerciales.dominio);
+      document.write("<br>");
+      document.write("<br>Extension de las paginas gubernamentales : " + paginas_gubernamentales.dominio);
+
+      var extension = new Array();
+      Array.prototype.dominio1 = ".bat";
+
+      var extensiones = new Array();
+      extension.dominio1 = ".exe";
+
+      document.write("<hr>");
+      document.write("<br>Extension 1: " + extension.dominio1);
+      document.write("<br>");
+      document.write("<br>Extension 2: " + extensiones.dominio1);
+      document.write("<hr>");
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

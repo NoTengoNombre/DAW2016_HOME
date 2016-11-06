@@ -14,6 +14,12 @@
     <link rel="shortcut icon" href="">
     <script>
 
+      /**
+       * Metodo principal
+       * 
+       * @param {type} res
+       * @returns {Boolean}
+       */
       function comprobarHumano() {
         var resultado = prompt("Introduce el resultado de 144/12");
         var humano = funcion_verifica(resultado);
@@ -26,9 +32,15 @@
         }
       }
 
+      /**
+       * Metodo de apoyo 
+       * 
+       * @param {type} res
+       * @returns {Boolean}
+       */
       function funcion_verifica(res) {
         var comprobarResultado;
-        if (res == 12) {
+        if (res === 12) {
           comprobarResultado = true;
         } else {
           comprobarResultado = false;

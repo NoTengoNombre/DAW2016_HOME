@@ -1,0 +1,44 @@
+<!--
+    @Created on : 05-nov-2016, 18:15:58
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+
+      for (var i = 0; i < 11; i++) {
+        document.write("<br> " + i + " - ");
+        var v = Math.floor((Math.random() * 10));
+        var x = (Math.random() * 10);
+        var xx = Math.floor(x);
+        if (xx < 5) {
+          document.write(xx + " :: es <strong>menor</strong> que 5 ");
+        }
+        if (xx >= 5) {
+          document.write(xx + " :: es <em>mayor</em> que 5 ");
+        }
+
+        function recarga() {
+          location.reload();
+        }
+      }
+
+
+    </script>
+  </head>
+  <body>
+    <br>
+    <br>
+    <button onclick="recarga()" name="">B</button>
+
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html><html><head><title></title><link rel="shortcut icon" href=""><script>
+// Hacer un algoritmo que ponga los 5 barcos en el tablero del juego de batalla naval
+  var tableroJuego = inicializaTablero(10, 10); // 1º Crear el tablero de juego
+  poneBarco(tableroJuego, 'P', 5);
+  poneBarco(tableroJuego, 'G', 4);
+  poneBarco(tableroJuego, 'C', 3);
+  poneBarco(tableroJuego, 'S', 3);
+  poneBarco(tableroJuego, 'D', 2);
+  imprime(tableroJuego);
+
+  /**
+   * // Genera el tablero
+   * 
+   * @param {type} tablero
+   * @returns {Number}
+   */
+  function inicializaTablero(filas, columnas) {
+    var tablero = new Array();
+    for (var fila = 0; fila < filas; fila++) {
+      tablero[fila] = [];
+      for (var columna = 0; columna < columnas; columna++)
+        tablero[fila][columna] = '.';
+    }
+    return tablero;
+  }
+
+  /**
+   * Imprime el barco
+   * @type Number
+   */
+  function imprime(tablero) {
+    for (var fila = 0; fila < tablero.length; fila++) {
+      for (var col = 0; col < tablero.length; col++)
+        document.write(tablero[fila][col] + " ");
+      document.write("<br>");
+    }
+    document.write("<br>");
+  }
+
+  /**
+   * Pone el barco en una posicion al azar
+   * @returns {undefined}
+   */
+  function poneBarco(tablero, simbolo, numCasillas) {
+    var orientacion, fil, col, posValida;
+    do {
+      orientacion = Math.random(); // Vertical o Horizontal
+      fil = Math.floor(Math.random() * tablero.length);
+      col = Math.floor(Math.random() * tablero[0].length);
+      posValida = true;
+
+      if (fil + numCasillas >= tablero.length && orientacion < 0.5)
+        posValida = false; // Comprueba si no se sale del tablero
+      else if (col + numCasillas >= tablero[0].length && orientacion >= 0.5)
+        posValida = false;
+      else { // Chequea si ya ha sido ocupada esa parte
+        if (orientacion < 0.5)
+          for (var cont = 0; cont < numCasillas; cont++) {
+            if (tablero[fil + cont][col] !== '.')
+              posValida = false;
+          }
+        else
+          for (var cont = 0; cont < numCasillas; cont++) {
+            if (tablero[fil][col + cont] !== '.')
+              posValida = false;
+          }
+      }
+    } while (posValida === false);
+
+    if (orientacion < 0.5)
+      for (var cont = 0; cont < numCasillas; cont++)
+        tablero[fil + cont][col] = simbolo;
+    else
+      for (var cont = 0; cont < numCasillas; cont++)
+        tablero[fil][col + cont] = simbolo;
+  }
+
+  function recarga() {
+    window.location.reload();
+  }
+
+    </script>
+  </head>
+  <body>
+    <button onclick="recarga()">B</button>
+  </body>
+</html>

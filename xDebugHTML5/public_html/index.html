@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/libs/jquery-3.1.1/"></script>
+    <script src="js/libs/jqueryui-1.12.1/"></script>
+    <link type="text/css" rel="stylesheet" href="css/basecss.css">
+    <link type="text/css" rel="stylesheet" href="css/mycss.css">
+    <style type="text/css">
+      ul{
+        list-style-type: none;
+      } 
+      img{
+        margin-right: 20px;
+        float: left;
+        border: 1px solid;
+        width: 90px;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#infolist").accordion({
+          autoHeight: false});
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <div><h3><a href="#">Mary Adams</a></h3>
+        <div id="infolist">
+          <img src="pix/1.bmp" alt="Maria Adams">
+          <ul>
+            <li><h4>President</h4></li>
+            <li><b>Phone:</b>x555</li>
+            <li><b>Office:</b> 102 Blog 1</li>
+            <li><b>Email:</b> m1@company.com</li>
+          </ul>
+          <br clear="all">
+        </div>
+      </div>
+
+      <div><h3><a href="#">Jhon Matthews</a></h3>
+        <div>
+          <img src="pix/2.png" alt="Jhon Matthews">
+          <ul>
+            <li><h4>Vice President</h4></li>
+            <li><b>Phone:</b>x333</li>
+            <li><b>Office:</b> 102 Blog 12</li>
+            <li><b>Email:</b> m2@company.com</li>
+          </ul>
+          <br clear="all">
+        </div>
+      </div>
+
+      <div><h3><a href="#">Pepe Perez</a></h3>
+        <div>
+          <img src="pix/6.png" alt="Maria Adams">
+          <ul>
+            <li><h4>Middle President</h4></li>
+            <li><b>Phone:</b>x111</li>
+            <li><b>Office:</b> 102 Blog 13</li>
+            <li><b>Email:</b> m3@company.com</li>
+          </ul>
+          <br clear="all">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

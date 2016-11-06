@@ -1,0 +1,50 @@
+<!--
+    @Created on : 05-nov-2016, 23:20:00
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+
+  </head>
+  <body>
+    <p> Click the button to add a new element to the array</p> 
+
+    <button onclick="myFunction()">B</button>
+    <br>
+    <br>
+    <button onclick="recarga()">R</button>
+    <div>
+      <p id="demo">Valor </p>
+    </div>
+
+    <script>
+
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      var x = fruits.length;
+      document.write("Longitud total : " + x);
+//      Salida de los datos 
+      document.getElementById("demo").innerHTML = fruits;
+
+      function myFunction() {
+        fruits.push("Kiwi");
+        document.getElementById("demo").innerHTML = fruits;
+        if (fruits.length % 5 === 0) {
+          fruits.push("Kiwi <hr>");
+        }
+      }
+      
+      function recarga() {
+        location.reload();
+      }
+
+    </script>
+  </body>
+</html>
