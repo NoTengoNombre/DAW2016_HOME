@@ -1,0 +1,41 @@
+<!--
+    @Created on : 06-nov-2016, 17:55:02
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p {
+        font-size: xx-large;
+        width: 200px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+
+      var fruits, text, fLen, i;
+      fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+      fruits[6] = "Lemon";
+
+      fLen = fruits.length;
+      text = "";
+      for (var i = 0; i < fLen; i++) {
+        text += fruits[i] + '<br>';
+      }
+
+      document.getElementById("demo").innerHTML = text;
+
+    </script>
+  </body>
+</html>

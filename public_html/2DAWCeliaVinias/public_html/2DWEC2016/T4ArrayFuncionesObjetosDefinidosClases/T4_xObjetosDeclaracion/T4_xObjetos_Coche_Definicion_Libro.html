@@ -1,0 +1,95 @@
+<!--
+    @Created on : 06-nov-2016, 22:29:05
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      /**
+       * Declarar objeto 
+       * 
+       * @param {type} marca_in
+       * @param {type} modelo_in
+       * @param {type} anyo_in
+       * @returns {Coche}
+       */
+      function Coche(marca_in, modelo_in, anyo_in) {
+        this.marca = marca_in;
+        this.modelo = modelo_in;
+        this.anyo = anyo_in;
+      }
+
+      var mi_coche1 = new Coche("Pegeout", "206cc", "2003");
+      mi_coche1.color = "azul"; // nueva instancia tiene nuevo atributo
+
+      /**
+       * 
+       * @param {type} cod_oficina_in
+       * @param {type} ciudad_in
+       * @param {type} responsable_in
+       * @returns {Concesionario}
+       */
+      function Concesionario(cod_oficina_in, ciudad_in, responsable_in) {
+        this.cod_oficina = cod_oficina_in;
+        this.ciudad = ciudad_in;
+        this.responsable = responsable_in;
+      }
+
+      /**
+       * 
+       * @returns {undefined}
+       */
+      function Coche(marca_in, modelo_in, anyo_in, concesionario_in) {
+        this.marca = marca_in;
+        this.modelo = modelo_in;
+        this.anyo = anyo_in;
+        this.concesionario = concesionario_in;
+      }
+
+      var concesionario_atocha = new Concesionario('281', 'Madrid', 'Pedro Bravo');
+
+      var mi_coche2 = new Coche('Citroen', 'C4', '2010', concesionario_atocha);
+
+      /**
+       * 
+       * @returns {undefined}
+       */
+      function imprimeDatos() {
+        document.write('<br>Marca : ' + this.marca);
+        document.write('<br>Modelo : ' + this.modelo);
+        document.write('<br>Anyo : ' + this.anyo);
+      }
+
+      /**
+       * 
+       */
+      function Coche(nombre_in, modelo_in, anyo_in) {
+        this.marca = nombre_in;
+        this.modelo = modelo_in;
+        this.anyo = anyo_in;
+        this.imprimeDatos = imprimeDatos;
+      }
+
+      var mi_coche3 = new Coche("Seat", "Toledo", "1999");
+      mi_coche1.imprimeDatos();
+      document.write('<br>');
+      mi_coche2.imprimeDatos();
+      document.write('<br>');
+      mi_coche3.imprimeDatos();
+      document.write('<br>');
+
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

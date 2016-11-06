@@ -1,0 +1,47 @@
+<!--
+    @Created on : 06-nov-2016, 12:32:10
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <h1>Positioning</h1>
+    <script>
+
+      var positioning1 = new Array("display", "position", "top", "right", "left", "float");
+      document.write('1º Lista :<b>  ' + positioning1 + '</b>');
+      var positioning2 = new Array("clear", "z-index", "direction", "unicode-bidi", "overflow", "clip", "visibility");
+      document.write('<br>2º Lista :<b>' + positioning2 + '</b>');
+
+
+      document.write('<br><br> Fusionar elementos: ');
+      var fusion = new Array();
+      fusion = positioning1.push(positioning2);
+      document.write(fusion);
+
+      document.write('<br><br>');
+      document.write(positioning1.length);
+      document.write('<br><br>');
+      document.write(positioning2.length);
+      document.write('<br><br>');
+
+      var positioning_separar = positioning1.slice(0, 7);
+      document.write('• Primera Separacion : <br>');
+      document.write('<em>' + positioning_separar + '</em>');
+      var positioning_separar2 = positioning1.slice(-7);
+      document.write('<br>• Segunda Separacion : <br>');
+      document.write('<em>' + positioning_separar2 + '</em>');
+
+    </script>
+
+  </body>
+</html>

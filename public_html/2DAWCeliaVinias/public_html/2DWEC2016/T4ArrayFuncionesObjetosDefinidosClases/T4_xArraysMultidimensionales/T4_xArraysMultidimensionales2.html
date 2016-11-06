@@ -1,0 +1,39 @@
+<!--
+    @Created on : 06-nov-2016, 16:04:03
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var cadena1 = new Array("a", "b", "c", "d", "f");
+      var cadena2 = new Array("g", "h", "i", "j", "k");
+      var cadena3 = new Array("l", "m", "n", "o", "p");
+      var cadena4 = new Array("q", "r", "s", "t", "u", "v");
+      var cadena4 = new Array("w", "x", "y", "z", "◘");
+
+      var abecedario = new Array(cadena1, cadena2, cadena3, cadena4);
+
+      document.write("<table border='1'>");
+      for (var i = 0; i < abecedario.length; i++) {
+        for (var ij = 0; ij < abecedario[i].length; ij++) {
+          document.write("<td>" + abecedario[i][ij] + "</td>");
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

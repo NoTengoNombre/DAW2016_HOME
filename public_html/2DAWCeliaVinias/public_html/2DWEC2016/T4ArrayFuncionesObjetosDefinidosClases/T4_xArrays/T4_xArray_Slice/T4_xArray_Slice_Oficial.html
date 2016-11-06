@@ -1,0 +1,39 @@
+<!--
+    @Created on : 06-nov-2016, 12:32:10
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var numeros = new Array();
+      for (var i = 0; i < 10; i++) {
+        numeros[i] = i;
+      }
+      document.write('<b>' + numeros + '</b>');
+      document.write('<br>');
+      document.write('<br>');
+
+      var primeros_cinco = numeros.slice(0, 5);
+      var ultimos_cuatro = numeros.slice(-4);
+
+      document.write("• 5 primeros numeros : ");
+      document.write("<br>" + primeros_cinco);
+      document.write("<br> • 5 ultimos numeros : ");
+      document.write("<br>" + ultimos_cuatro);
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

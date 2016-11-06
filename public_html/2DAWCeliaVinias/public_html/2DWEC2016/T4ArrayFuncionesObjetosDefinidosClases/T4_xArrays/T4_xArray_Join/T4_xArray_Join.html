@@ -1,0 +1,35 @@
+<!--
+    @Created on : 06-nov-2016, 10:38:06
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var selectores = new Array("div", "div *", "div span", "div,span", "div>span", "div+span", ".class", "div.class", "#itemid", "div#itemid", "a[attr]", "a[attr='x']", "a[class~='x']", "a[lang|='en']");
+
+
+      document.write(selectores.join(' - '));
+      document.write('<hr>');
+      document.write('<h3>Tipo de Selectores </h3>');
+
+      for (var i = 1; i < selectores.length; i++) {
+        document.write(i + ' - ');
+        document.write('<b>' + selectores[i] + '</b>');
+        document.write('<br>');
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

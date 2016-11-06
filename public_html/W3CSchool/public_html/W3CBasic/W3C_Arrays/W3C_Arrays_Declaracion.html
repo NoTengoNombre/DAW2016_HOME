@@ -1,0 +1,40 @@
+<!--
+    @Created on : 06-nov-2016, 17:55:02
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+
+      var cars = ["Saab", "Volvo", "BMW"];
+
+      var cars2 = new Array("Saab1", "Volvo1", "BMW1");
+
+      for (var i = 0; i < cars.length; i++) {
+        document.write(" " + cars[i]);
+      }
+
+      document.write('<hr>');
+
+      for (var i = 0; i < cars2.length; i++) {
+        document.write(" " + cars2[i]);
+      }
+
+      document.getElementById("demo").innerHTML = cars;
+//      Solo sale este elemento
+      document.getElementById("demo").innerHTML = cars2;
+    </script>
+
+  </body>
+</html>

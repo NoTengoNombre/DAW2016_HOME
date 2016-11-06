@@ -1,0 +1,75 @@
+<!--
+    @Created on : 06-nov-2016, 23:23:19
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      *{
+        font-size: large;
+        color: blue;
+        margin: 0 auto;
+        width: 300px;
+      }
+    </style>
+    <script>
+
+      function Concesionario(cod_oficina_in, ciudad_in, responsable_in) {
+        this.cod_oficina = cod_oficina_in;
+        this.ciudad = ciudad_in;
+        this.responsable = responsable_in;
+      }
+
+
+
+      function imprimeDatos() {
+        document.write("<br>Marca: " + this.marca);
+        document.write("<br>Modelo: " + this.modelo);
+        document.write("<br>Anio: " + this.anyo);
+        document.write("<br>");
+      }
+
+      function Coche(marca_in, modelo_in, anyio_in, concesionario_in) {
+        this.marca = marca_in;
+        this.modelo = modelo_in;
+        this.anyo = anyio_in;
+        this.concesionario = concesionario_in;
+        this.imprimeDatos = imprimeDatos;
+      }
+
+      var mi_coche1 = new Coche('Citroen', 'C4', '2010', concesionario_atocha);
+      mi_coche1.coche = "azul";
+
+      var mi_coche2 = new Coche("Opel", "x55", "2012");
+
+      var mi_coche3 = new Coche("Seat", "Toledo", "1999");
+
+      var concesionario_atocha = new Concesionario('281', 'Madrid', 'Pedro Bravo');
+
+      mi_coche1.imprimeDatos();
+      mi_coche2.imprimeDatos();
+      mi_coche3.imprimeDatos();
+
+      document.getElementById("demo1").innerHTML = mi_coche1.imprimeDatos();
+      document.getElementById("demo2").innerHTML = mi_coche2.imprimeDatos();
+      document.getElementById("demo3").innerHTML = mi_coche3.imprimeDatos();
+
+    </script>
+  </head>
+  <body>
+    <div>
+      <p id="demo1"></p>
+      <p id="demo2"></p>
+      <p id="demo3"></p>
+    </div>
+
+  </body>
+</html>

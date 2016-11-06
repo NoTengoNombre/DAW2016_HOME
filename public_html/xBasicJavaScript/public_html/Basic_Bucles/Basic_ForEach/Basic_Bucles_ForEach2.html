@@ -1,7 +1,7 @@
 <!--
-    @Created on : 06-nov-2016, 0:57:54
+    @Created on : 06-nov-2016, 18:47:20
     @Author     : RVS - N.F.N.D
-    @Pag        :
+    @Pag        : https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/for_each...in
     @version    :
     @TODO       :
 -->
@@ -14,16 +14,16 @@
     <link rel="shortcut icon" href="">
     <script>
 
-      var cadena1 = new Array(1, 2, 3, 4, 5, 6);
+      var arr = [];
+      arr[0] = 'aqui';
+      arr[1] = 'chau';
+      arr[2] = 'hola';
 
-      var cadena2 = new Array();
-
-
-      cadena1.concat(cadena2["a", "b", "c", "d", "f", "g"]);
-
-      for (var i = 0; i < cadena1.length; i++) {
-        document.write(cadena1[i]);
+      for (var ele in arr) {
+        document.write('<br>');
+        document.write(ele);
       }
+
 
 
     </script>

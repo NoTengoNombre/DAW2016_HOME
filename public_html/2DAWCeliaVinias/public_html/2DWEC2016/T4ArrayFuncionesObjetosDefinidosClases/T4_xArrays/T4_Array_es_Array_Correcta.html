@@ -1,0 +1,38 @@
+<!--
+    @Created on : 06-nov-2016, 20:21:35
+    @Author     : RVS - N.F.N.D
+    @Pag        :http://www.w3schools.com/js/tryit.asp?filename=tryjs_array_typeof
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p{
+        font-size: xx-large;
+        color: blue;
+        margin: 0 auto;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <p id="demo"></p>
+
+    <script>
+      var numero = ["1", "2", "3", "4", "5", "6"];
+      document.getElementById('demo').innerHTML = isArray(numero);
+
+      function isArray(x) {
+        return x.constructor.toString().indexOf("Array") > -1;
+      }
+    </script>
+
+  </body>
+</html>

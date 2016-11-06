@@ -1,0 +1,55 @@
+<!--
+    @Created on : 06-nov-2016, 16:04:03
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var palabras_espana = new Array(5);
+      palabras_espana[0] = 'facebook1';
+      palabras_espana[1] = 'youtube1';
+      palabras_espana[2] = 'hotmail1';
+      palabras_espana[3] = 'download1';
+
+      var palabras_suiza = new Array(5);
+      palabras_suiza[0] = 'facebook2';
+      palabras_suiza[1] = 'youtube2';
+      palabras_suiza[2] = 'hotmail2';
+      palabras_suiza[3] = 'blick2';
+
+      var palabras_portugal = new Array(5);
+      palabras_portugal[0] = 'facebook3';
+      palabras_portugal[1] = 'youtube3';
+      palabras_portugal[2] = 'hotmail3';
+      palabras_portugal[3] = 'download3';
+
+      var palabras_mas_buscadas = new Array(palabras_espana, palabras_suiza, palabras_portugal);
+
+
+      document.write("<table border='1'>");
+      for (var i = 0; i < palabras_mas_buscadas.length; i++) {
+        document.write("<tr>");
+        document.write("<td><b>Estado : " + i + "</b></td>");
+        for (var j = 0; j < palabras_mas_buscadas[i].length; j++) {
+          document.write("<td>" + palabras_mas_buscadas[i][j] + "</td>");
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

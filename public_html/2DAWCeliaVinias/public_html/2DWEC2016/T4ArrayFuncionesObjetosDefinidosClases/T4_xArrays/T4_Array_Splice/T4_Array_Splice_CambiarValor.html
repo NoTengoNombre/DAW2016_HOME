@@ -1,0 +1,46 @@
+<!--
+    @Created on : 06-nov-2016, 13:23:56
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <script>
+
+      var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      var longitud = numeros.length;
+      document.write('<br>Longitud total: ' + longitud);
+
+      numeros.splice(4, 0, "<b>A</b>");
+
+      document.write('<br>');
+      document.write('<br>');
+      document.write('• Cambiar posicion : <br><em>' + numeros + '</em>');
+
+      var numeros1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      numeros1.splice(0, 3, "<b>A</b>");
+      document.write('<br>');
+      document.write('<br>');
+      document.write('♦ Cambiar posicion : <br><em>' + numeros1 + '</em>');
+
+      var numeros2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      numeros2.splice(6, 3, "<b>A</b>");
+      document.write('<br>');
+      document.write('<br>');
+      document.write('♦ Cambiar posicion : <br><em>' + numeros2 + '</em>');
+
+
+
+
+    </script>
+  </body>
+</html>

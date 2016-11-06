@@ -1,0 +1,62 @@
+<!--
+    @Created on : 06-nov-2016, 20:21:35
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    : http://www.w3schools.com/js/js_arrays.asp
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p{
+        font-size: xx-large;
+        color: blue;
+        margin: 0 auto;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+
+      var points = [3];
+
+      for (var i = 0; i < points.length; i++) {
+        document.write('longitud basica : ' + points[i]);
+      }
+
+      var points1 = new Array(10);
+
+      document.write('<br>');
+      for (var i = 0; i < points1.length; i++) {
+        document.write('<br>' + points1[i]);
+      }
+
+      document.getElementById('demo').innerHTML = points1[i];
+
+      var points2 = new Array(10, 2, 3);
+      document.write('<br>');
+      for (var i = 0; i < points2.length; i++) {
+        document.write('<br>' + points2[i]);
+      }
+
+
+      var points3 = [0, 1, 2];
+      document.write('<br>');
+      for (var i = 0; i < points3.length; i++) {
+        document.write('<br>' + points3[i]);
+      }
+
+
+
+
+    </script>
+
+  </body>
+</html>

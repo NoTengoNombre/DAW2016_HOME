@@ -1,0 +1,47 @@
+<!--
+    @Created on : 06-nov-2016, 22:29:05
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function imprimeDatos() {
+        document.write('<br>Marca : ' + this.marca);
+        document.write('<br>Modelo : ' + this.modelo);
+        document.write('<br>Anyo : ' + this.anyo);
+      }
+
+      function concesionario(cod_oficina_in, ciudad_in, responsable_in) {
+        this.cod_oficina = cod_oficina_in;
+        this.ciudad = ciudad_in;
+        this.responsable = responsable_in;
+      }
+
+
+      function Coche(marca_in, modelo_in, anyo_in) {
+        this.marca = marca_in;
+        this.modelo = modelo_in;
+        this.anyo = anyo_in;
+        this.imprimeDatos = imprimeDatos;
+      }
+
+
+      var mi_coche2 = new Coche('Citroen', 'C4', '2010');
+      mi_coche2.imprimeDatos();
+
+
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

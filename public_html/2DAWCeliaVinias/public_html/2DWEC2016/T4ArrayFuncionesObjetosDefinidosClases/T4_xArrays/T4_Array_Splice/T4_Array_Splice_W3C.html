@@ -1,0 +1,42 @@
+<!--
+    @Created on : 06-nov-2016, 13:23:56
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <p>Click the button to add elements to the array</p>
+
+    <button onclick="myFunction()">B</button>
+    <br><br>
+    <button onclick="reload()">R</button>
+
+    <p id="demo"></p>
+    <script>
+
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+      document.getElementById("demo").innerHTML = fruits;
+
+      function myFunction() {
+        fruits.splice(2, 0, "Lemon","Kiwi");
+        document.getElementById("demo").innerHTML = fruits;
+      }
+
+      function reload() {
+        location.reload();
+      }
+
+
+    </script>
+  </body>
+</html>

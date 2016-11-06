@@ -1,0 +1,50 @@
+<!--
+    @Created on : 06-nov-2016, 0:57:54
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var cadena1 = new Array(1, 2, 3, 4, 5, 6);
+
+      var cadena2 = new Array("a", "b", "c", "d", "f", "g");
+
+      var cadena_total = cadena1.concat(cadena2);
+
+      for (var i = 0; i < 1; i++) {
+        document.write(cadena_total);
+      }
+
+      document.write('<hr>');
+
+      var cadena11 = new Array(1, 2, 3, 4, 5, 6);
+
+      var cadena22 = new Array("a", "b", "c", "d", "f", "g");
+
+      var cadena33 = new Array("a1", "b2", "c3", "d4", "f5", "g6");
+
+      var cadena_total1 = cadena11.concat(cadena22, cadena33);
+
+      document.write(cadena_total1);
+
+      document.write('<hr>');
+
+      for (var i = 0; i < cadena_total1.length; i++) {
+        document.write(cadena_total1[i]);
+        document.write('<br>');
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!--
+    @Created on : 06-nov-2016, 11:01:04
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <h1>Tipo Pseudo-Selectors and Pseudo-Classes</h1>
+    <p>Hover : flotar</p>
+    <script>
+      var pseudo_selector = new Array("<b>:hover", ":active", ":focus", ":link", ":visited", ":lang(var)", ":before", ":after</b>");
+      pseudo_selector.unshift("<em>:first-child", ":first-line", ":first-letter</em>");
+
+      document.write(pseudo_selector);
+
+      document.write('<br>');
+      document.write('<br>');
+      for (var i = 0; i < 1; i++) {
+        document.write(pseudo_selector);
+      }
+    </script>
+  </body>
+</html>

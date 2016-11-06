@@ -1,0 +1,44 @@
+<!--
+    @Created on : 06-nov-2016, 13:23:56
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <script>
+
+      var color = ["color", "background", "background-color", "background-attachment"];
+
+      color.splice(2, 0, "<b>background-repeat", "background-image", "background-position</b>");
+
+      document.write(color);
+
+      document.write('<br>');
+      document.write('<br>');
+
+      var color1 = ["color", "background", "background-color", "background-attachment"];
+      color1.splice(0, 2, "<b>background-repeat", "background-image", "background-position</b>");
+      document.write(color1);
+
+      document.write('<br>');
+      document.write('<br>');
+
+
+      for (var i = 0; i < color.length; i++) {
+        document.write('<br>' + color[i]);
+      }
+
+
+
+    </script>
+  </body>
+</html>
