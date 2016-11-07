@@ -1,0 +1,56 @@
+<!--
+    @Created on : 07-nov-2016, 22:41:25
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function Coche() {
+        this.marca = "Audi A6";
+        this.combustible = "diesel";
+        this.cantidad = 0;
+      }
+
+      var cocheDeMartin = new Coche();
+      var cocheDeSilvia = new Coche();
+
+      function Coche1(marca, combustible) {
+        this.marca = marca;
+        this.combustible = combustible;
+        this.cantidad = 0; // cantidad de combustible inicial por defecto 
+      }
+
+      var cocheDeMartin1 = new Coche1("Volkswage Golf", "Gasolina");
+      var cocheDeSilvia1 = new Coche1("Mercedes SLK", "Diesel");
+
+      document.write("<br>El coche de Martin es un : " + cocheDeMartin.marca + " a " + cocheDeMartin.combustible);
+      document.write("<br>El coche de Martin1 es un : " + cocheDeMartin1.marca + " a " + cocheDeMartin1.combustible);
+      document.write("<br>El coche de Martin1 es un : " + cocheDeMartin1.marca + " a " + cocheDeMartin1.combustible + "- cantidad : " + cocheDeMartin1.cantidad);
+      document.write('<hr>');
+      document.write("<br>El coche de Silvia es un : " + cocheDeSilvia.marca + " a " + cocheDeSilvia.combustible);
+      document.write("<br>El coche de Silvia1 es un : " + cocheDeSilvia1.marca + " a " + cocheDeSilvia1.combustible);
+      document.write("<br>El coche de Silvia1 es un : " + cocheDeSilvia1.marca + " a " + cocheDeSilvia1.combustible + " - cantidad : " + cocheDeSilvia1.cantidad);
+
+      document.write('<hr>');
+      cocheDeMartin.marca = "BMW X5";
+      cocheDeMartin.combustible = "Queroseno";
+      document.write("<br> El coche de Martin es un : <b>" + cocheDeMartin.marca + "</b> a " + cocheDeMartin.combustible);
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

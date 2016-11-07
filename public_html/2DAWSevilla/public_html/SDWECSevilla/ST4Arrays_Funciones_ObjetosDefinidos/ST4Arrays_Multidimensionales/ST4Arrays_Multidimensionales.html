@@ -1,0 +1,98 @@
+<!--
+    @Created on : 07-nov-2016, 19:52:49
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+
+      body{
+        width: 500px;
+        margin: auto 100px;
+        color: #ffffff;
+        background-color: #000000;
+      }
+
+      table{
+        color: black;
+        border: #00ffff;
+        border-bottom: blueviolet;
+        padding-top: 10px ;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 20px;
+        margin: auto 100px;
+        font-family: fantasy;
+        background-color: #ffffff;
+      }
+
+    </style>
+    <script>
+
+      var datos = new Array();
+      datos[0] = new Array("Cristina", "Seguridad", 24);
+      datos[1] = new Array("Catalina", "Base de Datos", 17);
+      datos[2] = new Array("Vieites", "Sistema Informaticos", 28);
+      datos[3] = new Array("Benjamin", "Redes", 26);
+
+      var datos1 =
+              [["Cristina", "Seguridad", 24],
+                ["Catalina", "Base de Datos", 17],
+                ["Vieites", "Sistema Informaticos", 28],
+                ["Benjamin", "Redes", 26]];
+
+      for (var i = 0; i < datos1.length; i++) {
+        for (var j = 0; j < datos1[i].length; j++) {
+          document.write('<br>' + datos1[i][j]);
+        }
+        document.write('<hr>');
+      }
+      document.write('<hr>');
+
+      document.write("<br> datos1[1][0] -> ? " + datos1[1][0]);
+      document.write("<br> datos1[2][1] -> ? " + datos1[2][1]);
+      document.write("<br> datos1[3][2] -> ? " + datos1[3][2]);
+
+      document.write('<hr>');
+      document.write('<hr>');
+//                                                      F  C
+      document.write("<br> datos1[1][0] -> ? " + datos1[0][0]);
+      document.write("<br> datos1[2][1] -> ? " + datos1[2][1]);
+      document.write("<br> datos1[3][2] -> ? " + datos1[3][2]);
+
+      document.write('<hr>');
+      document.write('<hr>');
+
+      document.write('Imprimir Datos en una Tabla');
+      document.write("<table border='2'>");
+      for (var i = 0; i < datos1.length; i++) {
+        document.write("<tr>");
+        for (var j = 0; j < datos1[i].length; j++) {
+          document.write("<td>" + datos1[i][j] + "</td>");
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
+
+
+
+
+
+
+

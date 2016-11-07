@@ -1,0 +1,62 @@
+<!--
+    @Created on : 07-nov-2016, 17:39:55
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var sistemaSolar = new Array();
+      sistemaSolar[0] = "Mercurio";
+      sistemaSolar[1] = "Venus";
+      sistemaSolar[2] = "Tierra";
+      sistemaSolar[3] = "Marte";
+      sistemaSolar[4] = "Jupiter";
+      sistemaSolar[5] = "Saturno";
+      sistemaSolar[6] = "Urano";
+      sistemaSolar[7] = "Neptuno";
+
+      for (var i = 0, len = sistemaSolar.length; i < len; i++) {
+        document.write('<br>' + sistemaSolar[i]);
+      }
+
+      document.write('<hr>');
+
+      for (var index in sistemaSolar) {
+        var valores = sistemaSolar[index];
+        document.write("<br>" + index);
+        document.write(" - " + valores);
+      }
+
+      document.write('<hr>');
+
+      var sistemaSolar1 = new Array();
+      sistemaSolar1[0] = "Mercurio1";
+      sistemaSolar1[1] = "Venus1";
+      sistemaSolar1[2] = "Tierra1";
+      sistemaSolar1[3] = "Marte1";
+      sistemaSolar1[4] = "Jupiter1";
+      sistemaSolar1[5] = "Saturno1";
+      sistemaSolar1[6] = "Urano1";
+      sistemaSolar1[7] = "Neptuno1";
+
+      for (var index1 in sistemaSolar1) {
+        if (sistemaSolar1.hasOwnProperty(index1)) {
+          var atributo = sistemaSolar1[index1];
+          document.write("<br>" + index1);
+          document.write(" - " + atributo);
+        }
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

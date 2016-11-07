@@ -1,0 +1,44 @@
+<!--
+    @Created on : 07-nov-2016, 19:24:41
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <br>
+    <br>
+    <button onclick="myfunction2()">B1</button>
+    <script>
+
+      function Coche(marca_in, modelo_in, anyo_in) {
+        this.marca = marca_in;
+        this.modelo = modelo_in;
+        this.anyo = anyo_in;
+      }
+
+      var coche = new Coche("Porche", "z121", "1999");
+
+      var array = ["1", boolean, 2.2, "cadena", null, coche];
+
+
+      function myfunction2() {
+        document.getElementById("demo1").innerHTML = array.valueOf();
+      }
+
+
+
+
+
+    </script>
+    <p id="demo1"></p>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!--
+    @Created on : 07-nov-2016, 17:39:55
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       : Si se quiere tener un mayor control 
+                  sobre la eliminación de elementos de un array, deberías
+                  considerar usar el método splice(índice, número de elementos a eliminar), 
+                  que está soportado por
+                  la mayoría de los navegadores. 
+                  Este método se puede usar en cualquier array, y te permite eliminar
+                  un elemento o una secuencia de elementos de un array, 
+                  provocando que la longitud del array se
+                  ajuste al nuevo número de elementos
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      document.write('<h1>Eliminar elementos Array</h1>');
+
+
+      var oceanos = new Array("Atlantico", "Pacifico", "Artico", "Indico");
+
+      for (var i = 0; i < 1; i++) {
+        if (oceanos[i] === "Atlantico") {
+          oceanos.splice(0, 1, null);
+        }
+        document.write(oceanos);
+      }
+
+      document.write('<hr>');
+
+      var oceanos2 = new Array("Atlantico", "Pacifico", "Artico", "Indico");
+      delete oceanos2[0];
+      for (var i = 0; i < oceanos2.length; i++) {
+        document.write(' ' + oceanos2[i]);
+      }
+
+      document.write('<hr>');
+      var oceanos3 = new Array("Atlantico", "Pacifico", "Artico", "Indico");
+      var oceanos3 = oceanos3.join('-');
+      delete oceanos3[0];
+      for (var i = 0; i < oceanos3.length; i++) {
+        document.write(' ' + oceanos3[i]);
+      }
+
+      document.write('<hr>');
+      var oceanos4 = new Array("Atlantico", "Pacifico", "Artico", "Indico");
+      var oceanos5 = oceanos4.join('-');
+      delete oceanos5[0];
+      for (var i = 0; i < oceanos5.length; i++) {
+        document.write(oceanos5[i]);
+      }
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

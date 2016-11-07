@@ -1,0 +1,59 @@
+<!--
+    @Created on : 07-nov-2016, 19:52:49
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+
+      body{
+        width: 500px;
+        margin: auto 100px;
+        color: #ffffff;
+        background-color: #000000;
+      }
+
+    </style>
+    <script>
+
+      var profesores = ["Cristina", "Catalina", "Vieites", "Benjamin"];
+      var asignaturas = ["Seguridad", "Bases de datos", "Sistema Informaticos", "Redes"];
+      var alumnos = [24, 17, 28, 26];
+
+      function imprimeDatos(indice) {
+        document.write('<br>' + profesores[indice] + " del modulo de " + asignaturas[indice] + ', tiene ' + alumnos[indice] + " alumnos en clase. ");
+      }
+
+      for (var i = 0; i < profesores.length; i++) {
+        imprimeDatos(i);
+      }
+
+      for (var i = 0; i < 12; i++) {
+        document.write('<hr>');
+      }
+
+      var profesores1 = ["Cristina", "Vieites"];
+      var asignaturas1 = ["Seguridad", "Sistema Informaticos", "Redes"];
+      var alumnos1 = [24, 17];
+
+      function imprimeDatos1(indice) {
+        document.write('<br>' + profesores1[indice] + " del modulo de " + asignaturas1[indice] + ', tiene ' + alumnos1[indice] + " alumnos en clase. ");
+      }
+
+      for (var i = 0; i < profesores1.length; i++) {
+        imprimeDatos1(i);
+      }
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

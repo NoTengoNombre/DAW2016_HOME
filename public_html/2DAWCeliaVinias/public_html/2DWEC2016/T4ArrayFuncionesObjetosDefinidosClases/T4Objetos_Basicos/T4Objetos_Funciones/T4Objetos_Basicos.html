@@ -1,0 +1,43 @@
+<!--
+    @Created on : 07-nov-2016, 22:41:25
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function Coche(marca, combustible) {
+        this.marca = marca;
+        this.combustible = combustible;
+        this.cantidad = 0; // Cantidad de combustible inicial por defecto en el depósito.
+        this.rellenarDeposito = rellenarDeposito; // Metodo convertido en Propiedad
+      }
+
+      var cocheDeMartin = new Coche("Volkswagen Golf", "gasolina");
+      var cocheDeSilvia = new Coche("Mercedes SLK", "diesel");
+
+      document.write("<br/>El coche de Martin es un: " + cocheDeMartin.marca + " a " + cocheDeMartin.combustible);
+      cocheDeMartin.marca = "BMW X5";
+      cocheDeMartin.combustible = "diesel";
+      document.write("<br>El coche de Martin es un: " + cocheDeMartin.marca + " a " + cocheDeMartin.combustible);
+
+      function rellenarDeposito(litros) {
+        this.cantidad = litros;
+      }
+
+      cocheDeMartin.rellenarDeposito(35);
+      document.write("<br/>El coche de Martin tiene " + cocheDeMartin.cantidad + " litros de " + cocheDeMartin.combustible + " en el deposito.");
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
