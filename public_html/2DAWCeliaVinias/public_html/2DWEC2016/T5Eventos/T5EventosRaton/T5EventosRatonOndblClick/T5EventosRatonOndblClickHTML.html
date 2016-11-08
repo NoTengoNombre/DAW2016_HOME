@@ -1,0 +1,49 @@
+<!--
+    @Created on : 08-nov-2016, 19:06:51
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p{
+        width: 300px;
+        margin: 100px;
+        padding: 10px;
+        margin: 100px;
+        background-color: #000000;
+        color : #ffffff;
+      }
+
+      p#demo{
+        width: 300px;
+        border: 30px;
+        padding: 10px;
+        margin: 100px;
+        background-color: #000000;
+        color : #ff0000;
+
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>HTML : element ondblclick</h1>
+    <p>This examples uses the HTML DOM to assign an "ondblclick" event to a p element</p>
+
+    <p id="demo" ondblclick="myFunction()">Double-click me</p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "I was double-clicked!";
+      }
+    </script>
+  </body>
+</html>

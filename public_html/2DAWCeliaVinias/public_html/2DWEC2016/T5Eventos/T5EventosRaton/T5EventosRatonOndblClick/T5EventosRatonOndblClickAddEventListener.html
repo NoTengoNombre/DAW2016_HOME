@@ -1,0 +1,68 @@
+<!--
+    @Created on : 08-nov-2016, 19:06:51
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p{
+        width: 300px;
+        margin: 100px;
+        background-color: #000000;
+        color : #ffffff;
+      }
+
+      p#demo{
+        width: 300px;
+        border: 30px;
+        padding: 10px;
+        margin: 100px;
+        background-color: #000000;
+        color : #ff0000;
+
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>Javascript : addEventListener</h1>
+    <p>This examples uses the addEventListener() method to attach a "dblclick" event to a element </p>
+
+    <p id="demo">Double-Click me</p>
+
+
+    <script>
+      document.getElementById("demo").addEventListener("dblclick", myFunction);
+
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "I was double-clicked";
+      }
+    </script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

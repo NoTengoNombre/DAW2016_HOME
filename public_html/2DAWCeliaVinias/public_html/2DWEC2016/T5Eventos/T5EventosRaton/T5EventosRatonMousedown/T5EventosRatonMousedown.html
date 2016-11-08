@@ -1,0 +1,50 @@
+<!--
+    @Created on : 08-nov-2016, 19:52:13
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      function mouseDown() {
+        document.getElementById("myP").style.color = "#ff0000";
+      }
+      function mouseUp() {
+        document.getElementById("myP").style.color = "#00ff00";
+      }
+      function recarga() {
+        location.reload();
+      }
+
+    </script>
+  </head>
+  <body>
+    <div>
+      <p id='myP' onmousedown='mouseDown()' onmouseup='mouseUp()'>
+        Click the text <br>
+        <br>
+        The mouseDown() function is triggered <br>
+        when the mouse button is pressed down over <br>
+        this paragraph , and sets <br>
+        the color of the text to red. <br>
+        <br>
+        The mouseUp() function is triggered <br>
+        when the mouse button is released ,<br>
+        and sets the color of the text<br>
+        to green<br>
+      </p>
+    </div>
+    <div>
+      <br>
+      <button onclick="recarga()">B</button>
+    </div>
+
+  </body>
+</html>

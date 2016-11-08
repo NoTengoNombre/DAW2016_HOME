@@ -1,0 +1,42 @@
+<!--
+    @Created on : 08-nov-2016, 19:06:51
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p{
+        background-color: #000000;
+        color: #ffffff;
+        width: 200px;
+        padding: 10px;
+        border : 10px;
+        margin-left: 220px;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello Friend";
+      }
+
+      function recarga() {
+        location.reload();
+      }
+    </script>
+  </head>
+  <body>
+    <p ondblclick="myFunction()">Double-click this paragraph to trigger a function</p>
+
+    <p id="demo"></p>
+
+    <p onclick="recarga()">Recarga la pagina</p>
+  </body>
+</html>

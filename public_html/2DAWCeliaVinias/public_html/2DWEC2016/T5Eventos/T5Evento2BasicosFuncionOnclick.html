@@ -1,0 +1,42 @@
+<!--
+    @Created on : 08-nov-2016, 16:09:06
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      function func1() {
+        alert("Click en imagen");
+      }
+      function func2() {
+        document.write("Click en imagen");
+      }
+
+      function  recarga() {
+        location.reload();
+      }
+    </script>
+  </head>
+  <body>
+
+    <!-- Los 2 responde al mismo evento --> 
+    <img src="../T5Eventos/img/5.png" width="30" alt="" onclick="func1();">
+    <br>
+    <img src="../T5Eventos/img/3.jpg" width="30" alt="" onclick="func1();">
+    <!--Otro evento-->
+    <br>
+    <img src="../T5Eventos/img/t.jpg" width="30" alt="" onclick="func2();">
+    <br>
+    <img src="../T5Eventos/img/error.jpg" width="30" alt="" onclick="recarga();">
+  </body>
+
+
+</html>

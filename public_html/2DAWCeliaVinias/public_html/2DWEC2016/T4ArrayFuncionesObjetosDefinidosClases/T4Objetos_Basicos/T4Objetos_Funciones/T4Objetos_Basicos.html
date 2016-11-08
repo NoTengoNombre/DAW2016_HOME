@@ -14,6 +14,7 @@
     <link rel="shortcut icon" href="">
     <script>
 
+// Constructor
       function Coche(marca, combustible) {
         this.marca = marca;
         this.combustible = combustible;
@@ -21,18 +22,23 @@
         this.rellenarDeposito = rellenarDeposito; // Metodo convertido en Propiedad
       }
 
+//Objeto
       var cocheDeMartin = new Coche("Volkswagen Golf", "gasolina");
       var cocheDeSilvia = new Coche("Mercedes SLK", "diesel");
 
       document.write("<br/>El coche de Martin es un: " + cocheDeMartin.marca + " a " + cocheDeMartin.combustible);
+//Modificar Atributos
       cocheDeMartin.marca = "BMW X5";
       cocheDeMartin.combustible = "diesel";
+//Mostrar Por Pantalla      
       document.write("<br>El coche de Martin es un: " + cocheDeMartin.marca + " a " + cocheDeMartin.combustible);
 
+//Metodo que puede ser propiedad del constructor 
       function rellenarDeposito(litros) {
         this.cantidad = litros;
       }
 
+//Instanciar objeto y modificar por medio de un metodo un atributo 
       cocheDeMartin.rellenarDeposito(35);
       document.write("<br/>El coche de Martin tiene " + cocheDeMartin.cantidad + " litros de " + cocheDeMartin.combustible + " en el deposito.");
     </script>

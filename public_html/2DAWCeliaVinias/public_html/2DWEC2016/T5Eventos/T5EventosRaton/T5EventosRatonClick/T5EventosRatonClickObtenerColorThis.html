@@ -1,0 +1,42 @@
+<!--
+    @Created on : 08-nov-2016, 16:37:38
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+
+      button{
+        color: white;
+        width: 300px;
+        margin-left: 200px;
+        padding-left: 10px;
+      }
+
+      p#demo{
+        color: white;
+        background-color: black;
+        width: 200px;
+        margin-left: 300px;
+        padding-left: 70px;
+      }
+
+    </style>
+    <script>
+      function myFunction(elemento, seleccionarColores) {
+        elemento.style.color = seleccionarColores;
+      }
+    </script>
+  </head>
+  <body>
+    <p id="demo" onclick="myFunction(this,'#00ff00')">Click my text color</p>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!--
+    @Created on : 08-nov-2016, 16:37:38
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p#demo {
+        color: #ffffff;
+        width: 70px;
+        padding: 10px;
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-left: 100px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background-color: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This examples uses the addEventListener() method to attach a 'click' event to a p element</p>
+
+    <p id="demo">Click me</p>
+    <script>
+//      addEventListener tiene 2 parametros 'mensaje' , "METODO"
+      document.getElementById("demo").addEventListener("click", myFunction);
+
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "You clicked me";
+      }
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+<!--
+    @Created on : 08-nov-2016, 16:37:38
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      for (var i = 0; i < 5; i++) {
+        document.write('<hr>');
+      }
+    </script>
+    <style>
+
+      button{
+        background-color: black;
+        color: white;
+        width: 200px;
+        margin-left: 340px;
+        padding-left: 10px;
+      }
+
+      p#demo , p{
+        color: white;
+        background-color: black;
+        width: 200px;
+        margin-left: 300px;
+        padding-left: 70px;
+      }
+
+      hr{
+        color: white;
+        background-color: black;
+        padding: 1px;
+        width: 200px;
+        margin-left: 300px;
+        padding-left: 70px;
+      }
+
+    </style>
+    <script>
+
+      function recarga() {
+        location.reload();
+      }
+
+    </script>
+  </head>
+  <body>
+    Field1 : <input type="text" id="field1" value="Hello Friend"><br>
+    Field2 : <input type="text" id="field2">
+    <br><br>
+    <button onclick="myFunction()">Copy Text</button>
+
+    <p>A function is triggered when the button is clicked</p>
+    <p>The function copies the text from Field1 into Field2</p>
+
+    <button onclick="recarga()">Recarga</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById('field2').value = document.getElementById('field1').value;
+      }
+
+    </script>
+  </body>
+</html>

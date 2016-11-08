@@ -1,0 +1,47 @@
+<!--
+    @Created on : 08-nov-2016, 16:37:38
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p#demo {
+        color: #ffffff;
+        width: 70px;
+        padding: 10px;
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-left: 100px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background-color: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Click the button to trigger a function that will output "Hello Friend"
+      in a p element with id="demo"</p>
+
+    <p id="demo">Click me</p>
+
+    <script>
+//      Metodo JS - utiliza .onclick que almacena la function
+      document.getElementById("demo").onclick = function () {
+//     Metodo que ejecuta el codigo dentro de la etiqueta 'p'
+        myFunction();
+      };
+
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "You Clicked me!";
+      }
+    </script>
+  </body>
+</html>
