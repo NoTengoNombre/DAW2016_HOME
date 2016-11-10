@@ -1,0 +1,46 @@
+<!--
+    @Created on : 10-nov-2016, 20:40:08
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function enviar(formulario) {
+
+        var nombre = document.getElementsByName("alta");
+
+        for (var i = 0; i < nombre.length; i++) {
+          if (nombre[i].checked) {
+            var resultado = nombre[i].value;
+          }
+          document.getElementById("resultado").innerHTML = " Valor : " + resultado;
+        }
+    </script>
+  </head>
+  <body>
+    <form name="alta">
+      <div>
+        <label form="Hombre">Hombre</label><br>
+        <input type="radio" name="alta" id="Hombre" value="Hombre" checked="checked">
+        <br>
+        <label form="Mujer">Mujer</label><br>
+        <input type="radio" name="alta" id="Mujer" value="Mujer">
+        <br>
+      </div>
+    </form>
+    <br>
+    <input type="button" name="enviar" value="Enviar" onclick="enviar(this.form)">
+
+    <p id="resultado"></p>
+
+  </body>
+</html>

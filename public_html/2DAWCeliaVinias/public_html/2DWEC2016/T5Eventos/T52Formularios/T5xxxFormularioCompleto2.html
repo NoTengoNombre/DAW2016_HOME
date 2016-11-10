@@ -1,0 +1,63 @@
+<!--
+    @Created on : 10-nov-2016, 18:05:37
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <style type="text/css">
+      div{
+        background-color: #ccccff;
+      }
+      .azul{
+        border : 0;
+        background-color: transparent;
+        color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+
+      <fieldset>
+        <legend>Formulario : </legend>
+        <form method="post" enctype="multipart/form-data" action="">
+          <br>
+          <label>Nombre : </label>
+          <input type="text" name="nombre" value="" size="42" maxlength="30">
+          <br><br>
+          <label>Apellidos : </label>
+          <input type="text" name="apellidos" value="" size="40" maxlength="80">
+          <br><br>
+          <label>Sexo : </label>
+          <br>
+          <label>Hombre</label><br>
+          <input type="radio" name="sexo" value="hombre" checked="checked">
+          <br>
+          <label>Mujer</label><br>
+          <input type="radio" name="sexo" value="mujer">
+          <br>
+          <label>Pelicula: </label>
+          <input class="azul" type="button" value="Enviar">
+          <br>
+          <label>Incluir mi foto:</label>
+          <br>
+          <input type="file" name="foto">
+          <br>
+          <input name="publicidad" type="checkbox" value="publicidad" checked="checked">Enviar publicidad
+          <br>
+          <input type="submit" name="enviar" value="Guardar cambios">
+          <input type="reset" name="limpiar" value="Borrar datos">
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>

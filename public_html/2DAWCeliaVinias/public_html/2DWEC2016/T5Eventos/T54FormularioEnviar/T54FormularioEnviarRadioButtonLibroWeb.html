@@ -1,0 +1,56 @@
+<!--
+    @Created on : 10-nov-2016, 20:40:08
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://aprende-web.net/javascript/js7_2.php
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+//      function enviar(formulario) {
+//        if (formulario.alta.checked == true) {
+//          alert(formulario);
+//          alert(formulario.alta.checked);
+//          document.write("hello");
+//        } else {
+////        if (formulario.alta.checked == false) {
+//          alert(formulario);
+//          alert(formulario.alta.checked);
+//          document.write("friend");
+//        }
+//        form.submit();
+//      }
+
+      function enviar(formulario) {
+        var elementos = document.getElementsByName("pregunta");
+        for (var i = 0; i < elementos.length; i++) {
+          alert("Elemento : " + elementos[i].value + " Seleccionado " + elementos[i].checked);
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Formulario : </legend>
+      <form>
+        Alta: 
+        <input type="radio" value="true" name="pregunta" id="true_si">
+        <input type="radio" value="false" name="pregunta" id="false_no" >
+        <input type="radio" value="nsnc" name="pregunta" id="true_nsnc" >
+        <br><br>
+        <!--Baja:-->
+        <!--<input type="radio" name="alta" value="false">-->
+        <!--<br><br>-->
+        <button type="button" onclick="enviar(this.form)">Enviar</button>
+      </form>
+    </fieldset>
+
+  </body>
+</html>

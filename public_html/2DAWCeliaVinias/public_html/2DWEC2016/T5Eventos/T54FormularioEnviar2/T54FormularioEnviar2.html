@@ -1,0 +1,53 @@
+<!--
+    @Created on : 10-nov-2016, 20:40:08
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://aprende-web.net/javascript/js7_2.php
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Campos de texto</title> 
+    <style type="text/css">
+      #caja  
+      { width: 60%;
+        float:right; 
+        border: 1px solid black; }
+      </style>
+      <script>
+        function escribe() {
+          escribir = document.getElementById("caja");
+          miTitulo = "<h1>" + document.rellenar.titulo.value + "</h1>";
+          miClave = "<h3>" + document.rellenar.clave.value + "</h3>";
+          miTexto = "<p>" + document.rellenar.texto.value + "</p>";
+          escribir.innerHTML = miTitulo + miClave + miTexto;
+        }
+        window.onload = function () {
+          document.rellenar.ver.onclick = escribe;
+        };
+      </script>
+    </head>
+    <body>
+      <h1> Acceso a campos de texto</h1>
+      <div id="caja">
+      <p>Espacio para tu texto, pulsa en el botón "ver" para verlo.</p>
+    </div>
+    <form name="rellenar" action="#" >
+      <h2>Escribe tu texto:</h2>
+      <p> Escribe el título : 
+        <input name="titulo" type="text"></p> 
+      <p>Escribe tu clave: 
+        <br>
+        <input name="clave" type="password"></p>
+      <p>Escribe el texto</p>
+      <p>
+        <textarea name="texto">
+        </textarea>
+      </p>
+      <p>
+        <input type="button" id="ver" name="ver" value="ver">
+      </p>
+    </form>
+  </body>
+</html>

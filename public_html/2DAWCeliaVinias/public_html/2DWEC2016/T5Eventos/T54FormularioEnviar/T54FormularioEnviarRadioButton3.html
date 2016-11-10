@@ -1,0 +1,70 @@
+<!--
+    @Created on : 10-nov-2016, 20:40:08
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      function info() {
+        var pulsado = document.elegir.color;
+        for (var i = 0; i < pulsado.length; i++) {
+          var valor = pulsado[i].checked;
+          if (valor === true) {
+            var elegido = pulsado[i].value;
+          }
+        }
+        var cambio = document.getElementById("parrafo");
+        cambio.style.color = elegido;
+      }
+
+      function enviar(formulario) {
+        if (formulario.alta.checked == true) {
+          document.write("hello");
+        }
+        if (forkmulario.alta.checked == false) {
+          document.write("friend");
+        }
+        form.submit();
+      }
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Formulario : </legend>
+      <form name="elegir">
+        Rojo:
+        <input type="radio" name="color" value="red">
+        <br>Verde:
+        <input type="radio" name="color" value="green">
+        <br>Azul:
+        <input type="radio" name="color" value="blue">
+        <br>Negro:
+        <input type="radio" name="color" value="black">
+        <br><br>
+        <button type="button" onclick="info()">Enviar</button>
+      </form>
+      <br>
+      <p id="parrafo">Parrafo</p>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>Formulario : </legend>
+      <form name="alta">
+        Alta: 
+        <input type="radio" name="alta" value="true" checked="checked">
+        <br><br>
+        <button type="button" onclick="enviar(this.form)">Enviar</button>
+      </form>
+    </fieldset>
+
+  </body>
+</html>

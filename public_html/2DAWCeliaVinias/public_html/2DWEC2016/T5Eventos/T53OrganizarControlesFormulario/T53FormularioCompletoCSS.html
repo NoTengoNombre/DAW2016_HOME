@@ -1,0 +1,82 @@
+<!--
+    @Created on : 10-nov-2016, 18:05:37
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style type="text/css">
+      div{
+        margin: .4em 0;
+        background-color: wheat;
+      }
+
+      div label{
+        width: 15%;
+        float: left;
+      }
+
+      .btn{
+        display: block;
+        margin: 1em 0;
+      }
+
+      .col{
+        background-color: tomato;
+      }
+      .color{
+        background-color: yellowgreen;
+      }
+      .azul{
+        background-color: violet;
+        border-bottom-color: #0000ff;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <fieldset>
+        <legend>Formulario : </legend>
+        <form method="post" enctype="multipart/form-data" action="">
+          <div>
+            <br>
+            <label form="nombre">Nombre : </label>
+            <input class="col" type="text" id="nombre" name="nombre" value="nom" size="42" maxlength="30">
+            <br><br>
+            <label form="Apellidos">Apellidos : </label>
+            <input class="color" type="text" id="Apellidos" name="apellidos" value="ape" size="40" maxlength="80">
+            <br><br>
+            <label form="Sexo">Sexo : </label>
+            <br>
+            <label form="Hombre">Hombre</label><br>
+            <input type="radio" name="sexo" id="Hombre" value="hombre" checked="checked">
+            <br>
+            <label form="Mujer">Mujer</label><br>
+            <input type="radio" name="sexo" id="Mujer" value="mujer">
+            <br>
+            <label form="Pelicula">Pelicula: </label>
+            <input class="azul" type="button" id="Pelicula" value="Enviar">
+            <br>
+            <label form="nombre">Incluir mi foto:</label>
+            <br>
+            <input type="file" name="foto">
+            <br>
+            <input name="publicidad" type="checkbox" value="publicidad" checked="checked">Enviar publicidad
+            <br>
+            <input type="submit" name="enviar" value="Guardar cambios">
+            <input type="reset" name="limpiar" value="Borrar datos">
+          </div>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>

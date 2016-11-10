@@ -1,0 +1,82 @@
+<!--
+    @Created on : 08-nov-2016, 16:09:06
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      legend{
+        color: white;
+        border: 10px;
+        margin: 10px;
+        padding: 10px;
+        background-color: black;
+      }
+      fieldset{
+        display: block;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-top: 0.35em;
+        padding-bottom: 0.625em;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+        border: 2px groove;
+      }
+      p{
+        width: 50px;
+        color: white;
+        background-color: black;
+      }
+    </style>
+    <script>
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Fomrulario basico con enctype</legend>
+      <div>
+        <form action="" method="post" enctype="multipart/form-data">
+          <label>Entrada</label>
+          <input type="text" name="cadena" value="" size="10" />
+          <br>
+          <br>
+          <input type="submit" />
+        </form>
+      </div>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>Formulario basico con enctype</legend>
+      <div>
+        <form id="formulario">
+          <input type="file">
+        </form>
+        <br>
+        <input type="submit" form="formulario" formenctype="multipart/form-data" />
+        <br>
+      </div>
+    </fieldset>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

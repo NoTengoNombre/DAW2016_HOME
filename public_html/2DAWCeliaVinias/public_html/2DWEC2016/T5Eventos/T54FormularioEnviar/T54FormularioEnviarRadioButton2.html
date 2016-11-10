@@ -1,0 +1,52 @@
+<!--
+    @Created on : 10-nov-2016, 20:40:08
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>javascript - Obtener el valor de un radio button</title>
+    <script>
+      function capturar() {
+        var porNombre = document.getElementsByName("deacuerdo");
+        // Recorremos todos los valores del radio button para encontrar el
+        // seleccionado
+        for (var i = 0; i < porNombre.length; i++) {
+          if (porNombre[i].checked)
+            var resultado = porNombre[i].value;
+        }
+        document.getElementById("resultado").innerHTML = " \Valor : " + resultado;
+      }
+    </script>
+
+    <style>
+      form   {
+        width:150px;
+        /*height:180px;*/
+        border:1px solid #ccc;
+        padding:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Obtener el valor de un radio button</h1>
+    <form id="form1">
+      <p>Deacuerdo: </p>
+      Si :
+      <input type="radio" name="deacuerdo" value="si" checked="checked"> 
+      <br>
+      No :
+      <input type="radio" name="deacuerdo" value="no">
+    </form>
+    <br>
+    <input type="button" value="Enviar" onclick="capturar()">
+    <br>
+    <br>
+    <div id="resultado"></div>
+
+  </body>
+</html>

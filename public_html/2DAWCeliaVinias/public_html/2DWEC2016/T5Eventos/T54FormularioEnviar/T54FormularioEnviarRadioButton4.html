@@ -1,0 +1,46 @@
+<!--
+    @Created on : 10-nov-2016, 20:40:08
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://aprende-web.net/javascript/js7_2.php
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      function enviar(formulario) {
+        if (formulario.alta.checked == true) {
+          alert(formulario);
+          alert(formulario.alta.checked);
+          document.write("hello");
+        } else {
+//        if (formulario.alta.checked == false) {
+          alert(formulario);
+          alert(formulario.alta.checked);
+          document.write("friend");
+        }
+        form.submit();
+      }
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Formulario : </legend>
+      <form action="#" name="notienevalor">
+        Alta: 
+        <input type="radio" name="alta" value="true" checked="checked">
+        <br><br>
+        <!--Baja:-->
+        <!--<input type="radio" name="alta" value="false">-->
+        <!--<br><br>-->
+        <button type="button" onclick="enviar(this.form)">Enviar</button>
+      </form>
+    </fieldset>
+
+  </body>
+</html>
