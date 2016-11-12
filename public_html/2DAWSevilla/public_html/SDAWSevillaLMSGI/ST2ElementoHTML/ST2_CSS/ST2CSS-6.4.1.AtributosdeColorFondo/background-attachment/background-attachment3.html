@@ -1,0 +1,43 @@
+<!--
+    @Created on : 12-nov-2016, 19:02:33
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.w3schools.com/cssreF/tryit.asp?filename=trycss_background-attachment_fixed
+    @version    :
+    @TODO       : fixed : fijo
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+
+      /*class*/
+      .fixed-bg{
+        background-image: url(img/fondo.png);
+        min-height: 500px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      /*      div{
+              height: 800px;
+              background-color: #00ff00;
+            }*/
+
+    </style>
+  </head>
+  <body>
+
+    <p>In this example, we have created a fixed background image that will disappear slowly on scroll. Scroll the page to see the effect. <strong>Note:</strong> Try to remove the background-attachment property to really understand this example.</p>
+
+    <div class="fixed-bg"></div>
+
+    <div style="height:800px;background-color:yellow;">This div is only here to enable scrolling </div>
+
+  </body>
+</html>

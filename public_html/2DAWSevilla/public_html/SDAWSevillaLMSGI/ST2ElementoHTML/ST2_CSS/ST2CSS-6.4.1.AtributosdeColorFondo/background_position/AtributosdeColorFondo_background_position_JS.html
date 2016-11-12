@@ -1,0 +1,43 @@
+<!--
+    @Created on : 12-nov-2016, 18:13:45
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      #myDIV {
+        border: 2px solid black;
+        width: 300px;
+        height: 150px;
+        background: url("img/bola.png") no-repeat;
+        background-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Click the "Try it" button to set the<br>
+      background-position property <br>
+      of the DIV element to "center":</p>
+
+    <button onclick="myFunction()">Try it</button>
+    <button id="izquierda" onclick="myFunction()">Try it</button>
+
+    <div id="myDIV">
+      <h1>Mueve la imagen</h1>
+    </div>
+
+    <script>
+      function myFunction() {
+//        document.getElementById("myDIV").style.backgroundPosition = "center";
+        document.getElementById("myDIV").style.backgroundPosition = "right top";
+      }
+    </script>
+  </body>
+</html>

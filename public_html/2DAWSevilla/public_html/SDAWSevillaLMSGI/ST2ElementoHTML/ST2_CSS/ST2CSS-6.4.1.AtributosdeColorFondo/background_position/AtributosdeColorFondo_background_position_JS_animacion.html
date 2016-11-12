@@ -1,0 +1,69 @@
+<!--
+    @Created on : 12-nov-2016, 18:13:45
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      #myDIV {
+        width: 300px;
+        height: 150px;
+        border: 1px solid black;
+        background: url("img/bola.png") no-repeat;
+        background-position: top left;
+        -webkit-animation: mymove 5s infinite;
+        animation: mymove 5s infinite;
+      }
+
+      @-webkit-keyframes mymove{
+        50%{
+          background-position: center;
+        }
+      }
+
+      @keyframes mymove{
+        50%{
+          background-position:center;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <br><br>
+    <button onclick="izquierda()">Superior Izquierda</button>
+    <button onclick="derecha()">Superior Derecha</button><br><br>
+    <button onclick="centro()">Centro</button><br><br>
+    <button onclick="izquierda_abajo()">Abajo izquierda</button>
+    <button onclick="izquierda_derecha()">Abajo derecha</button>
+
+    <div id="myDIV">
+      <h1 style="text-align: center">Mueve la imagen</h1>
+    </div>
+
+    <script>
+      function derecha() {
+        document.getElementById("myDIV").style.backgroundPosition = "right top";
+      }
+      function izquierda() {
+        document.getElementById("myDIV").style.backgroundPosition = "left top";
+      }
+      function centro() {
+        document.getElementById("myDIV").style.backgroundPosition = "center";
+      }
+      function izquierda_derecha() {
+        document.getElementById("myDIV").style.backgroundPosition = "right bottom";
+      }
+      function izquierda_abajo() {
+        document.getElementById("myDIV").style.backgroundPosition = "left bottom";
+      }
+    </script>
+  </body>
+</html>

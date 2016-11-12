@@ -1,0 +1,21 @@
+/* 
+    Created on : 12-nov-2016, 18:14:34
+    Author     : Portatil_Bot
+*/
+
+h3{
+  width: 10em;
+  height: 10em;
+  background-image: url(../img/bola.png);
+  /*background-repeat: repeat-x;*/
+  /*background-repeat: repeat-y;*/
+  /*background-attachment: scroll;*/
+  /*background-attachment: fixed;*/
+}
+
+p {
+  color : #ffffff;
+  background-color: black;
+  /*background-image: cross-fade;*/
+  /*background-image: element;*/
+}
