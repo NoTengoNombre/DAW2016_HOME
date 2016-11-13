@@ -1,0 +1,115 @@
+<!--
+    @Created on : 13-nov-2016, 10:51:38
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <title>Full Background Image</title>
+    <style>
+      * {
+        margin: 0px; 
+        padding: 0px;
+      }
+      body {
+        height:100%;
+        font: normal 16px/2 Helvetica, sans-serif;
+      }
+      img {
+        -ms-interpolation-mode:bicubic; 
+        /*image-rendering:optimizeQuality;*/
+        /*image-rendering:pixelated;*/
+        /*image-rendering:optimizeSpeed;*/
+        image-rendering:optimize-contrast;
+      }
+      #bgim {
+        position:fixed;
+        top:0px;
+        left:0px;
+        right:0px;
+        bottom:0px;
+        border:0px;
+      }
+      #wrap {
+        position:relative;
+        width:420px;
+        margin:40px auto;padding:20px;
+        background:#FFFFFF;
+        filter:alpha(opacity=0);
+        -khtml-opacity:0;
+        -moz-opacity:0;
+        opacity:0;
+      }
+      #wrap:hover {
+        background: #FFFFFF; 
+        filter:alpha(opacity=80);
+        -khtml-opacity:0.8;
+        -moz-opacity:0.9;opacity:0.8;
+        -webkit-transition:all .8s;
+        transition:all .8s;
+      }
+    </style>
+    <script>
+      function init(i) {
+        var e = document.getElementById("bgim");
+        var r = e.width / e.height;
+        var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+        if (i !== null) {
+          e.src = i;
+        }
+        if ((w / h) < r) {
+          e.style.width = "auto";
+          e.style.height = "100%";
+          if (e.width > w) {
+            var a = (w - e.width) / 2;
+            e.style.left = a + "px";
+          }
+        } else {
+          e.style.left = "0";
+          e.style.width = "100%";
+          e.style.height = "auto";
+        }
+      }
+      window.onload = function () {
+        init(null);
+      };
+      window.onresize = function () {
+        init(null);
+      };
+
+      var actual = null;
+      function showhide(id) {
+        if (actual !== null)
+          document.getElementById(actual).style.display = "none";
+        actual = id;
+        document.getElementById(id).style.display = "inline";
+      }
+    </script>
+  </head>
+  <body onload="showhide('par1')">
+    <img id="bgim" src="../../xximg/fondos/fondo.png" alt="bgim" border="0">
+    <div id="wrap">
+      <img id="logo" src="../../xximg/BMP/2.bmp" alt="logo" border="0">
+      <br>Imágenes: / <a href="javascript:void(0)" onclick="showhide('par1')"> Estas ...</a> / <a href="javascript:void(0)" onclick="showhide('par2')"> Otras ...</a> /
+      <br><br>
+      <span id="par1" style="display:none">
+        <img src="../../xximg/JPG/2.jpg" onclick="init(this.src)" alt="img2" width="102" height="78" border="0">
+        <img src="../../xximg/JPG/3.jpg" onclick="init(this.src)" alt="img3" width="102" height="78" border="0">
+        <img src="../../xximg/JPG/Acierto.jpg" onclick="init(this.src)" alt="img4" width="102" height="78" border="0">
+        <img src="../../xximg/JPG/Error.jpg" onclick="init(this.src)" alt="img5" width="102" height="78" border="0">
+      </span>
+      <span id="par2" style="display:none">
+        <img src="../../xximg/BMP/1.bmp" onclick="init(this.src)" alt="bmp1" width="102" height="78" border="0">
+        <img src="../../xximg/BMP/2.bmp" onclick="init(this.src)" alt="bmp1" width="102" height="78" border="0">
+        <img src="../../xximg/BMP/3.bmp" onclick="init(this.src)" alt="bmp1" width="102" height="78" border="0">
+        <img src="../../xximg/BMP/boton.bmp" onclick="init(this.src)" alt="bmp1" width="102" height="78" border="0">
+      </span>
+    </div>
+  </body>
+</html>
