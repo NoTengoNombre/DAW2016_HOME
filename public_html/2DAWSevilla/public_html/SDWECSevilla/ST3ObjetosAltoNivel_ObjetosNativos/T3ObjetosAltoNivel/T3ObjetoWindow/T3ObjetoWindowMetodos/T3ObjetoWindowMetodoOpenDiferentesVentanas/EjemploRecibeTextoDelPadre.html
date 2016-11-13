@@ -14,7 +14,11 @@
     <link rel="shortcut icon" href="">
     <script>
       function copiarAlPadre() {
-        opener.document.getElementsById("original").value = document.getElementById('textocopiar').value;
+        opener.document.getElementById("original").value = document.getElementById('textocopiar').value;
+      }
+
+      function cerrarVentana() {
+        window.close();
       }
     </script>
   </head>
@@ -26,7 +30,8 @@
         <input type="text" id="textocopiar" />
       </p>
       <p>
-        <input type="button" value="Enviar texto a la ventana padre" id="enviar" onclick="copiarAlPadre()" />
+        <input type="button" value="Enviar texto a la ventana padre" id="enviar" onclick="copiarAlPadre()">
+        <input type="button" value="Cerrar texto" id="cerrar" onclick="cerrarVentana()">
       </p>
     </form>
   </body>
