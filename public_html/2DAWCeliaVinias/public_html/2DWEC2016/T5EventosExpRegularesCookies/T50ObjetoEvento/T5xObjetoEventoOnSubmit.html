@@ -1,0 +1,84 @@
+<!--
+    @Created on : 14-nov-2016, 20:26:10
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    : http://www.aprenderaprogramar.es/index.php?option=com_content&view=article&id=808:getelementsbyname-javascript-onsubmit-al-enviar-formulario-form-con-input-type-submit-ejemplo-cu01130e&catid=78:tutorial-basico-programador-web-javascript-desde-&Itemid=206
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <style>
+      body {
+        background-color:white; 
+        font-family: sans-serif;
+      }
+      label {
+        color: maroon; 
+        display:inline-block; 
+        padding:5px;
+      }
+    </style>
+    <script type="text/javascript">
+
+      function informarItemsElegidos(elemento) {
+        var elementosObtenidos = document.getElementsByName(elemento);
+        var msg = 'Animales que ha elegido que le gustan incluye: ';
+        var elegidos = 0;
+
+        if (elementosObtenidos[0].checked === true) {
+          msg = msg + elementosObtenidos[0].value;
+          elegidos = elegidos + 1;
+        }
+        if (elementosObtenidos[1].checked === true) {
+          if (elegidos >= 1) {
+            msg = msg + ', ';
+          }
+          msg = msg + elementosObtenidos[1].value;
+          elegidos = elegidos + 1;
+        }
+        if (elementosObtenidos[2].checked) {
+          if (elegidos >= 1) {
+            msg = msg + ', ';
+          }
+          msg = msg + elementosObtenidos[2].value;
+          elegidos = elegidos + 1;
+        }
+        if (elementosObtenidos[3].checked) {
+          if (elegidos >= 1) {
+            msg = msg + ', ';
+          }
+          msg = msg + elementosObtenidos[3].value;
+          elegidos = elegidos + 1;
+        }
+        if (elegidos === 0) {
+          msg = '¡No ha elegido ningún animal!';
+        }
+        alert(msg);
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Formulario de contacto -->
+    <div style="width:450px;">
+      <form name ="formularioContacto"  method="get" action="" onsubmit="informarItemsElegidos('animal')">
+        <p>Si quieres contactar con nosotros envíanos este formulario relleno:</p>
+        <p>Elige los animales que te gusten:</p>
+        <input type="checkbox" name="animal" id="leon" value="leon" /> <label for="leon">León &nbsp;&nbsp;&nbsp;    </label>
+        <br>
+        <input type="checkbox" name="animal" id="tigre" value="tigre" /> <label for="tigre">Tigre &nbsp;&nbsp;&nbsp; </label>
+        <br>
+        <input type="checkbox" name="animal" id="guepardo" value="guepardo" /> <label for="guepardo">Guepardo &nbsp;&nbsp;&nbsp; </label>
+        <br>
+        <input type="checkbox" name="animal" id="jaguar" value="jaguar" /> <label for="jaguar">Jaguar </label>
+        <br>
+        <br>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Cancelar" />
+        <br>
+      </form>
+    </div>
+  </body>
+</html>

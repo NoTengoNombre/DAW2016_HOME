@@ -1,0 +1,46 @@
+<!--
+    @Created on : 15-nov-2016, 21:05:16
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      a = {"a": "Athens", "b": "Belgrade", "c": "Cairo"};
+
+      var s = "";
+
+      for (var key in a) {
+        s += key + " : " + a[key];
+        s += "<br>";
+      }
+      document.write(s);
+
+      document.write('<hr>');
+
+      var arr = new Array("zero", "one", "two");
+
+      arr["orange"] = "fruit";
+      arr["carrot"] = "vegetable";
+
+      var s1 = "";
+      for (var key in arr) {
+        s1 += key + ": " + arr[key];
+        s1 += "<br>";
+      }
+      document.write(s1);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!--
+    @Created on : 14-nov-2016, 18:42:55
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_regexp_charset_gi
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <p>Click one of the buttons to perform a search for the characters "THIS" in a string.</p>
+
+    <button onclick="myFunction()">Global case-sensitive search</button>
+    <button onclick="myFunction2()">Global case-insensitive search</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        var str = "THIS This this";
+        var patt1 = /[THIS]/g;
+        var result = str.match(patt1);
+        document.getElementById("demo").innerHTML = result;
+      }
+    </script>
+
+    <script>
+      function myFunction2() {
+        var str = "THIS This this";
+        var patt1 = /[THIS]/gi;
+        var result = str.match(patt1);
+        document.getElementById("demo").innerHTML = result;
+      }
+    </script>
+
+  </body>
+</html>

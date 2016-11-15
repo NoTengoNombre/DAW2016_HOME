@@ -1,0 +1,91 @@
+<!--
+    @Created on : 15-nov-2016, 0:07:55
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.maestrosdelweb.com/dom/
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body {
+        font-family: arial, helvetica, sans-serif; 
+        font-size: 12px; 
+        margin: 0px;
+      }
+      a:link {
+        color: #0000cc; 
+        font-weight: bold; 
+        text-decoration: none; }
+      a:visited {
+        color: #990099; 
+        font-weight: bold; 
+        text-decoration: none; }
+      a:active {
+        color: #ff9900; 
+        font-weight: bold; 
+        text-decoration: none; }
+      a:hover {
+        color: #3333ff; 
+        text-decoration: underline; }
+      u {
+        color: #ff0000; 
+        text-decoration: none;
+      }
+      i {
+        font-size: 11px; 
+        text-decoration: underline;
+      }
+      em {
+        font-weight: bold; 
+        color: #666666; 
+        text-decoration: none;
+      }
+    </style>
+    <script>
+
+      /**
+       * Los atributos de una etiqueta son traducidos 
+       por el navegador en propiedades de un objeto. 
+       
+       * Dos métodos existen para leer y escribir 
+       los atributos de un elemento, getAttribute 
+       permite leer el valor de un atributo mientras 
+       que setAttribute permite su escritura.
+       * 
+       * @param {type} elementos
+       * @returns {undefined}
+       */
+
+      function inspector(elementos) {
+        var str = "";
+        for (var i in elementos) {
+          str += i + " : " + elementos.getAttribute(i) + "\n";
+        }
+        alert(str);
+      }
+
+//      Para usar la función inspector()
+//      tan sólo debe pasarle la referencia al elemento, 
+//      continuando con el ejemplo anterior resulta:
+      var ancla = document.getElementById("editor");
+      inspector(ancla);
+//      Para modificar el atributo title del hipervínculo, 
+//      elemento referenciado por la variable ancla, 
+//      se usará el setAttribute, pasándole el nombre del atributo y el valor:
+      var ancla = document.getElementById("editor");
+      ancla.setAttribute("title", "Artículos de programación");
+      var nuevoTitulo = ancla.getAttribute("title");
+//      El valor de la variable nuevoTitulo es ahora “Artículos de programación”.
+    </script>
+  </head>
+  <body>
+    <button onclick="inspector(this.form)">B</button>
+
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!--
+    @Created on : 14-nov-2016, 18:42:55
+    @Author     : RVS - N.F.N.D
+    @Pag        : https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>  
+  <head>  
+    <script>
+      var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
+
+      function testInfo(phoneInput) {
+        var OK = re.exec(phoneInput.value);
+        if (!OK)
+          window.alert(RegExp.input + " isn't a phone number with area code!");
+        else
+          window.alert("Thanks, your phone number is " + OK[0]);
+      }
+    </script>  
+  </head>  
+  <body>  
+    <p>Enter your phone number (with area code) and then click "Check".
+      <br>The expected format is like ###-###-####.</p>
+    <form action="#">  
+      <input id="phone"><button onclick="testInfo(document.getElementById('phone'));">Check</button>
+    </form>  
+  </body>  
+</html>

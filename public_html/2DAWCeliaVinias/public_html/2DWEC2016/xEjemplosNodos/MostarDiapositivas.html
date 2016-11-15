@@ -1,0 +1,61 @@
+<!--
+    @Created on : 14-nov-2016, 23:54:32
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo de un mostrador de diapositivas</title> 
+    <script>
+      var contador = 0;
+      var diapositivas = [];
+      function inicio() {
+        var contenedor = document.getElementById("diapositivas");
+        while (contenedor.childNodes.length > 0) {
+          if (contenedor.getElementsByTagName("img")[0] === contenedor.firstChild) {
+            diapositivas[diapositivas.length] = contenedor.removeChild(contenedor.firstChild);
+          } else
+            contenedor.removeChild(contenedor.firstChild);
+        }
+      }
+
+      function adelante() {
+        contador++;
+        if (contador >= diapositivas.length)
+          contador = 0;
+        ponerImagen();
+      }
+
+      function atras() {
+        contador--;
+        if (contador < 0)
+          contador = diapositivas.length - 1;
+        ponerImagen();
+      }
+
+      function ponerImagen() {
+        var contenedor = document.getElementById("diapositivas");
+        if (contenedor.childNodes.length === 0)
+          contenedor.appendChild(diapositivas[contador]);
+        else
+          contenedor.replaceChild(diapositivas[contador], contenedor.childNodes[0]);
+      }
+    </script>
+  </head>
+  <body>
+    <a href="javascript: atras();">Atrás</a>
+    <span id="diapositivas">
+      <img src="img/Diapositiva1.jpg" alt="Diapositiva1" height="100" width="200">
+      <img src="img/Diapositiva2.jpg" alt="Diapositiva2" height="100" width="200">
+      <img src="img/Diapositiva3.jpg" alt="Diapositiva3" height="100" width="200">
+    </span>
+    <a href="javascript: adelante();">Adelante</a>
+    <script>
+      inicio();
+      ponerImagen();
+    </script> 
+  </body>
+</html>

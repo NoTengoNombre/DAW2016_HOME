@@ -1,0 +1,89 @@
+<!--
+    @Created on : 15-nov-2016, 19:13:46
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://jrruiz.es/posts/javascript-moverse-por-los-elementos-del-dom/
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document title</title>
+  </head>
+  <body>
+    <h1>My home page</h1>
+    <p>Hello <span>world</span>!</p>
+  </body>
+</html>
+
+<!--
+DOM
+|
+|__ html
+    |
+    |__ head
+    |   |
+    |   |__ title
+    |        |
+    |        |__ Document title
+    |
+    |__ body
+        |
+        |__ h1
+        |   |
+        |   |__ My home page
+        |
+        |__ p
+            |
+            |__ Hello
+            |
+            |__ span
+            |   |
+            |   |__ world
+            |
+            |__ !
+            
+Moverse por el árbol del DOM
+
+Cada nodo del árbol puede ser una etiqueta HTML, un nodo de texto o un comentario. 
+Se puede identificar cada tipo de nodo comprobando el valor de su propiedad nodeType. 
+Cada valor de los tipos de nodos están definidos como constantes del objeto document
+
+Moverse por el árbol del DOM
+
+Cada nodo del DOM tiene enlaces a los nodos cercanos para moverse por el árbol del DOM. Estos enlaces a los nodos cercanos están representados con estas propiedades del nodo:
+
+parentNode devuelve el nodo padre de este nodo.
+childNodes devuelve un objeto NodeList con los hijos del nodo. Se puede usar la notación de los arrays para acceder a los nodos de un NodeList (nodeList[0]). La propiedad length de este objeto tiene indica cuántos nodos contiene.
+firstChild devuelve el primer nodo hijo del nodo actual. Si el nodo no tiene hijos devuelve null.
+lastChild devuelve el último nodo hijo del nodo actual. Si el nodo no tiene hijos devuelve null.
+previousSibling devuelve el nodo anterior a este que pertenezca al mismo padre. Si el nodo es el primer hijo devuelve null.
+nextSibling devuelve el nodo siguiente a este que pertenezca al mismo padre. Si el nodo es el último hijo devuelve null.
+El código de este ejemplo:
+
+<p>Hello <span>world</span>.</p>
+Se puede representar en forma de árbol así:
+
+           p
+  _________|_________
+  |        |        |
+Hello     span      .
+           |
+         world
+Si tomamos el nodo <span> como referencia:
+
+parentNode devuelve el nodo <p>.
+childNodes devuelve un objeto nodeList. Este nodeList contiene un nodo de texto con la palabra "world".
+firstChild devuelve el nodo de texto que contiene "world".
+lastChild devuelve el nodo de texto que contiene "world".
+previousSibling devuelve el nodo de texto que contiene "Hello".
+nextSibling devuelve el nodo de texto que contiene ".".
+Si tomamos el nodo <p> como referencia:
+
+parentNode devuelve null.
+childNodes devuelve un objeto nodeList. Este nodeList contiene tres nodos, dos nodos de texto y una etiqueta.
+firstChild devuelve el nodo de texto que contiene "Hello".
+lastChild devuelve el nodo de texto que contiene ".".
+previousSibling devuelve null.
+nextSibling devuelve null.
+-->

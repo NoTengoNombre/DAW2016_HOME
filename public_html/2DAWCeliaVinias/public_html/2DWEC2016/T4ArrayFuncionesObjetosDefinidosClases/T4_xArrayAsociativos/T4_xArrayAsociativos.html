@@ -1,0 +1,37 @@
+<!--
+    @Created on : 15-nov-2016, 20:56:25
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo aprenderaprogramar.com</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      function TaxiRenault(tipoMotor) {
+        this.tipoMotor = tipoMotor;
+        this.marca = 'Renault';
+        this.getCapacidad = function () {
+          if (tipoMotor === 'Diesel') {
+            return 40;
+          } else {
+            return 35;
+          }
+        };
+      }
+      function ejemploObjetos() {
+        var taxi1 = new TaxiRenault("");
+        alert('La marca de taxi 1 como taxi1.marca es ' + taxi1.marca);
+        alert('La marca de taxi 1 como taxi1.[\'marca\'] es ' + taxi1['marca']);
+      }
+    </script>
+  </head>
+  <body><div id="cabecera">
+      <h2>Cursos aprenderaprogramar.com</h2>
+      <h3>Ejemplos JavaScript</h3></div>
+    <div style="color:blue;" id ="pulsador" onclick="ejemploObjetos()"> Probar </div>
+  </body>
+</html>

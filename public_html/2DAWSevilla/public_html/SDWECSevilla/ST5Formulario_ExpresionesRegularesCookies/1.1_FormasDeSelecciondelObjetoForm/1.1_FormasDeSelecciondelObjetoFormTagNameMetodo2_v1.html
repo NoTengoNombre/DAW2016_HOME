@@ -1,0 +1,39 @@
+<!--
+    @Created on : 14-nov-2016, 21:14:08
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+
+//Otra posibilidad interesante que te permite el método anterior, es la de buscar objetos con un PADRE
+//determinado, 
+//      por ejemplo:
+      var menu = document.getElementById("menulateral");
+//      Formulario contenido en el menu lateral
+      var formularios = menu.getElementsByTagName("form");
+// Primer formulario en el menu lateral
+      var primerFormulario = formularios[0]; // primer formulario en el menu lateral
+
+
+    </script>
+  </head>
+  <body>
+    FORMULARIO
+    <!--Objeto Padre--> 
+    <div id="menulateral">
+      <form id="contactar" name="contactar" action="">
+
+      </form>
+    </div>
+  </body>
+</html>

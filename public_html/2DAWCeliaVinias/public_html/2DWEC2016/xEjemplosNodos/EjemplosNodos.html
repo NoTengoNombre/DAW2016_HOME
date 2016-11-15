@@ -1,0 +1,52 @@
+<!--
+    @Created on : 14-nov-2016, 23:36:09
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.maestrosdelweb.com/dom/
+    @version    :  
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      var body = document.getElementsByTagName("body")[0];
+      document.write(body);
+      document.write("<br>");
+
+      var nuevoEnlace = document.createElement("a");
+      var nodoTexto = document.createTextNode("Semblanza");
+      document.write("<br>");
+      document.write(nodoTexto);
+
+      var textoViejo = nodoTexto.nodeValue;
+      nodoTexto.nodeValue = "Novedades";
+      document.write("<br>");
+      document.write(nodoTexto);
+
+      NuevoEnlace.appendChild(nodoTexto);
+      /**
+       * Ahora todo lo que se necesita es insertar 
+       el enlace en el cuerpo del documento. 
+       Para hacer esto, se necesita una 
+       referencia al elemento body del documento, 
+       teniendo como guía los estándares siguientes:
+       */
+//      var cuerpoRef = document.getElementsByTagName("body")[0];
+//      cuerpoRef.appendChild(nuevoEnlace);
+
+//      Otra manera sería utilizando el método getElementById.
+//      Para ello se asume que la etiqueta < body > tiene asignado un valor para el atributo id.
+      var cuerpoRef = document.getElementById("cuerpo");
+      cuerpoRef.appendChild(nuevoEnlace);
+
+
+    </script>
+  </head>
+  <body id="cuerpo">
+
+  </body>
+</html>

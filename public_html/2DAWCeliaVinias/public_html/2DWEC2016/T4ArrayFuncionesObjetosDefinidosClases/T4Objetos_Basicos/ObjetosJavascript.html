@@ -1,0 +1,31 @@
+<!--
+    @Created on : 15-nov-2016, 19:37:13
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html><head><title>Ejemplo aprenderaprogramar.com</title><meta charset="utf-8">
+    <script type="text/javascript">
+      function ejemploObjetos() {
+        var elDocType = document.doctype;
+        var resultadoEjecutarMetodo = document.getElementById('cabecera');
+        var msg = 'document es un objeto. Una de sus propiedades es doctype, puede valer por ejemplo: ' + elDocType + ' que es otro objeto, ';
+        msg = msg + 'es decir, una propiedad puede ser un objeto. La propiedad name del objeto doctype devuelve: ' + elDocType.name;
+        msg = msg + ' y la propiedad publicId devuelve ' + elDocType.publicId + ' \n\n';
+        msg = msg + 'document como objeto tiene métodos, por ejemplo getElementById nos devuelve ';
+        msg = msg + 'el elemento (objeto) con id indicado, que a su vez tiene atributos y métodos. Por ';
+        msg = msg + 'ejemplo el div con id cabecera objeto ' + resultadoEjecutarMetodo + ' tiene atributo nodeName: ' + resultadoEjecutarMetodo.nodeName + '\n\n';
+        alert(msg);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="cabecera">
+      <h2>Cursos aprenderaprogramar.com</h2>
+      <h3>Ejemplo funciones JavaScript</h3>
+    </div>
+    <div style="color:blue;" id ="pulsador" onclick="ejemploObjetos()"> Probar </div>
+  </body>
+</html>

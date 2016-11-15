@@ -1,0 +1,35 @@
+<!--
+    @Created on : 14-nov-2016, 18:42:55
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      function validaEmail() {
+        valor = document.getElementById("campo").value;
+        if (!(/[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/.test(valor))) {
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      <label>Validar Correo</label>
+      <div>
+        <input type="text" name="texto" value="">
+        <input type="submit" onsubmit="validaEmail()">
+      </div>
+    </fieldset>
+
+  </body>
+</html>

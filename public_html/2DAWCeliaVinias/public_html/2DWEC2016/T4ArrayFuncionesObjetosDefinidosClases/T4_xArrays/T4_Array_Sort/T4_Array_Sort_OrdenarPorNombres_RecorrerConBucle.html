@@ -1,0 +1,55 @@
+<!--
+    @Created on : 06-nov-2016, 13:23:56
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <script>
+
+      var alumnos = [
+        {apellidos: "Barbero Jimenez", nombre: "Ambrosio", ciudad: "Madrid", telefono: 666666666, edad: 20},
+        {apellidos: "Gomez Martinez", nombre: "Eustasio", ciudad: "Almeria", telefono: 654321456, edad: 19},
+        {apellidos: "Fernandez Reyes", nombre: "Eufrasio", ciudad: "Zaragoza", telefono: 635456244, edad: 22},
+        {apellidos: "Garcia Jerez", nombre: "Alvaro", ciudad: "Barcelona", telefono: 678234234, edad: 30}];
+
+      alumnos.sort(function (a, b) {
+        var x = a.apellidos.toLowerCase();
+        var y = b.apellidos.toLowerCase();
+        if (x < y) {
+          return -1;
+        }
+        if (x > y) {
+          return 1;
+        }
+        return 0;
+      });
+
+      var t = "";
+      for (var key in alumnos) {
+        document.write(t + alumnos[key].apellidos);
+        document.write(t + alumnos[key].nombre);
+        document.write(t + alumnos[key].ciudad);
+        document.write(t + alumnos[key].edad);
+        document.write("<br>");
+        if (alumnos[key].nombre === "Alvaro") {
+          document.write("<h1>Hola Alvaro</h1>");
+        }
+        if (alumnos[key].edad === 20) {
+          document.write("<h1>edad 20</h1>");
+        }
+      }
+
+
+    </script>
+  </body>
+</html>

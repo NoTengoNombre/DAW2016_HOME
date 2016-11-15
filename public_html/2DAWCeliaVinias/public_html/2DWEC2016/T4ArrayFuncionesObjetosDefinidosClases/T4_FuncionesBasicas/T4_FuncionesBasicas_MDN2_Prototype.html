@@ -1,0 +1,75 @@
+<!--
+    @Created on : 03-nov-2016, 22:58:51
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+//      En JavaScript los métodos son objetos
+//       como lo es una función normal
+//        y se vinculan a un objeto como 
+//        lo hace una propiedad, lo que 
+//        significa que se pueden invocar 
+//        desde "fuera de su contexto". 
+//        Considera el siguiente código de ejemplo:
+
+      /**
+       function Persona(primerNombre) {
+       this.primerNombre = primerNombre;
+       }
+       
+       Persona.prototype.diHola = function () {
+       alert("Hola , Soy " + this.primerNombre);
+       };
+       
+       var persona1 = new Persona("Alicia");
+       var persona2 = new Persona("Sebastian");
+       var funcionSaludar = persona1.diHola;
+       
+       persona1.diHola();
+       persona2.diHola();
+       funcionSaludar();
+       
+       alert(funcionSaludar === persona1.diHola);
+       alert(funcionSaludar === Persona.prototype.diHola);
+       
+       funcionSaludar.call(persona1);
+       */
+
+      function Persona(primerNombre) {
+        this.primerNombre = primerNombre;
+      }
+
+      Persona.prototype.diHola = function () {
+        alert("Hola, Soy " + this.primerNombre);
+      };
+
+      var persona1 = new Persona("Alicia");
+      var persona2 = new Persona("Sebastian");
+      var funcionSaludar = persona1.diHola;
+
+      persona1.diHola();                            // muestra "Hola, Soy Alicia"
+      persona2.diHola();                            // muestra "Hola, Soy Sebastian"
+      funcionSaludar();                             // muestra "Hola, Soy undefined (ó da un error con el
+      // TypeError en modo estricto
+
+      alert(funcionSaludar === persona1.diHola);            // muestra true (verdadero)
+      alert(funcionSaludar === Persona.prototype.diHola);   // muestra true (verdadero)
+      funcionSaludar.call(persona1);
+
+    </script>
+  </head>
+  <body>
+    <script>
+    </script>
+  </body>
+</html>

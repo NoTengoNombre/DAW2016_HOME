@@ -1,0 +1,30 @@
+<!--
+    @Created on : 15-nov-2016, 19:37:13
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html><head><title>Ejemplo aprenderaprogramar.com</title><meta charset="utf-8">
+    <script type="text/javascript">
+      function CuentaBancaria(datoTitular, datoApellidos, datoSaldo) {
+        this.nombreTitular = datoTitular;
+        this.apellidosTitular = datoApellidos;
+        this.saldo = datoSaldo;
+        this.mostrarDatos = function () {
+          var msg = 'Los datos de la cuenta son Nombre: ' + this.nombreTitular;
+          msg = msg + '; Apellidos: ' + this.apellidosTitular + '; Saldo: ' + this.saldo;
+          alert(msg);
+        }
+      }
+      function ejemploCreaObjetos() {
+        var cuenta1 = new CuentaBancaria('Barack', 'Obama', 600000);
+        cuenta1.mostrarDatos();
+        var cuenta2 = new CuentaBancaria('Vladimir', 'Putin', 900000);
+        cuenta2.mostrarDatos();
+      }
+    </script></head>
+  <body><div id="cabecera"><h2>Cursos aprenderaprogramar.com</h2><h3>Ejemplo funciones JavaScript</h3></div>
+    <div style="color:blue;" id ="pulsador" onclick="ejemploCreaObjetos()"> Probar </div>
+  </body></html>

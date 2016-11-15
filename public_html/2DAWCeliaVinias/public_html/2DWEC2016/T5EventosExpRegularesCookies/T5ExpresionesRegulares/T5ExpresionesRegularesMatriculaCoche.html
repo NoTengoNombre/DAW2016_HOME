@@ -1,0 +1,51 @@
+<!--
+    @Created on : 14-nov-2016, 18:42:55
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function literal() {
+        var m = document.getElementById("matricula").value;
+        var expreg = /^[A-Z]{1,2}\s\d{4}\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$/;
+
+        if (expreg.test(m))
+          alert("La matrícula es correcta");
+        else
+          alert("La matrícula NO es correcta");
+      }
+
+      function objeto() {
+        var m = document.getElementById("matricula").value;
+        var expreg = new RegExp("^[A-Z]{1,2}\\s\\d{4}\\s(B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$");
+
+        if (expreg.test(m))
+          alert("La matrícula es correcta");
+        else
+          alert("La matrícula NO es correcta");
+      }
+
+
+
+    </script>
+  </head>
+  <body>
+    <form id="miForm" action="" method="get">
+      <p>
+        Matricula
+        <input type="text" id="matricula">
+        <br>
+        <input type="button" value="Literal" onclick="literal()">
+        <input type="button" value="Objeto" onclick="objeto()">
+    </form>
+  </body>
+</html>
