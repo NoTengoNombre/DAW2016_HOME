@@ -6,4 +6,5 @@
 
 
 document.write("Hello Friend");
+document.write("Bye Friend");
  
