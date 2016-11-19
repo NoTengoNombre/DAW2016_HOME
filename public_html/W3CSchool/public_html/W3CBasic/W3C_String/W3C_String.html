@@ -1,0 +1,69 @@
+<!--
+    @Created on : 19-nov-2016, 12:13:39
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      /**
+       * Va dividiendo dependiendo del caracter pasado por split
+       * 
+       * @returns {undefined}
+       */
+      function  myFunction() {
+        var str = "1How are you doing today ? - Coge los espacios en blanco";
+        var res = str.split(" ");
+        document.getElementById("demo").innerHTML = res;
+        myFunction0();
+        myFunction1();
+        myFunction2();
+      }
+
+      function  myFunction0() {
+        var str = "2How are you doing today ?";
+        var res1 = str.split("");
+        document.getElementById("demo0").innerHTML = res1;
+      }
+
+      function  myFunction1() {
+        var str = "3How are you doing today ? - sustituye 'a' ";
+        var res1 = str.split("a");
+        document.getElementById("demo1").innerHTML = res1;
+      }
+
+
+      function myFunction2() {
+//        Coge 2 letras
+        var str1 = "4How are you doing today ?";
+        var res2 = str1.split(" ", 2);
+        document.getElementById("demo2").innerHTML = res2;
+      }
+
+
+
+    </script>
+  </head>
+  <body>
+
+    <button onclick="myFunction()">B</button>
+
+    <p id="demo"></p>
+
+    <p id="demo0"></p>
+
+    <p id="demo1"></p>
+
+    <p id="demo2"></p>
+
+
+  </body>
+</html>

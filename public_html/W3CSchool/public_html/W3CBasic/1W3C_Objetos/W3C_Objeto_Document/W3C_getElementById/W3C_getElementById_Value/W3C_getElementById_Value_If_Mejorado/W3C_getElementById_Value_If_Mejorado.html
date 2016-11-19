@@ -1,0 +1,38 @@
+<!--
+    @Created on : 19-nov-2016, 16:41:54
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://stackoverflow.com/questions/1646571/getting-the-value-of-text-from-a-text-object-in-javascript
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function getText(obj) {
+        return obj.textContent ? obj.textContent : obj.innerText;
+      }
+
+      function setText(obj, to) {
+        obj.textContent ? obj.textContent = to : obj.innerText = to;
+      }
+
+      getText(document.getElementById('test'));
+      setText(document.getElementById('test').lastChild, 'bar');
+
+
+
+    </script>
+  </head>
+  <body>
+    <div id="test">
+      <img src="mr.gif" alt="foto"><br>
+      My Text
+    </div>
+  </body>
+</html>

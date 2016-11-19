@@ -1,0 +1,35 @@
+<!--
+    @Created on : 19-nov-2016, 14:23:52
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_text_value
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function get_valor_caja_texto() {
+        var x = document.getElementById("myText").value;
+        document.getElementById("demo").textContent = x;
+      }
+
+    </script>
+  </head>
+  <body>
+
+    <!--Funciona sin poner el type-->
+    <!--<input id="myText" value="Coge el valor de este Input">-->
+    <input type="text" id="myText" value="Coge el valor de este Input">
+
+    <button onclick="get_valor_caja_texto()">Copia el Texto del Input</button>
+
+    <p id="demo"></p>
+
+  </body>
+</html>

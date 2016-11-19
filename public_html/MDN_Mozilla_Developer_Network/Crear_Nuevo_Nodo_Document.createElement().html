@@ -1,0 +1,40 @@
+<!--
+    @Created on : 19-nov-2016, 12:42:16
+    @Author     : RVS - N.F.N.D
+    @Pag        : https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      document.body.onload = addElement;
+
+      function addElement() {
+//        Crea un nuevo elemento Div y le agrega contenido
+        var newDiw = document.createElement("div");
+        var newContent = document.createTextNode("Hi there and greeting");
+        newDiw.appendChild(newContent);
+
+//        agrega el elemento y su contenido al DOM
+        var currentDiv = document.getElementById("div1");
+        document.body.insertBefore(newDiv, currentDiv);
+      }
+
+
+    </script>
+  </head>
+  <body>
+
+
+
+    <p id="demo">Aqui</p>
+
+  </body>
+</html>
