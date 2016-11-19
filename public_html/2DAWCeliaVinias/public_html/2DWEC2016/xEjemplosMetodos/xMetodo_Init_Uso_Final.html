@@ -1,0 +1,51 @@
+<!--
+    @Created on : 17-nov-2016, 20:14:31
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.yporqueno.es/blog/programacion-orientada-a-objetos-en-javascript
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      var Cuadrado = function () {
+        var _api = {};
+        _api.unNumero;
+
+        function init() {
+          _api.unNumero = 5;
+        }
+
+//        Metodo publico
+        _api.metodoPublico = function () {
+          alert("Soy un Cuadrado!");
+        };
+
+//      Metodo privado , solo accesible desde dentro del objeto
+        function metodoPrivado() {
+          alert("metodo privado");
+        }
+        init();
+        return _api;
+      };
+
+      /**
+       * Esto (menos las tres ultimas lineas) 
+       lo guadamos en un archivo independiente llamado Cuadrado.js, 
+       lo importamos en nuestro html con la etiqueta script
+       script type="text/javascript" src="js/Cuadrado.js" /script
+       * @type Cuadrado
+       */
+      var unCuadrado = new Cuadrado();
+
+      alert(unCuadrado.unNumero);
+      unCuadrado.metodoPublico();
+    </script>
+
+  </body>
+</html>

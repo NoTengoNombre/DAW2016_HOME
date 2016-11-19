@@ -1,0 +1,36 @@
+<!--
+    @Created on : 18-nov-2016, 21:02:47
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  <body>
+    Texto dentro del TextArea: <br>
+    <textarea id="DentroDelTextArea">
+      Texto que va a ser reemplazado
+    </textarea>
+
+    <p>Click the button to change the contents of the TextArea</p>
+
+    <button type="button" onclick="myFunction()">Boton</button>
+
+    <script>
+      /**
+       * 'value' mete dentro del textArea una cadena de texto mediante el id='DentroDelTextArea'
+       * 
+       * @returns {undefined}
+       */
+      function myFunction() {
+        document.getElementById("DentroDelTextArea").value = "cadena pasada como parametro dentro de value";
+      }
+    </script>
+  </body>
+</html>

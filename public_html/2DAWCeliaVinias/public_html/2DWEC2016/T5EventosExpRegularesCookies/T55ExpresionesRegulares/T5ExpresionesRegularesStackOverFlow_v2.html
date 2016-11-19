@@ -1,0 +1,49 @@
+<!--
+    @Created on : 14-nov-2016, 18:42:55
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function objeto() {
+        var m = document.getElementById("email").value;
+        var emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+        if (emailRegex.test(m)) {
+          document.write("Email Ok");
+        } else {
+          document.write("Email FAIL");
+          reload();
+        }
+      }
+
+      function ver() {
+        document.getElementById("ver").innerHTML = objeto();
+      }
+
+      function reload() {
+        location.reload();
+      }
+
+    </script>
+  </head>
+  <body>
+    <form id="miForm" action="" method="get">
+      <p>
+        Email:
+        <input type="text" id="email">
+        <br><br>
+        <input type="button" name="entrada" value="validar" onclick="objeto()">
+        <br><br>
+      </p>
+    </form>
+  </body>
+</html>

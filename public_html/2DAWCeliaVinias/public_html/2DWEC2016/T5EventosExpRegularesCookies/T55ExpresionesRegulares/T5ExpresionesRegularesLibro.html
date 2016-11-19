@@ -17,17 +17,28 @@
         valor = document.getElementById("campo").value;
         if (!(/[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/.test(valor))) {
           return false;
+        } else {
+          return true;
         }
-        return true;
       }
+
+      if (validaEmail() === true) {
+        document.write("bien");
+      } else {
+        document.write("Mal");
+      }
+
+
     </script>
   </head>
   <body>
     <fieldset>
       <label>Validar Correo</label>
       <div>
-        <input type="text" name="texto" value="">
-        <input type="submit" onsubmit="validaEmail()">
+        <form method="get" action="">
+          <input type="text" id="campo" name="texto" value="">
+          <input type="submit" onsubmit="validaEmail()">
+        </form>
       </div>
     </fieldset>
 

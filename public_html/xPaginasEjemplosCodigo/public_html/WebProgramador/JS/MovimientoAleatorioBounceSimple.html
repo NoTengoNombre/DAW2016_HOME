@@ -1,0 +1,77 @@
+<!--
+    @Created on : 17-nov-2016, 20:04:23
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.lawebdelprogramador.com/codigo/JavaScript/3738-Imagen-de-fondo-JavaScript-vs-CSS3.html
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Full Background Image | jScript</title>
+    <style>
+      *{
+        margin:0px;
+        padding:0px;
+        color:#FFFFFF;
+        font-size:100%;
+        font-family:sans-serif;
+        vertical-align:baseline;
+        text-rendering:optimizeLegibility;
+      }
+      img{
+        border:0px none;
+        -ms-interpolation-mode:bicubic;
+        image-rendering:optimizeQuality;
+      }
+      #bg{
+        position:fixed;
+        left:0px;
+        top:0px;
+        z-index:-100;
+      }
+      .bgw{
+        width:100%;
+      }
+      .bgh{
+        height:100%;
+      }
+      h4{
+        font-size:40px;
+      }
+    </style>
+    <script>
+      function init() {
+        e = document.getElementById("bg");
+        r = e.width / e.height;
+        w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+        if ((w / h) < r) {
+          e.className = "bgh";
+        } else {
+          e.className = "bgw";
+        }
+        e.onload = function () {
+          init();
+        };
+      }
+
+      window.onload = function () {
+        init();
+      };
+      window.onresize = function () {
+        init();
+      };
+    </script>
+  </head>
+  <body>
+    <img id="bg" src="../GIF/2.gif" alt="foto">
+    <h4>Text</h4>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p>&nbsp;</p>
+  </body>
+</html>

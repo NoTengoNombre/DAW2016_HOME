@@ -1,0 +1,43 @@
+<!--
+    @Created on : 19-nov-2016, 1:13:33
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function stopDefault(e) //cross browser function for stopping default action
+      {
+        if (e && e.preventDefault)
+        {
+          e.preventDefault();
+        } else
+        {
+          window.event.returnValue = true;
+        }
+        return false;
+      }
+
+      function readPage(event) {
+        alert("Hello");
+        return stopDefault(event);//prevent default action
+      }
+
+      window.onload = function (event) {
+        document.getElementById('read').onclick = readPage;
+      };
+      
+    </script>
+
+  <a id="read" href="#">read</a> 
+
+</body>
+</html>

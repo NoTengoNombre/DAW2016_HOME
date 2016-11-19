@@ -1,0 +1,39 @@
+<!--
+    @Created on : 18-nov-2016, 21:02:47
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      
+      function myFunction() {
+//        Coge lo que hay dentro del myTextarea mediante 'value'
+        var x = document.getElementById("myTextarea").value;
+//        Lo saca por pantalla mediante 'innerHTML'
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
+  </head>
+  <body>
+    Mensaje <br>
+    <textarea id="myTextarea">
+      Texto lo coge de aqui
+    </textarea>
+
+    <p>Click the button to alert the contents of the text area </p>
+
+    <button type="button" onclick="myFunction()">Intentar</button>
+
+    <p>La informacion se vuelca aqui </p>
+    <p style="color: #0000ff" id="demo">Mensaje</p>
+
+  </body>
+</html>

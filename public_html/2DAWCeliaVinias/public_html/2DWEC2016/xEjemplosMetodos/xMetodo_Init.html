@@ -1,0 +1,145 @@
+<!--
+    @Created on : 17-nov-2016, 20:14:31
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.yporqueno.es/blog/programacion-orientada-a-objetos-en-javascript
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      alert("1º Script JavaScript primero tenemos que \n\
+    entender que TODO lo que declaremos se guarda \n\
+en el espacio global Para evitar problemas vamos \n\
+a meter nuestro código dentro de una función \n\
+al ser una función no se ejecutará hasta que \n\
+la llamemos por primera vez). podemos guardar \n\
+esta “clase” en una variable y de esta manera \n\
+instanciarla tantas veces como queramos:");
+
+      var Cuadrado = function () {
+        alert("Soy un cuadrado");
+      };
+
+      var unCuadrado = new Cuadrado();
+      var otroCuadrado = new Cuadrado();
+      var unTercerCuadrado = new Cuadrado();
+
+
+    </script>
+  </head>
+  <body>
+    <script>
+      alert("Todas las variables que declaremos \n\
+    dentro de esa función no entrará en conflicto \n\
+con ninguna variable de fuera, y a su vez, \n\
+desde fuera se podrá preguntar por las \n\
+variables de dentro:");
+
+      alert("2º Script");
+      var unNumero = 0;
+
+      var Cuadrado = function () {
+        this.unNumero = 5;
+//        No tiene nada declarado
+        var otraVariable = "Foo";
+      };
+
+      var unCuadrado = new Cuadrado();
+
+      alert(unNumero);
+      alert(unCuadrado.unNumero);
+      alert(unCuadrado.otraVariable);
+
+      alert("\
+    En este ejemplo “declaramos” la variable unNumero en “this“, \n\
+    que hace referencia al propio objeto creado. \n\
+ ese this es lo que devuelve la función \n\
+cuando hacemos un new Cuadrado() y lo que se almacena \n\
+en la variable unCuadrado.\n\
+ Todo lo que no esté declarado \n\
+en this se ejecuta dentro de la función \n\
+pero no es accesible desde fuera \n\
+como en el caso de otraVariable.");
+    </script>
+
+    <script>
+      alert("3º Script");
+      alert("Sin embargo, podemos devolver cualquier cosa, por ejemplo un objeto creado por nosotros:");
+
+      var Cuadrado = function () {
+        var _api = {};
+        _api.unNumero = 5;
+
+        var otraVariable = "Foo";
+        return _api;
+      };
+
+      var unCuadrado = new Cuadrado();
+
+      alert(unCuadrado.unNumero); // 5
+      alert(unCuadrado.otraVariable); // undefined
+
+    </script>
+
+    <script>
+      alert("4º Script");
+      alert("Hemos creado un objeto vacío \n\
+    llamado _api que devuelve la función, \n\
+y con él todas las variables (y métodos) \n\
+que hayamos declarado dentro. El resto de \n\
+variables siguen teniendo como ámbito nuestro \n\
+nuevo objeto pero no son accesibles \n\
+desde fuera de este.");
+    </script>
+
+    <script>
+      alert("5º Script");
+      alert("utilizar un método init declarado \n\
+    al principio de nuestra clase y llamado \n\
+justo antes del final \n\
+De esta manera nos aseguramos \n\
+que cuando accedemos al objeto éste está \n\
+perfectamente montado y podemos acceder \n\
+a sus variables y métodos sin problemas.\n\
+Quedaría tal que así");
+
+      var Cuadrado = function () {
+        var _api = {};
+        _api.unNumero;
+
+        function init() {
+          _api.unNumero = 5;
+        }
+
+//        Metodo publico
+        _api.metodoPublico = function () {
+          alert("Soy un Cuadrado!");
+        };
+
+//      Metodo privado , solo accesible desde dentro del objeto
+        function metodoPrivado() {
+
+        }
+        init();
+        return _api;
+      };
+
+      var unCuadrado = new Cuadrado();
+
+      alert(unCuadrado.unNumero);
+      unCuadrado.metodoPublico();
+
+      alert("Esto (menos las tres ultimas lineas) \n\
+    lo guadamos en un archivo independiente llamado Cuadrado.js,\n\
+ lo importamos en nuestro html con la etiqueta script");
+    </script>
+
+  </body>
+</html>

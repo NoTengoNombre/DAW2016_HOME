@@ -1,0 +1,60 @@
+<!--
+    @Created on : 19-nov-2016, 11:17:04
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      document.write("<h1>1º </h1>");
+
+      function myFunction() {
+        var cadena = "0123456789";
+        var letras = cadena.split(" ");
+
+        for (i in letras) {
+          document.write(letras[i]);
+          document.getElementById("demo").innerHTML = letras;
+        }
+      }
+
+
+    </script>
+
+    <script>
+
+      document.write("<h1>2º </h1>");
+
+      var cadena = "0123456789";
+      var letras = cadena.split("", 10);
+
+      var resultado = "";
+
+      for (i in letras) {
+        if (letras[i] === '5') {
+          document.write("Fin<br>");
+          document.write(i);
+          document.write("<br>");
+          break;
+        } else {
+          resultado += letras[i];
+        }
+      }
+      document.write('<hr>');
+      document.write(letras);
+      document.write('<hr>');
+
+    </script>
+  </head>
+  <body>
+    <button onclick="myFunction()">B</button>
+    <p id="demo"></p>
+  </body>
+</html>

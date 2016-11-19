@@ -1,0 +1,40 @@
+<!--
+    @Created on : 19-nov-2016, 1:13:33
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function readPage() {
+        alert("Hello");
+      }
+      document.write("1 script");
+      document.write("<br>");
+      document.getElementById('read').onclick = readPage();
+
+
+
+    </script>
+  </head>
+  <body>
+    <a id="read" href="">Read</a>
+
+    <br>
+    <script>
+      document.write("2 script");
+      window.onload = function () {
+        document.getElementById('read').onclick = readPage;
+      };
+
+    </script>
+  </body>
+</html>
