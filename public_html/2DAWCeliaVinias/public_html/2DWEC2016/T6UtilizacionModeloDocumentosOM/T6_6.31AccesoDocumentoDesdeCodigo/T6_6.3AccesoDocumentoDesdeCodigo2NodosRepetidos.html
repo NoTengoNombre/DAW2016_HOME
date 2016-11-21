@@ -1,0 +1,33 @@
+<!--
+    @Created on : 20-nov-2016, 23:42:40
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Titulo DOM</title>
+    <script>
+
+      var obj_html = document.documentElement;
+
+      var obj_head = obj_html.childNodes[0];
+      var obj_body = obj_html.childNodes[1];
+
+//Numero de nodos hijos ; acceder a este valor utilizando la propiedad length sobre el metodo childNodes
+
+      var numeroHijos = obj_html.childNodes.length;
+      alert(numeroHijos);
+
+    </script>
+  </head>
+  <body>
+    <p>Parrafo DOM primero</p>
+    <p>Parrafo DOM segundo</p>
+    <p>Parrafo DOM tres</p>
+  </body>
+</html>
+
+

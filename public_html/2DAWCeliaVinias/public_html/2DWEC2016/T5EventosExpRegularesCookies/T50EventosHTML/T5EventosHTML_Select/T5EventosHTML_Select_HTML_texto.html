@@ -1,0 +1,36 @@
+<!--
+    @Created on : 20-nov-2016, 20:24:42
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+
+    <p>This example uses the HTML DOM 
+      to assign an 'onselect' event to an input element</p>
+
+    Select some text : 
+    <input type="text" value="Hello Friend" id="myText">
+
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("myText").onselect = function () {
+        myFunction();
+      };
+
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "You selected some text!";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!--
+    @Created on : 19-nov-2016, 23:52:35
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+
+    <form>
+      Select numbers: <br>
+      <input id="no" value="5" size="1"> 
+      <input type="button" onclick="myFunction()" value="-->">
+      <input type="text" id="result" size="10">
+    </form>
+    <script>
+      function myFunction() {
+        var txt = document.getElementById("no").value;
+        document.getElementById("result").value = txt * 22;
+      }
+    </script>
+  </body>
+</html>

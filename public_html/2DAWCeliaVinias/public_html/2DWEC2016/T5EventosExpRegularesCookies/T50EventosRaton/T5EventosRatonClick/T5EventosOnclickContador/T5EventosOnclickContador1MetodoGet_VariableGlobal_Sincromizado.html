@@ -1,0 +1,29 @@
+<!--
+    @Created on : 18-nov-2016, 19:29:26
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      var x = 0;
+      function set_valor() {
+        document.getElementById("valor").innerHTML = ++x;
+        document.getElementById("valor1").value = x;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="valor1" value="" size="4" readonly="readonly"> 
+    <br>
+    <p id="valor"></p>
+    <button id="boton" value="boton" onclick="set_valor()">Boton</button>
+  </body>
+</html>

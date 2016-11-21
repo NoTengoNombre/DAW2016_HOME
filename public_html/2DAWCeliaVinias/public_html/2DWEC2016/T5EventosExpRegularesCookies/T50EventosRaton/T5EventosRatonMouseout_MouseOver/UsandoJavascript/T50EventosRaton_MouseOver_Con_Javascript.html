@@ -1,0 +1,40 @@
+<!--
+    @Created on : 20-nov-2016, 18:23:41
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  <body>
+    <p>This example uses the HTML DOM to assign an "onmouseover" and "onmouseout" event to a h1 element.</p>
+
+    <div style="background-color: #9999ff">
+      <h1 id="demo">Mouse over me</h1>
+    </div>
+
+    <script>
+      document.getElementById("demo").onmouseover = function () {
+        mouseOver();
+      };
+      document.getElementById("demo").onmouseout = function () {
+        mouseOut();
+      };
+
+      function mouseOver() {
+        document.getElementById("demo").style.cssText = "color : #ff0000;";
+      }
+
+      function mouseOut() {
+        document.getElementById("demo").style.cssText = "color: #00ff00";
+      }
+    </script>
+
+  </body>
+</html>

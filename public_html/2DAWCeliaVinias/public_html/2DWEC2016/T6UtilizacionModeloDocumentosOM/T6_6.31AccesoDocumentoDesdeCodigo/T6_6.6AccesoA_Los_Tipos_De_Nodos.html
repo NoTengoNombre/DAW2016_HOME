@@ -1,0 +1,36 @@
+<!--
+    @Created on : 21-nov-2016, 0:17:44
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ACCESO A LOS TIPO DE NODO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+
+      obj_tipo_document = document.nodeType;
+      alert(obj_tipo_document); // 9
+      obj_tipo_elemento = document.documentElement.nodeType;
+      alert(obj_tipo_elemento); // 1
+
+      if (document.nodeType == Node.DOCUMENT_NODE) {
+        alert("Verdadero");
+      }
+
+      if (document.documentElement.nodeType == Node.ELEMENT_NODE) {
+        alert("Verdadero");
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

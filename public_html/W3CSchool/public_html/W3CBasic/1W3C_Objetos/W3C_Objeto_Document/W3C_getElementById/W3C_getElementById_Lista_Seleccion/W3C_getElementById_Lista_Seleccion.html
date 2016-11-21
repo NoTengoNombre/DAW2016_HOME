@@ -1,0 +1,46 @@
+<!--
+    @Created on : 19-nov-2016, 23:52:35
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_text_value_dropdown2
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+    </script>
+  </head>
+  <body>
+
+    <form>
+      Select numbers: <br>
+      <select id="no">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+      </select>
+      <input type="button" onclick="myFunction()" value="-->">
+      <input type="text" id="result" size="10">
+    </form>
+    <script>
+      function myFunction() {
+        var no = document.getElementById("no");
+        var option = no.options[no.selectedIndex].text;
+        var txt = document.getElementById("result").value;
+        txt = txt + option;
+        document.getElementById("result").value = txt;
+      }
+    </script>
+  </body>
+</html>

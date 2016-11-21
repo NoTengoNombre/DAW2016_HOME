@@ -13,12 +13,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="">
     <script>
+      var xx = 0;
+      function set_valor() {
+        document.getElementById("valor").innerHTML = xx++;
+      }
     </script>
   </head>
   <body>
-    <!-- Utiliza el id='input1' para mostrar el valor incrementado  -->
-    <!-- Coge el value='2' para ir incrementando el valor -->
-    <input type="text" id="input1" value="2" readonly="readonly">
-    <input type="button" value="Multiplicar" onclick="document.getElementById('input1').value = document.getElementById('input1').value * 2;">
+    <button id="boton" value="boton" onclick="set_valor()">Boton</button>
+
+    <p id="valor"></p>
+
   </body>
 </html>

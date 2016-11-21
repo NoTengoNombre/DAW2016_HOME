@@ -1,5 +1,5 @@
 <!--
-    @Created on : 18-nov-2016, 19:29:26
+    @Created on : 20-nov-2016, 0:27:28
     @Author     : RVS - N.F.N.D
     @Pag        :
     @version    :
@@ -12,11 +12,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="">
-    <script>
-
-    </script>
   </head>
   <body>
+    <h1>My Web Page</h1>
+    <p id="demo">CLick the button to alert the text of this paragraph</p>
+    <button onclick="myFunction()">Intentar</button>
 
+    <script>
+      function myFunction() {
+        alert(document.getElementById('demo').innerHTML);
+      }
+    </script>
   </body>
+
+
 </html>
+
+
+

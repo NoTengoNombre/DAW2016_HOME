@@ -1,0 +1,27 @@
+<!--
+    @Created on : 18-nov-2016, 19:29:26
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+    </script>
+  </head>
+  <body>
+    <!-- Utiliza el id='input1' para mostrar el valor incrementado  -->
+    <!-- Coge el value='2' para ir incrementando el valor -->
+    <input type="text" id="input1" value="2" readonly="readonly">
+    <br>
+    <input type="button" value="1 vez" onclick="document.getElementById('input1').value = document.getElementById('input1').value * 2;">
+    <!--No permite dejar pulsado el boton de ENTER-->
+    <input type="button" value="2 veces" ondblclick="document.getElementById('input1').value = document.getElementById('input1').value * 2;">
+  </body>
+</html> 

@@ -1,0 +1,53 @@
+<!--
+    @Created on : 20-nov-2016, 19:48:32
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  <body>
+
+    <p>This example uses the HTML DOM to assign an 'onerror' event to an img element</p>
+
+    <img id="myImg" src="mr.gif" alt="">
+
+    <p id="demo"></p>
+    <script>
+      document.getElementById('myImg').onerror = function () {
+        myFunction();
+      };
+
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "The image could not be loaded";
+      }
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

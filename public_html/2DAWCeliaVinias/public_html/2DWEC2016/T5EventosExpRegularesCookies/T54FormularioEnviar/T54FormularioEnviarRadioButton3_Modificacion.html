@@ -13,9 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="">
     <script>
-      function info() {
 // form name : elegir 
 // input type : color
+      function info() {
         var pulsado = document.elegir.color;
         for (var i = 0; i < pulsado.length; i++) {
           var valor = pulsado[i].checked;
@@ -26,17 +26,8 @@
         var cambio = document.getElementById("parrafo");
         cambio.style.color = elegido;
       }
-
-      function enviar(formulario) {
-        if (formulario.alta.checked == true) {
-          document.write("hello");
-        }
-        if (forkmulario.alta.checked == false) {
-          document.write("friend");
-        }
-        form.submit();
-      }
     </script>
+
   </head>
   <body>
     <fieldset>
@@ -67,6 +58,20 @@
         <button type="button" onclick="enviar(this.form)">Enviar</button>
       </form>
     </fieldset>
+
+    <script>
+      function enviar(formulario) {
+        if (formulario.alta.checked === true) {
+          document.getElementById("texto").value = "Aceptado";
+        }
+        form.submit();
+      }
+    </script>
+
+    <div>
+      <br>
+      <input type="text" id="texto" value="">
+    </div>
 
   </body>
 </html>

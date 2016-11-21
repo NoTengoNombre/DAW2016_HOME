@@ -1,0 +1,66 @@
+<!--
+    @Created on : 08-nov-2016, 20:01:39
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      div#capa1{
+        background: #9999ff;
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        margin-top: 50px;
+        padding: 5px ;
+        position: absolute;
+      }
+      div#capa2{
+        background: #9999ff;
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px ;
+        position: absolute;
+      }
+    </style>
+    <script>
+
+      function normalImg(x) {
+        x.style.height = "32px";
+        x.style.width = "32px";
+      }
+
+      function bigImg(x) {
+        x.style.height = "64px";
+        x.style.width = "64px";
+      }
+
+    </script>
+  </head>
+  <body>
+    <div id="capa1">
+      <img id="nuevo" src="../../img/Acierto.jpg" onmouseout="normalImg(this)" onmouseover="bigImg(this)" alt="error" width="30" height="30">
+    </div>
+    <div id="capa2">
+      <img src="../../img/Error.jpg" onmouseout="normalImg(this)" onmouseover="bigImg(this)" alt="error" width="30" height="30">
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+

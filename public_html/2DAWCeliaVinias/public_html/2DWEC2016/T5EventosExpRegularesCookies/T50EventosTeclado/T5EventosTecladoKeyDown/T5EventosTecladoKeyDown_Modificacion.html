@@ -1,0 +1,31 @@
+<!--
+    @Created on : 08-nov-2016, 21:38:14
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <input type='text' id='demo' value='' onkeypress="myFunction()">
+    <br><br>
+    <input type='text' id='aqui' value=''>
+    <script>
+
+      function myFunction() {
+        document.getElementById('demo').style.cssText = "background : #ff9988";
+        var x = document.getElementById('demo').value;
+        document.getElementById('aqui').value = x;
+      }
+
+
+    </script>
+  </body>
+</html>

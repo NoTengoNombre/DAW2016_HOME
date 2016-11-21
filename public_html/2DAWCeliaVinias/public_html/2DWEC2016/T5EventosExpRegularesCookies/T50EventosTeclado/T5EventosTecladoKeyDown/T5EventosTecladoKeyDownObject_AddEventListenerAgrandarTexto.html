@@ -1,0 +1,34 @@
+<!--
+    @Created on : 08-nov-2016, 21:38:14
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <p> This examples uses the addEventListener() method to attach a 'keypress' event to an input element </p>
+
+    <p> Press a key inside the text field to set a red background color</p>
+
+    <input type="text" id="demo">
+
+    <script>
+      document.getElementById('demo').addEventListener("keypress", myFunction);
+
+      function myFunction() {
+        document.getElementById('demo').style.cssText = "background: #ffffaa; font-size: 20px;";
+      }
+
+    </script>
+
+  </body>
+
+</html>

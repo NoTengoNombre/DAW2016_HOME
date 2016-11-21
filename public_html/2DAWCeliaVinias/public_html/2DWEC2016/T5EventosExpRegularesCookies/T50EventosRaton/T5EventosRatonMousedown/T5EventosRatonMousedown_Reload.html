@@ -12,13 +12,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="">
+    <style>
+      div#borde1{
+        background: #ffff99;
+        border: #0000ff;
+      }
+      div#borde2{
+        background: #ff66cc;
+        border: #ff0000;
+      }
+    </style>
     <script>
+
       function mouseDown() {
         document.getElementById("myP").style.color = "#ff0000";
       }
+
       function mouseUp() {
         document.getElementById("myP").style.color = "#00ff00";
+        recarga();
       }
+
       function recarga() {
         location.reload();
       }
@@ -26,9 +40,10 @@
     </script>
   </head>
   <body>
-    <div>
+    <p style="text-align: center">Click the text </p>
+    <div id="borde1">
+      <!--Dentro del parrafo se ejecuta los eventos-->
       <p id='myP' onmousedown='mouseDown()' onmouseup='mouseUp()'>
-        Click the text <br>
         <br>
         PULSA EL BOTON<br>
         The mouseDown() function is triggered <br>
@@ -43,8 +58,7 @@
         to green<br>
       </p>
     </div>
-    <div>
-      <br>
+    <div id="borde2">
       <button onclick="recarga()">Recarga</button>
     </div>
 

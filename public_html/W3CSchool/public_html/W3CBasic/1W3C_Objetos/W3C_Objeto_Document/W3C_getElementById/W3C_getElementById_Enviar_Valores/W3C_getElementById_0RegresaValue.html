@@ -1,0 +1,39 @@
+<!--
+    @Created on : 19-nov-2016, 18:11:01
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      /**
+       * Actua como get - devuelve la cadena dentro del id del parrafo
+       * @returns {undefined}
+       */
+      function getDatosInput() {
+        var x = document.getElementById("TextoDentroDelId").value;
+        x.style.color = "#ff0000";
+        document.getElementById("demo").innerHTML = x + " Nueva Cadena";
+      }
+    </script>
+  </head>
+  <body>
+
+    <input type="text" id="TextoDentroDelId" value="Texto Dentro del Input">
+    <p>Click the button to display the value of the value attribute of the text field</p>
+
+    <button onclick="getDatosInput()">ObtenerDatosDesdeInput</button>
+
+    <p id="demo">Mostrar los datos</p>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!--
+    @Created on : 19-nov-2016, 19:18:05
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_text_defaultvalue3
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      function myFunction() {
+        var x = document.getElementById("MITEXTO");
+        var defaultVal = x.defaultValue;
+        alert("Mi valor es : " + typeof defaultValue);
+        var currentVal = x.value;
+        alert("Mi valor es : " + typeof currentVal);
+
+        if (defaultVal == currentVal) {
+          document.getElementById("DEMO").innerHTML = "Default value and current value is the same : " + x.defaultValue + " and " + x.value
+                  + "<br>Change the value of the field to see the difference!";
+        } else {
+          document.getElementById("DEMO").innerHTML = "The default value was: " + defaultVal + "<br> The new , current value is : " + currentVal;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Change the text of the field , and then click the button below</p>
+    Name :
+    <input type="text" id="MITEXTO" value="Cadena">
+    <p>Note that the default value is not affected when you change the value of the text field</p>
+    <button type="button" onclick="myFunction()">Intenta</button>
+    <p id="DEMO"></p>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+

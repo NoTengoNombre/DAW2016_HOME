@@ -1,0 +1,52 @@
+<!--
+    @Created on : 19-nov-2016, 20:04:37
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.etnassoft.com/2011/08/16/como-obtener-el-tipo-de-datos-preciso-de-una-variable-en-javascript/
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      /**
+       * ({}).toString es una abreviación (un shortcut) de Object.prototype.toString ya que, en todo objeto nuevo, el método toString se refiere a la definción dada por Object.prototype como vimos más arriba.
+       call lo utilizamos aquí para que el método anterior se efectúe sobre el argumento que indiquemos, en este caso, otro objeto.
+       match: utilizamos una expresión regular para extraer el tipo de datos sin la cadena inicial ‘object’ y los corchetes. Empleamos una expresión regular en lugar de un slice u otro método debido al mejor rendimiento que ésta ofrece sobre el resto.
+       toLowerCase: pasamos la [[Class]] a minúsculas para diferenciar el tipo de lo que sería la referencia a la instancia de un objeto y que, por lo general, se escribe en mayúsculas.
+       */
+
+      var toType = function (obj) {
+        return ({}).toString.call(obj).match(/\s([a-z|A-Z]+)/)[1].toLowerCase();
+      };
+
+//      toType({a: 4}); //"object"
+//      toType([1, 2, 3]); //"array"
+//      (function () {
+//        console.log(toType(arguments));
+//      })(); //arguments
+//      toType(new ReferenceError); //"error"
+//      toType(new Date); //"date"
+//      toType(/a-z/); //"regexp"
+//      toType(Math); //"math"
+//      toType(JSON); //"json"
+//      toType(new Number(4)); //"number"
+//      toType(new String("abc")); //"string"
+//      toType(new Boolean(true)); //"boolean"
+
+      var x = toType(1);
+      alert(x);
+      alert({a: 4});
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

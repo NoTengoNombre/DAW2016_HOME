@@ -21,10 +21,16 @@
         border : 10px;
         margin-left: 220px;
       }
+
+      p#pp{
+        background-color: #ff6666;
+        color : black;
+      }
+
     </style>
     <script>
       function myFunction() {
-        document.getElementById("demo").innerHTML = "Hello Friend";
+        document.getElementById("demo").innerHTML = "<h1>Hello Friend</h1>";
       }
 
       function recarga() {
@@ -37,6 +43,6 @@
 
     <p id="demo"></p>
 
-    <p onclick="recarga()">Recarga la pagina</p>
+    <p id="pp" onclick="recarga()">Recarga la pagina</p>
   </body>
 </html>

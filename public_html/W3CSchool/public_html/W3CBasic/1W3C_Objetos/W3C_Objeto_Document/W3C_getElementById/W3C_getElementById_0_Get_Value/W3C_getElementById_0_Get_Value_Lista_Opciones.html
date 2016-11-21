@@ -1,0 +1,51 @@
+<!--
+    @Created on : 19-nov-2016, 19:18:05
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_text_value_dropdown
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function get_Numero() {
+        var myList = document.getElementById("myList");
+        document.getElementById("demo").value = myList.options[myList.selectedIndex].text;
+      }
+
+    </script>
+  </head>
+  <body>
+    <form>
+      Select your option : 
+      <select id="myList" onchange="get_Numero()">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+      <p> La opcion elegida es : 
+        <input type="text" id="demo" size="20">
+      </p>
+    </form>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+

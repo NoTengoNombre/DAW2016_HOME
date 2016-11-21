@@ -1,5 +1,5 @@
 <!--
-    @Created on : 18-nov-2016, 19:29:26
+    @Created on : 20-nov-2016, 0:27:28
     @Author     : RVS - N.F.N.D
     @Pag        :
     @version    :
@@ -13,21 +13,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="">
     <script>
-
-
-      var xx = 0;
-      function set_valor() {
-        document.getElementById("valor").innerHTML = xx++;
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Paragraph change!";
       }
-
-
-
     </script>
   </head>
   <body>
-    <button id="boton" value="boton" onclick="set_valor()">Boton</button>
-
-    <p id="valor"></p>
-
+    <p 
+      style="background: #ffff99" id="demo" onclick="myFunction()">Click me to change my HTML content(innerHTML)
+    </p>
   </body>
 </html>

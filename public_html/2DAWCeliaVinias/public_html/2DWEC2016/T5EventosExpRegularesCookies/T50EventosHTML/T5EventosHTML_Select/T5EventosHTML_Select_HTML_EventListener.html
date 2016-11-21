@@ -1,0 +1,36 @@
+<!--
+    @Created on : 20-nov-2016, 20:24:42
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+
+    <p> 
+      This examples uses the addEventListener() method to attach a 'select' event to an input element
+    </p>
+
+    Select some text : 
+    <input type="text" value="Hello Friend" id="myText">
+
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("myText").addEventListener("select", myFunction);
+
+      function myFunction() {
+        var x = document.getElementById("demo").innerHTML = "You selected some text!";
+        var y = document.getElementById("demo").style.cssText = "background-color : #ffff99";
+      }
+    </script>
+  </body>
+</html>

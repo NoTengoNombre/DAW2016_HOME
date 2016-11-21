@@ -1,0 +1,37 @@
+<!--
+    @Created on : 20-nov-2016, 0:27:28
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <ul id="myList">
+      <li>Coffee</li>
+      <li>Tea</li>
+    </ul>
+    
+    <p>Click the button get the HTML content of the 'ul' element </p>
+
+    <button onclick='myFunction()'>Try it</button>
+    <p id='demo'></p>
+    
+    <script>
+      function myFunction() {
+        var x = document.getElementById('myList').innerHTML;
+        document.getElementById('demo').innerHTML = x;
+      }
+    </script>
+  </body>
+</html>
+
+
+

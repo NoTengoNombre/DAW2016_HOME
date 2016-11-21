@@ -1,0 +1,59 @@
+<!--
+    @Created on : 19-nov-2016, 18:55:09
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_text_value_formval
+    @version    : 
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      function myFunction() {
+        // Coger el elemento de la caja que empiece por @
+        var email = document.getElementById("email").value.indexOf("@");
+        var age = document.getElementById("age").value;
+        var fname = document.getElementById("fname").value;
+        submitOk = "true";
+
+        if (fname.length > 10) {
+          alert("The name may have no more than 10 characters");
+          submitOk = "false";
+        }
+
+        if (isNaN(age) || age < 1 || age > 100) {
+          alert("The age must be a number between 1 and 100");
+          submitOk = "false";
+        }
+
+        if (email == -1) {
+          alert("Not a valid e-mail");
+          submitOk = "false";
+        }
+
+        if (submitOk == "false") {
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+    <form action="" onsubmit="return myFunction()">
+      Name (max 10 characters) : 
+      <input type="text" id="fname" size="20">
+      <br>
+      Age (from 1 to 100) : 
+      <input type="text" id="age" size="20">
+      <br>
+      E-mail :  
+      <input type="text" id="email" size="20">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
