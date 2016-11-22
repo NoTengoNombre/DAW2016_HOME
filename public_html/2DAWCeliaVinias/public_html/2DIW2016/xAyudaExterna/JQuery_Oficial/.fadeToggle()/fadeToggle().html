@@ -1,0 +1,31 @@
+<!--
+    @Created on : 21-nov-2016, 21:21:12
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://api.jquery.com/fadeOut/
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>fadeOut </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      $("#clickme").click(function () {
+        $("#book").fadeOut("slow", function () {
+          // Animation complete.
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <div id="clickme">
+      Click here
+    </div>
+    <img id="book" src="book.gif" alt="" width="100" height="123">
+  </body>
+</html>

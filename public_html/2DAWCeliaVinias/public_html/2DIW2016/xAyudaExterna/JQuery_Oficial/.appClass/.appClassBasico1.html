@@ -1,0 +1,40 @@
+<!--
+    @Created on : 21-nov-2016, 23:07:34
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>addClass demo</title>
+    <link rel="shortcut icon" href="">
+    <style>
+      p {
+        margin: 8px;
+        font-size: 16px;
+      }
+
+      .selected{
+        color : blue;
+      }
+
+      .highlight{
+        background: yellow;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+    <p>Hello</p>
+    <p>and</p>
+    <p>Goodbye</p>
+
+    <script>
+      $("p").last().addClass("selected");
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!--
+    @Created on : 22-nov-2016, 15:17:38
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       : Absolute (absoluto) es el valor más mañoso. 
+                  absolute se comporta como fixed pero es 
+                  relativo a su ancestro posicionado más 
+                  cercano en lugar de ser relativo a la 
+                  ventana del navegador. 
+                  Si un elemento con position: absolute; 
+                  no tiene ancestros posicionados,
+                  usará el elemento body del documento,
+                  y se seguirá moviendo al hacer scroll 
+                  en la página. 
+                  Recuerda, un elemento "posicionado" 
+                  es aquel cuyo valor es cualquiera 
+                  excepto static.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      *{
+        background: #9999ff;
+      }
+      .relative{
+        position: relative;
+        width: 600px;
+        height: 400px;
+        background: wheat;
+        border-width: 1px;
+        border-style: solid;
+      }
+      .absolute{
+        background: #ff66ff;
+        position: absolute;
+        top: 120px;
+        right: 0; 
+        width: 300px;
+        height: 200px;
+        border-width: 1px;
+        border-style: solid;
+      }
+    </style>
+    <script>
+    </script>
+  </head>
+  <body>
+    <div class="relative">
+      Caja Relativa
+    </div>
+    <div class="absolute">
+      Caja Absoluta
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!--
+    @Created on : 21-nov-2016, 18:51:09
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       : Evento onload : definido para el nodo de tipo Element <Body>
+                  Actuar en el arbol DOM , cuando se desencadene un evento
+                  Etiqueta div tiene valor por defecto , cuando pasamos el raton
+                  por encima cambia su valor , cuando el raton no esta por encima
+                  div toma otro valor diferente
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Titulo DOM</title>
+    <style>
+      div{
+        background: #000000;
+        color: #ffffff;
+        width: 100px;
+        height: 50px;
+        margin: 50px 250px;
+      }
+    </style>
+    <script>
+
+      function ratonEncima() {
+        document.getElementsByTagName("div")[0].childNodes[0].nodeValue = "El Raton esta encima";
+      }
+
+      function ratonFuera() {
+        document.getElementsByTagName("div")[0].childNodes[0].nodeValue = "No esta el raton encima";
+      }
+    </script>
+  </head>
+  <body>
+    <div onmouseover ="ratonEncima();" onmouseout="ratonFuera()">
+      Valor por defecto!
+    </div>
+  </body>
+</html>

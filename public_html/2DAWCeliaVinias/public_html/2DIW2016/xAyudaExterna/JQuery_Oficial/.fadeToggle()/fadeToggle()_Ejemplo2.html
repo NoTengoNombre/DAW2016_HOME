@@ -1,0 +1,47 @@
+<!--
+    @Created on : 21-nov-2016, 21:21:12
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://api.jquery.com/fadeout/
+    @version    : fadeout - difuminarse
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>fadeOut demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p{
+        font-size: 150%;
+        cursor: pointer;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+    <p>If you click on this paragraph you will see it just fade away</p>
+    <script>
+      $("p").click(function () {
+        $(this).fadeOut("slow");
+      });
+
+      $("p").click(function () {
+        $(this).fadeIn("slow");
+      });
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

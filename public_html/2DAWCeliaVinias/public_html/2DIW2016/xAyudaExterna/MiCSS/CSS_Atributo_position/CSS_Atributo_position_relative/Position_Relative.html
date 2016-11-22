@@ -1,0 +1,83 @@
+<!--
+    @Created on : 22-nov-2016, 14:38:10
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://es.learnlayout.com/position.html
+    @version    :
+    @TODO       : relativo : Que guarda relación con alguien o con algo
+                           • Permite que un elemento se desplace 
+                            respecto a lo que hubiera 
+                            sido su posición normal; 
+                            el resto de elementos 
+                            continúan en su posición 
+                            ignorando al que se desplaza, 
+                            lo que puede crear superposiciones; 
+                            el espacio libre que deja 
+                            el elemento queda libre).
+                  absoluto : Entero , total , completo
+                             Independiente, ilimitado, que
+                             excluye cualquier relación.
+                            • Permite que un elemento se desplace 
+                             respecto al origen de coordenadas del primer 
+                             elemento contenedor posicionado 
+                             ó respecto a la esquina superior 
+                             izquierda de la ventana de 
+                             visualización; el resto de elementos   
+                             actúan como si el desplazado no existiera,
+                             por lo que su espacio será ocupado 
+                             por otros elementos; puede crear superposiciones)
+                              - La posición absoluta de un elemento 
+                                  que no está dentro de ningún 
+                                  otro se determina respecto a la 
+                                  parte superior izquierda del 
+                                  elemento html. 
+                                  (parte superior izquierda de 
+                                  la ventana donde se visualiza 
+                                  la página web; 
+                                  normalmente coincide 
+                                  con la parte superior 
+                                  izquierda del elemento body).
+                     fixed : • Permite fijar un elemento en una posición 
+                               respecto al origen de coordenadas del primer 
+                               elemento contenedor posicionado ó respecto 
+                               a la esquina superior de la ventana de 
+                               visualización; el elemento se mantendrá 
+                               en la ventana de visualización o viewport,
+                               siempre en una misma posición aunque 
+                               el usuario se desplace por la web haciendo scroll)
+                      inherit :
+                              • Se heredan las características del elemento padre.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      *{
+        background-color:#ff9999; 
+      }
+      .relative1{
+        background-color: #ffff66;
+        position:relative;
+      }
+      .relative2{
+        background-color: #9999ff;
+        position:relative;
+        top: -20px;
+        left: 20px;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="relative1">
+      Caja Relative
+    </div>
+
+    <div class="relative2">
+      Caja Relative
+    </div>
+  </body>
+</html>

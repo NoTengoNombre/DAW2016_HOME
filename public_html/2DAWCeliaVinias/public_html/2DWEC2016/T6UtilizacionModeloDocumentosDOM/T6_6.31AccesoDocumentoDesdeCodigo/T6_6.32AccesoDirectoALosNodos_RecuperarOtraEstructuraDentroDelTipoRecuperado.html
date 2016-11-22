@@ -1,0 +1,62 @@
+<!--
+    @Created on : 20-nov-2016, 23:42:40
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Titulo DOM</title>
+    <script>
+
+
+// Recupera elementos de la pagina HMTL de la etiqueta hayamos pasado por parametro
+      var divs = document.getElementsByTagName("div");
+
+// Funcion devuelve un vector con los nodos de tipo div ; el vector es una lista de nodos (nodeList)
+      var primerDiv = divs[0];
+      var segundDiv = divs[1];
+
+// Recuperar todos los div existentes en la pagina con una estructura repetitiva
+      var divs = document.getElementsByTagName("div");
+      for (var i = 0; i < divs; i++) {
+        var div = divs[i];
+      }
+
+// Recuperar otra estructura dentro de una de un tipo ya recuperado
+// Recuperar todos los enlaces del primer div del nodeList
+
+      var divs = document.getElementsByTagName("div");
+      alert(divs);
+      var primerdiv = div[0];
+      alert(primerdiv);
+      var enlaces = primerdiv.getElementsByTagName("a");
+      alert(enlaces);
+
+// Con el codigo anterior recuperamos todos los enlaces contenidos en el primer div de la pagina
+
+    </script>
+  </head>
+  <body>
+    <div>Parrafo DOM 1
+      <a href="1"></a>
+    </div>
+    <a href="11"></a>
+    <div>Parrafo DOM 2 
+      <a href="2"></a>
+    </div>
+    <a href="22"></a>
+    <div>Parrafo DOM 3 
+      <a href="3"></a>
+    </div>
+    <a href="33"></a>
+    <div>Parrafo DOM 4 
+      <a href="4"></a>
+    </div>
+    <a href="44"></a>
+  </body>
+</html>
+
+

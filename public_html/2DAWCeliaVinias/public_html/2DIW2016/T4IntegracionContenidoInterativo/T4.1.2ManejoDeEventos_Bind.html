@@ -1,0 +1,39 @@
+<!--
+    @Created on : 21-nov-2016, 20:29:20
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+
+      $(document).ready(function () {
+        $("p").bind("click mouseenter mouseleave", function () {
+          if ($(this).css("color") != "rgb(255, 0, 0)")
+            $(this).css("color", "rgb(255, 0, 0)");
+          else
+            $(this).css("color", "rgb(0, 0, 255)");
+        });
+      });
+    </script>
+
+    <style media="screen">
+      body{
+        background: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Hello Friend</p>
+    <p>OTRA COSA</p>
+
+  </body>
+</html>
