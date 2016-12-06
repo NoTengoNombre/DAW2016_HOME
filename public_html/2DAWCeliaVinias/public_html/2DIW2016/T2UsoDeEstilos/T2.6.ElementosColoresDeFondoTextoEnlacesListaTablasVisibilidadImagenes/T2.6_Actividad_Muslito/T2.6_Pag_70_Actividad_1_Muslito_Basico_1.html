@@ -1,0 +1,98 @@
+<!--
+    @Created on : 01-dic-2016, 23:32:59
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" type="text/css" href="micss.css">
+    <style>
+      
+      /*Barra lateral con mas contenido*/
+      div#body{
+        margin: auto;
+        width: 710px;
+      }
+
+      /*Define el identificador 'header' asociado a un elemento <div> 
+      Es la posicion de la cabecera*/
+      div#header{
+        margin: 10px auto 10px auto;
+        width: 710px;
+        border: solid 3px blue;
+        border-radius: 15px;
+      }
+
+      div#sidebar{
+        display: none;
+        border: solid 1px #CFC;
+        padding-left: 15px; /*Modifica el ancho*/
+      }
+
+      /*Define identificador 'footer' asociado al elemento div 
+      En la posicion del pie'*/
+      body.sidebar-main div#footer{
+        margin: 25px auto 25px auto;
+        width: 710px;
+        border: solid 3px green;
+        border-radius: 15px;
+        clear: right; /*Deja sin utilidad la opcion de float: right*/
+      }
+
+      /*Define un identificador 'footer' asociado a un elemento div
+      En la posicion del pie'*/
+      body.main-sidebar div#footer {
+        margin: 15px auto 15px auto;
+        width: 710px;
+        border: solid 3px blue;
+        border-radius: 15px;
+        clear: left; /*Deja sin utilidad la opcion de float : left*/
+      }
+
+      body.main-sidebar div#main , body.sidebar-main div#main{
+        width: 490px;
+        border:solid 4px green;
+      }
+
+      body.main-sidebar div#body , body.sidebar-main div#body{
+        margin: auto;
+        width: 710px;
+        border: solid 4px #FFF;
+      }
+
+      body.main-sidebar div#sidebar , body.sidebar-main div#sidebar{
+        display: block;
+        width:200px;
+        border:solid 1px #CCC;
+      }
+
+      /*Este estilo coloca el sidebar a la derecha y el main a la izquierda*/
+      body.main-sidebar div#main , body.main-sidebar div#sidebar{
+        float: left;
+        border: dotted 1px green;
+      }
+
+      /*Este estilo coloca el sidebar a la izquierda y el main a la derecha*/
+      body.sidebar-main div#main , body.sidebar-main div#sidebar{
+        float: right;
+        border: dotted 1px #ff0000;
+      }
+    </style>
+  </head>
+  <!--<body class="main-sidebar">-->
+  <body class="main-sidebar">
+    <div id="header">Cabecera. Restaurante : el muslito </div>
+    <div id="body">
+      <div id="main">Este Restaurante es una de las referencias gastronomicas de la zona</div>
+      <div id="sidebar">Menu Principal</div>
+    </div>
+    <div id="footer">Pie de Pagina</div>
+  </body>
+</html>

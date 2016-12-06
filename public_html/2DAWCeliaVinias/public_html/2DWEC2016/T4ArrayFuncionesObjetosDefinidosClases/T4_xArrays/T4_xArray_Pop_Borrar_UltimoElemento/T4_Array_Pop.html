@@ -1,0 +1,37 @@
+<!--
+    @Created on : 23-nov-2016, 23:39:04
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://manojsinghnegi.com/blog/2016/11/18/Working-with-arrays-in-javascript-Part-2/
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      /**
+       * 
+       * @param {type} elem
+       * @param {type} index
+       * @returns {undefined}
+       */
+      function borrar_ultimo_elemento(elem, index) {
+        document.write('<br>' + elem + " - " + index + " posicion");
+      }
+      var arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+      arr.forEach(borrar_ultimo_elemento);
+
+      document.write('<hr>');
+
+      arr.pop();
+      arr.forEach(borrar_ultimo_elemento);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

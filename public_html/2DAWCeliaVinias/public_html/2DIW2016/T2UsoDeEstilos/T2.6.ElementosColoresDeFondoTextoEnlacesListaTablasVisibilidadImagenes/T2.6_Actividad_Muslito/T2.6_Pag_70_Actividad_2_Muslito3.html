@@ -1,0 +1,140 @@
+<!--
+    @Created on : 01-dic-2016, 23:32:59
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+
+      div#body{
+        margin: auto;
+        width: 710px;
+        clear: left;
+      }
+
+      div#header{
+        margin: auto;
+        width: 710px;
+        border:solid 3px #815608;
+        border-radius: 15px;
+      }
+
+      div#sidebar{
+        display:none; /*Este div no lo hace visible*/
+        border: solid 1px #CFC;
+        padding-left: 15px;
+      }
+
+      body.sidebar-main div#footer {
+        margin: 25px auto 25px auto;
+        width: 710px;
+        border: solid 3px #815608;
+        border-radius: 15px;
+        clear: right;
+      }
+
+      body.main-sidebar div#footer{
+        margin: 15px auto 15px auto;
+        width: 710px;
+        border: solid 3px #815608;
+        border-radius: 15px;
+        clear: left; 
+      }
+
+      body.main-sidebar div#main , body.siberbar-main div#main{
+        width: 490px;
+        border: solid 4px green;
+      }
+
+      body.main-sidebar div#body, body.sidebar-main div#body{
+        margin: auto;
+        width: 710px;
+        border: solid 4px #FFF;
+      }
+
+      body.main-sidebar div#sidebar, body.sidebar-main div#sidebar{
+        padding-top: 10px;
+        display: block;
+        width: 200px;
+        border: solid 1px #CCC;
+      }
+
+      body.main-sidebar div#main , body.main-sidebar div#sidebar{
+        float : left;
+        border : dotted 1px green;
+      }
+
+      body.sidebar-main div#main , body.sidebar-main div#sidebar {
+        float : right;
+        border: dotted 1px green;
+      }
+
+      div#header div#logo {
+        margin-bottom: inherit;
+        border: dotted 1px green;
+        float: left;
+      }
+
+      div#header div#main-title{
+        width: 600px;
+        margin-bottom: inherit;
+        border: dotted 1px blue;
+        padding-bottom: 10px;
+      }
+
+      /*Define Menu*/
+      a.menus:link{
+        text-decoration : none;
+        color: #000000;
+        background-color: #815608;
+        border: #ffffff 1px solid;
+      }
+
+      a.menus:visited{
+        text-decoration: none;
+        color : #cccccc;
+      }
+
+      a.menus:active{
+        text-decoration:none;
+        color: #003399;
+        background: green;
+        border: #ffffff 1px solid;
+      }
+
+      a.menus.hover{
+        text-decoration:underline;
+        color: #003399;
+        background: red;
+        border: #FFFFFF 1px solid;
+      }
+    </style>
+  </head>
+  <body class="sidebar-main">
+    <div id="header">
+      <div id="logo"><img src="logo.jpg" alt="logo" width="100" height="90"></div>
+      <div id="main-title"><h1>El muslito</h1></div>
+      <p>&nbsp;</p>
+    </div>
+
+    <div id="body">
+      <div id="main"><img src="../../portada.png" alt="mr" width="379" height="352"></div>
+      <div id="sidebar">
+        <div><a href="#" class="menus">Inicio</a></div>
+        <div><a href="#" class="menus">¿Donde Estamos?</a></div>
+        <div><a href="#" class="menus">Nuestra Carta</a></div>
+        <div><a href="#" class="menus">Horarios</a></div>
+      </div>
+    </div>
+
+    <div id="footer">Pie de Pagina</div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!--
+    @Created on : 23-nov-2016, 23:52:12
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      var numbers = [65, 44, 12, 4];
+
+      function multiplyArrayElement(num) {
+        return num * document.getElementById("multiplyWith").value;
+      }
+
+      function getElementos_Array() {
+        document.getElementById("demo").innerHTML = numbers.map(multiplyArrayElement);
+      }
+
+    </script>
+  </head>
+  <body>
+    <p>Click the button to get multiply every element in the array with a specific number.</p>
+    <p>Multiply with : 
+      <input type="number" id="multiplyWith" value="10">
+    </p>
+
+    <button onclick="getElementos_Array()">Try it</button>
+
+    <p>New Array : <span id="demo"></span></p>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+<!--
+    @Created on : 03-dic-2016, 22:59:30
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : https://github.com/iliakan/javascript-tutorial/blob/ru/2-ui/2-events-and-interfaces/4-event-bubbling/capture.view/example.css
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      form {
+        background-color: green;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      div {
+        background-color: blue;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 100px;
+        height: 100px;
+      }
+
+      p {
+        background-color: red;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0;
+      }
+
+      body {
+        line-height: 25px;
+        font-size: 16px;
+      }
+    </style>
+    <script>
+      var elems = document.querySelectorAll('form,div,p');
+
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].addEventListener("click", highlightThis, true);
+      }
+
+      function highlightThis() {
+        this.style.backgroundColor = 'yellow';
+        alert(this.tagName);
+        this.style.backgroundColor = '';
+      }
+    </script>
+  </head>
+  <body>
+    <form>FORM
+      <div>DIV
+        <p>P</p>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!--
+    @Created on : 23-nov-2016, 14:22:11
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://programacion.net/articulo/como_insertar_videos_en_tu_web_que_sean_compatibles_con_todos_los_navegadores_mediante_html5_1667
+https://www.w3.org/wiki/HTML/Elements/video
+    @version    :
+    @TODO       : fallback : recurrir , retroceder
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+    </script>
+  </head>
+  <body>
+    <div>
+      <video controls>
+        <source src="video/f.mp4" type='video/mp4; codecs="avc1, mp4a"'>
+        <source src="video/tvogg.ogv" type='video/ogv; codecs="theora, vorbis"'>
+        <source src="video/f.webm" type='video/webm; codecs="theora,vorbis"'>
+        Tu navegador no soporta vídeos en HTML5. Descarga el video<br>
+        <a href="video.webm">aquí</a>.
+      </video>
+
+      <object width="300" height="374" type="application/x-shockwave-flash" data="fallback.swf">
+        <param name="movie" value="fallback.swf" />
+        <param name="flashvars" value="autostart=true&amp;file=video.flv" />
+      </object>
+    </div>
+
+    <div>
+      <p>Wikipedia HTML 5</p>
+      <video width="300" controls="" src="video/f.mp4">
+        Your users does not support the HTML5 video element
+      </video>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!--
+    @Created on : 02-dic-2016, 1:58:40
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style media="screen"></style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+      body{background-color: #666;
+      }
+    </style>
+    <script>
+      var poner_Rojo = function () {
+        $(this).css("color", "rgb(255,0,0");
+      };
+      var poner_Azul = function () {
+        $(this).css("color", "rgb(0,0,255");
+      };
+      $(document).ready(function () {
+        $("p").toggle(poner_Rojo, poner_Azul);
+      });
+    </script>
+    <style media="screen"></style>
+  </head>
+  <body>
+
+    <h2>This is a heading</h2>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+
+  </body>
+</html>

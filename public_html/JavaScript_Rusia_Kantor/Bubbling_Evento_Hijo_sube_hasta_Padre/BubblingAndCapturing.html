@@ -1,0 +1,39 @@
+<!--
+    @Created on : 03-dic-2016, 16:20:21
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : https://javascript.info/tutorial/bubbling-and-capturing
+    @version    :
+    @TODO       : DOM elements can be nested inside each other. And somehow, the handler of the parent works even if you click on it’s child.
+                  The reason is event bubbling.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bubbling and Caption</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      div{
+        position: absolute;  /*Restringe los espacios dentro del color*/
+        top: 20px;
+        left: 120px;
+        background-color: #2b81af;
+        padding: 20px;
+        margin: 20px;
+      }
+      em{
+        border-width: 1px;
+        border-style: solid;
+        padding: 0.5em;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <div onclick="alert('Div handler worked!')">
+      <em>Click here triggers on nested <code>EM</code>, not on <code>DIV</code></em>
+    </div>
+
+  </body>
+</html>

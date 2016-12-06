@@ -1,0 +1,105 @@
+<!--
+    @Created on : 08-nov-2016, 23:11:08
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.w3schools.com/tags/att_area_shape.asp
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        background-color: #000000;
+        color : #ffffff;
+      }
+      area{
+        color: #ff0000;
+        background-color: transparent;
+        /*        margin: 10px;
+                width: 300px;
+                height: 200px;
+                border: 3px solid #ff0000;
+        */
+      }
+
+      #img1{
+        position: absolute;
+        left: 210px;
+      }
+
+      #img2{
+        position: absolute;
+        left: 310px;
+      }
+
+      #img4{
+        position: static;
+        border-radius: 100px;
+      }
+
+      area#area1{
+        border: 10px solid #ff0000;
+        background-color: #ff9999;
+      }
+
+      area#area4{
+        border: 10px solid #ff0000;
+        background-color: #ff9999;
+      }
+
+      #img5{
+        position: static;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <img src="http://www.desarrolloweb.com/articulos/images/html/coordenadas.gif" alt="Cuadrado"> 
+    <img id="img1" src="http://www.desarrolloweb.com/archivoimg/general/3872.jpg" alt="Circulo"> 
+    <img id="img2" src="http://www.desarrolloweb.com/archivoimg/general/3873.jpg" alt="Poligono"> 
+    <p>
+      <img src="FondoBasico.png" width="70" height="70" usemap="#mapa1" alt="MapaDeImagenes"> 
+      <br>
+      <map name="mapa1">
+        <area shape="rect" coords="10,10,60,60" alt="Cuadrado" href="share/cuadrado.png">
+      </map>
+    </p>
+
+    <p>
+      <img src="FondoBasico.png" width="380" height="72" usemap="#mapa2" alt="MapaDeImagenes"> 
+      <br>
+      <map name="mapa2">
+        <!--x  y  radio-->
+        <area shape="circle" coords="20,20,10" alt="Circulo" href="share/circulo.png">
+      </map>
+    </p>
+
+    <p>
+      <img id="img4" src="FondoBasico.png" width="100" height="100" usemap="#mapa3" alt="MapaDeImagenes"> 
+      <br>
+      <map name="mapa3">
+        <!--x  y  radio-->
+        <br>
+        Boton 
+        <area id="area1" shape="circle" coords="50,50,40" alt="Circulo" href="share/circulo.png">
+      </map>
+    </p>
+    <p>
+
+    <p>
+      <img id="img5" src="FondoBasico.png" usemap="#mapa4" alt="MapaDeImagenes"> 
+      <br>
+      <map name="mapa4">
+        <br>
+        Boton 
+        <area id="area4" shape=poly coords="450,25,435,60,400,75,435,90,450,125,465,90,500,75,465,60" alt="Circulo" href="share/estrella.png">
+      </map>
+    </p>
+  </body>
+</html>

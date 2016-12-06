@@ -1,0 +1,106 @@
+<!--
+    @Created on : 04-dic-2016, 13:57:21
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : https://es.wikipedia.org/wiki/Google_AdSense
+    @version    : 
+    @TODO       : http://www.desarrolloweb.com/articulos/manual-implementar-codigo-adsense.html
+
+En este manual, te daremos instrucciones acerca de cómo ubicar el código de AdSense en los mejores lugares... ¡Empecemos!
+Fruto del acuerdo de colaboración entre DesarrolloWeb.com y Google Adsense, te presentamos un detallado manual en el que podrás aprender a entender el código de Adsense y también a ubicarlo en los mejores lugares de tu sitio web, donde pueda reportarte mayores ingresos.
+Comenzaremos por identificar los distintos elementos que forman parte del código de Adsense. Más tarde, en este mismo artículo, veremos un mapa de calor, donde podremos apreciar cuáles son los lugares que captan más o menos la atención del usuario cuando accede a una página web. A lo largo de todo el texto también presentaremos una serie de consejos para integrar mejor los anuncios, de modo que puedas obtener mejores resultados o solucionar algunos problemas típicos.
+
+Los elementos del código de Google AdSense
+A los efectos de entender cómo maximizar los resultados de AdSense, echémosle un vistazo de cerca al código de Google AdSense.
+Apenas hayamos creado un bloque de anuncios, con en función de las preferencias que estén configuradas, se genera un código de JavaScript para mostrarlo, de esta manera:
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-XXXXXXXXXXXXXXXX";
+/* 336x280, listados en resultados de busqueda */
+google_ad_slot = "XXXXXXXXXX";
+google_ad_width = 336;
+google_ad_height = 280;
+</script>
+<script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+Yendo por partes, esta pieza de código consta de dos instrucciones para el navegador. El primer segmento <script> configura los parámetros para que se muestre el anuncio:
+
+  google_ad_client es el id de editor asignado por Google AdSense.Para AdSense para contenido, éste suele tener un formato de "ca-pub-XXXXXXXXXXXXXXXX"
+          Cada bloque de anuncios tiene un nombre, que se inserta en el código JavaScript como comentario.En nuestro ejemplo, "336x280 listados en resultados de búsqueda" es el nombre del anuncio.Todo el código de JavaScript que se encuentre entre "/*" y "*/" será ignorado por el navegador, el propósito es sólo comentar y clarificar la estructura para quien lo esté leyendo.
+          google_ad_slot es la identificación del bloque de anuncios dentro de Google AdSense.
+          google_ad_width y google_ad_height sirven para configurar el ancho y el alto del anuncio, respectivamente.
+          Una vez asignados estos valores, la segunda parte del código < script > , llama a un archivo externo que se aloja en los servidores de Google, el cual contiene instrucciones más complejas para mostrar el bloque en cuestión.
+          Para los que no conocen cómo funciona este sistema, JavaScript es un lenguaje que se ejecuta del lado del cliente (es decir, lo interpreta el navegador que usa nuestro visitante, al contrario de otros lenguajes como PHP que son ejecutados del lado del servidor).Por lo tanto, el navegador que esté utilizando nuestro visitante y cómo lo tenga configurado (niveles de privacidad, activación de JavaScript, etc.) influirán en cómo se muestren los anuncios.
+
+  Básicamente, la lógica es muy simple: el explorador carga en memoria las variables google_ad_client, google_ad_slot, google_ad_width y google_ad_height.Luego, al llamar al archivo externo show_ads.js, éste lee las variables anteriormente mencionadas y ejecuta el anuncio en cuestión.
+          ¿Dónde ubicar los anuncios?
+          Para aquellos que no estén familiarizados con el código HTML de una página, su "esqueleto" principal es el siguiente (puede variar, pero por lo general, mantiene esta estructura):
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+          <html>
+          <head>
+          <title>Título de la página</title>
+          Otros encabezados..
+          </head>
+          <body>
+          AQUÍ VA EL CONTENIDO!
+          </body>
+          </html>
+          
+          Para colocar los anuncios, nos vamos a concentrar en la sección de "AQUÍ VA EL CONTENIDO", donde tendrás, entre los "tags" o etiquetas de HTML, el contenido de tu página. Es aquí donde vamos a copiar y a pegar el código JavaScript generado por Google AdSense.
+          
+          Es importante determinar dónde se quiere insertar el anuncio. A los efectos de tomar esta determinación, aquí te damos algunas sugerencias:
+          
+          Poner los anuncios en las ubicaciones más visibles de la página (ver "heatmap" o "mapa de calor"
+          Utilizar formatos anchos  cuanto más ancho es el formato, mayor rendimiento tendrá
+          Tener en cuenta que el primer bloque de anuncios es el que más paga. Allí estarán los anuncios cuyos clics serán más caros. Por eso, el orden en el que implementes los anuncios en tu HTML, cuenta.
+          El "mapa de calor" de un sitio web determina las zonas donde el usuario le presta más atención. Es muy útil para definir el diseño de nuestro sitio y ubicar los anuncios en consecuencia.
+  Es muy importante que los bloques de anuncios se muestren sobre la línea de pliegue del sitio, es decir, que los mismos se encuentren visibles sin necesidad de que el usuario tenga que desplazar la barra de scroll para leer el resto de la página.
+          
+          Una vez tomadas las determinaciones de qué anuncios poner, dónde ponerlos y generar el código, al pegarlo en tus páginas tienes dos opciones:
+          
+          Si dispones de un editor WYSIWYG (What you see is what you get, "lo que ves es lo que obtienes"), puedes seleccionar con el cursor la ubicación que quieres que tome el bloque de anuncios. Al utilizar la vista mixta (WYSIWYG y HTML), verás que el cursor se posiciona automáticamente en el HTML donde tienes que pegar el anuncio.
+          Otra alternativa es abrir la página desde un editor de texto plano (ej, el Notepad) y buscar (Ctrl + F) una palabra u oración para ubicarte en el HTML. Una vez localizada la posición deseada, proceder a pegarlo.
+          Alineando el bloque correctamente
+          Dependiendo de nuestro diseño y del contenido de nuestra página, podemos querer que el bloque se vea alineado hacia la derecha, izquierda o centro. Para esto, tendremos que encerrar al código generado con etiquetas <div>, las cuales marcan una división dentro del código HTML. Básicamente se agrega un principio de etiqueta <div> antes del código, con los atributos correspondientes que veremos a continuación, y un </div> al final del código JavaScript. Según cómo quedamos alinearlo, la etiqueta de apertura debe ser la siguiente:
+          Para alinearlo a la izquierda: <div style="text-align: left;">código generado</div>
+          Para alinearlo a la derecha: <div style="text-align: right;">código generado</div>
+          Para alinearlo al centro: <div style="text-align: center;">código generado</div>
+  De esta forma, el bloque de anuncios se centrará como el usuario lo desee. Pero si el espacio designado para este bloque es más ancho, es probable que quede un espacio vacío no deseado. Esto se debe a que la etiqueta <div> en HTML es un elemento de bloque. Los "elementos de bloque" ocupan toda la línea disponible, desde principio a fin. Por lo tanto, una misma línea no podría ser compartida con otro <div>, una imagen o un texto.
+          Para solucionar esto, se puede "flotar" el elemento <div>, agregándole otro parámetro al atributo "style". Por ejemplo, si se tiene un <div> y en la misma línea comienza un texto u otro <div>, se le debe agregar el parámetro float:left; a la propiedad style para que el navegador lo interprete y lo muestre de esta manera.
+          
+          ¿Problemas?
+          Si no puedes ver tu anuncio correctamente, varios factores pueden estar causando el problema. Pero en la mayoría de los casos, éstas con las fuentes de los problemas:
+          Anuncio en el caché del server: si has creado recientemente los anuncios, es natural que demoren de 10 a 15 minutos en mostrarse, ya que el servidor tiene un "caché", es decir, se actualiza cada 15 minutos para optimizar su desempeño. Si es este tu caso, sólo tienes que esperar para que tus anuncios comiencen a ser publicados.
+          Luego de 15 minutos, sigo viendo un espacio en blanco o "anuncios de servicio público": esto se puede dar por tres causas diferentes.
+          robots.txt impidiendo a Google revisar tu sitio web: robots.txt es un archivo de texto que indica a los robots (como el de Google) que visitan tu página para indexarla en su buscardor qué páginas puede visitar y cuales no. Este archivo te permite excluir las páginas que no quieres que un robot visite para indexar en un motor de búsqueda. Pero, al mismo tiempo, si el robot no tiene acceso a esta página, no podrá determinar de qué se trata, qué palabras clave contiene, etc.; por lo tanto se verá imposibilitado para mostrar anuncios. Te sugerimos que revises cuidadosamente las URLs que incluyes en tu archivo robots.txt (si es que lo usas).
+  Contenido negativo: si el contenido de tu sitio habla sobre, por ejemplo una muerte o una trajedia, es poco probable que se muestren anuncios. Esto es para impedir que, por ejemplo, si se habla de un accidente aéreo, aparezcan publicidades sobre vuelos.
+          Problemas técnicos con JavaScript: es muy importante que no alteres el código JavaScript que es generado por nuestra interfaz. Si lo haz editado o sospechas de que el programa que usas para diseñar tu sitio lo pudo haber hecho, ésta puede ser la causa del mal funcionamiento del mismo.
+          Pablo Fähnle 
+          Google AdSense - Equipo de Auyda de editores de Google AdSense.
+          Foro official de Google AdSense: http://www.google.com/support/forum/p/adsense?hl=es 
+          Blog official de Google AdSense: http://adsense-es.blogspot.com/ 
+          Centro de Auyda de Google AdSense: https://www.google.com/adsense/support/
+//-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+      <!-- 
+    google_ad_client = "pub-3033628290023372";
+      /* 300x250, created 5/25/11 */
+      google_ad_slot = "9101521675";
+      google_ad_width = 300;
+      google_ad_height = 250;
+      //-->
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

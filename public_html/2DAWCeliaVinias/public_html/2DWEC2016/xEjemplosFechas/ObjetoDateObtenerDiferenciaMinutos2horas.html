@@ -1,0 +1,52 @@
+<!--
+    @Created on : 03-dic-2016, 10:24:19
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.lawebdelprogramador.com/codigo/JavaScript/3756-Obtener-la-diferencia-en-minutos-de-dos-horas.html
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="">
+  <script>
+// metodo set
+    function calcularMinutos() {
+      var horaInicial = devolverMinutos(document.getElementById("horaInicial").value);
+      var horaFinal = devolverMinutos(document.getElementById("horaFinal").value);
+
+      if (horaInicial < horaFinal) {
+        document.getElementById("resultado").innerHTML = "Hay una diferencia de : " + (horaFinal - horaInicial) + " minutos";
+      } else {
+        document.getElementById("resultado").innerHTML = "La hora inicial tiene que ser inferior a la hora final";
+      }
+    }
+// metodo get
+    function devolverMinutos(horaMinutos) {
+      return (parseInt(horaMinutos.split(":")[0]) * 60) + parseInt(horaMinutos.split(":")[1]);
+    }
+    
+    function coger_de_teclado(){
+    }
+    
+  </script>
+</head>
+<body>
+  <p>Introduce la hora inicial y final en formato hh:mm</p>
+  <form>
+    <input type="text" name="horaInicial" id="horaInicial" value="10:20">
+    <br>
+    <br>
+    <input type="text" name="horaFinal" id="horaFinal" value="18:30">
+    <br>
+    <br>
+    <input type="button" value="Calcular diferencia" onclick="calcularMinutos()">
+    <br>
+  </form> 
+  <p id="resultado">Hora inicial y Final en formato <b>hh:mm</b></p>
+</body>
+
+

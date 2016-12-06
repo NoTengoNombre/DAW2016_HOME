@@ -1,0 +1,73 @@
+<!--
+    @Created on : 03-dic-2016, 16:20:21
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : https://javascript.info/tutorial/bubbling-and-capturing
+    @version    :
+    @TODO       : DOM elements can be nested inside each other. 
+                  And somehow, the handler of the parent works even if you click on it’s child.
+                  The reason is event bubbling.
+- Despues de que un evento disparador sobre un profundo elemento , entonces se dispara sobre el padre en orden de anidanamiento
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      .d1{
+        background-color:green;
+        position:relative;
+        width:150px;
+        height:150px;
+        text-align:center;
+        cursor:pointer;
+      }
+      .d2{
+        background-color:blue;
+        position:absolute;
+        top:25px;
+        left:25px;
+        width:100px;
+        height:100px;
+      }
+      .d3{
+        background-color:red;
+        position:absolute;
+        top:25px;
+        left:25px;
+        width:50px;
+        height:50px;
+        line-height:50px;
+      }
+    </style>
+    <script>
+      function highlight(elem) {
+        elem.style.backgroundColor = 'yellow';
+        alert(elem.className);
+        elem.style.backgroundColor = '';
+
+        var divs = document.getElementsByTagName('div');
+
+        for (var i = 0; i < divs.length; i++) {
+          divs[i].addEventListener("click", highlight, true);
+          divs[i].addEventListener("click", highlight, false);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Después de que un evento se activa<br> 
+      en el elemento más profundo posible,<br> 
+      entonces se activa en los padres<br> 
+      en orden de anidamiento.</h1>
+    <div class="d1" onclick="highlight(this)">1 <!-- the topmost -->
+      <div class="d2" onclick="highlight(this)">2 
+        <div class="d3" onclick="highlight(this)">3</div> <!-- the innermost -->
+      </div>
+    </div>
+
+
+  </body>
+</html>

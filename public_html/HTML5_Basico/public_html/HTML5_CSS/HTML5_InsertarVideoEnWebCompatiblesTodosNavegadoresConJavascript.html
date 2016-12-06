@@ -1,0 +1,232 @@
+<!--
+    @Created on : 23-nov-2016, 14:22:11
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://programacion.net/articulo/como_insertar_videos_en_tu_web_que_sean_compatibles_con_todos_los_navegadores_mediante_html5_1667
+                  https://www.w3.org/wiki/HTML/Elements/video
+                  https://www.html5rocks.com/es/tutorials/video/basics/
+    @version    :
+    @TODO       : fallback : recurrir , retroceder
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 Reproductor video</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      /**
+       * 
+       * @returns {undefined}
+       */
+      function vid_play_pause() {
+        var myVideo = document.getElementById("myVideo");
+        if (myVideo.paused) {
+          myVideo.play();
+        } else {
+          myVideo.pause();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <video id="myVideo">
+      <source src="video/f.mp4" type='video/mp4; codecs="avc1, mp4a"'>
+      <source src="video/f.webm" type='video/webm; codecs="vp8, vorbis"'>
+      <source src='video/tvogg.ogv' type='video/ogv; codecs="theora, vorbis"'>
+      Your users agents does not support the HTML5 Video elements
+    </video>
+    <br>
+    <button type="button" onclick="vid_play_pause()">Play/Pause</button>
+
+  </body>
+</html>
+<!--
+https://www.html5rocks.com/es/tutorials/video/basics/
+Articulo de ayuda y complemento
+Introducción
+
+La etiqueta de vídeo es una de las funciones de HTML5 que suscitan más interés. Esta etiqueta se suele presentar como alternativa a Flash para el contenido multimedia, pero tiene más aplicaciones. Aunque recientemente se ha incorporado al resto de etiquetas HTML omnipresentes, sus posibilidades y su compatibilidad con diferentes navegadores han aumentado a una increíble velocidad. Como se puede ver en este tutorial, la ventaja principal de la etiqueta de vídeo es la posibilidad de integración natural con las demás capas de la pila de desarrollo web, como CSS y JavaScript, así como con las otras etiquetas HTML.
+
+En este tutorial se explican los aspectos básicos de la etiqueta de vídeo y se muestran ejemplos de diferentes integraciones con otras funciones de HTML5, como el elemento <canvas>.
+
+1. El marcado
+
+Las líneas de código que se muestran a continuación deben ser suficientes para que funcione el vídeo HTML en un sitio web.
+
+<video>
+  <source src="movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+  <source src="movie.webm" type='video/webm; codecs="vp8, vorbis"' />
+</video>
+En este fragmento se utiliza la etiqueta <source>, que permite incluir varios formatos como tipos alternativos en caso de que el navegador del usuario no admita alguno de ellos. En la siguiente sección se ofrece más información sobre este tema.
+
+También se puede utilizar un único formato de vídeo que haga que la sintaxis sea muy parecida a la de la etiqueta de imagen. Esta sintaxis será la más utilizada en un futuro próximo cuando todos los navegadores admitan un formato de vídeo común.
+
+<video src="movie.webm"></video>
+Por el momento, nos centraremos en el primer caso, que actualmente es el más común. Lo más importante que debes recordar es que tienes que asegurarte de que tu servidor muestre los archivos de vídeo con el tipo MIME correcto en el encabezado Content-Type. De lo contrario, los vídeos podrían no funcionar correctamente (aunque sí funcionen en una copia local del sitio). En un archivo de configuración "httpd.conf" de Apache, solo habría que añadir estas líneas:
+
+AddType video/ogg .ogv
+AddType video/mp4 .mp4
+AddType video/webm .webm
+Si tu aplicación se muestra a través de Google App Engine, tendrás que añadir un bloque parecido al siguiente en el archivo "app.yaml" (uno por cada formato):
+
+- url: /(.*\.ogv)
+  static_files: videos_folder/\1
+  mime_type: video/ogg
+  upload: videos_folder/(.*\.ogv)
+Para mejorar el rendimiento del cliente, es importante no olvidarse de especificar el atributo type en las etiquetas source cuando se tenga que hacer referencia a varios formatos. De ese modo, el navegador podrá decidir qué formatos puede descargar y reproducir y no descargará los formatos que no pueda reproducir para aumentar el rendimiento del sitio.
+
+2. Formatos de vídeo
+
+El concepto de formato de vídeo se puede entender como un archivo zip que contiene secuencias de vídeo y secuencias de audio. Los tres formatos que se deben tener en cuenta para la Web son WebM, MP4 y OGV:
+
+.mp4 = H.264 + AAC
+.ogg/.ogv = Theora + Vorbis
+.webm = VP8 + Vorbis
+La velocidad de evolución de la etiqueta de vídeo es verdaderamente alentadora. Hace tan solo un año, el único navegador que admitía la etiqueta de vídeo en su versión estable era Safari. Ahora, todos los navegadores actuales admiten vídeo HTML5, incluido IE9, la última versión del navegador Internet Explorer. En cuanto a los códecs, Firefox, Chrome y Opera han acordado admitir WebM como formato de vídeo común a través del proyecto WebM. Internet Explorer también admitirá ese formato si el códec se instala en el ordenador (esperemos que este requisito no sea imprescindible en el futuro).
+
+Nota: en el momento de escribir este artículo, Safari no admite el formato WebM.
+
+A continuación se muestra un ejemplo en el que se observa que el navegador solo puede mostrar uno o dos de los tres formatos mencionados (¡puedes sentirte afortunado si tu navegador admite los tres formatos!):
+
+
+En el momento de escribir este artículo (agosto de 2010), este es el fragmento que ofrece la combinación de formatos más segura para que el vídeo se muestre en todos los navegadores:
+
+<video>
+  <source src="movie.webm" type='video/webm; codecs="vp8, vorbis"' />
+  <source src="movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+  <source src="movie.ogv" type='video/ogg; codecs="theora, vorbis"' />
+  Video tag not supported. Download the video <a href="movie.webm">here</a>.
+<video>
+Nota: debido a un error del iPad, hay que indicar .mp4 como primera opción si se quiere que el vídeo se cargue en ese dispositivo. Hasta que se corrija el error, claro...
+
+Como se ha indicado anteriormente, casi todos los proveedores de navegadores aceptaron admitir un formato de vídeo común. Por tanto, en menos de un año, el código que probablemente se utilizará en toda la Web será el siguiente:
+
+<video>
+  <source src="movie.webm" type='video/webm; codecs="vp8, vorbis"' />
+  <source src="movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+  Video tag not supported. Download the video <a href="movie.webm">here</a>.
+<video>
+Uno de los principales problemas relacionados con el uso del formato .mp4 es que su códec de vídeo (h.264) no es un códec abierto y que las licencias que tendría que pagar una empresa para utilizarlo son bastante complejas. En este capítulo sobre vídeos, se ofrece más información acerca de este formato.
+
+Otro problema que afecta al formato .mp4 es que el atributo type tiene que ser más específico que otros formatos dependiendo del perfil que se utilice para codificar el vídeo. Aunque el más común es "avc1.42E01E, mp4a.40.2", es importante comprobar esta lista de perfiles para asegurarse.
+
+Aunque Microsoft anunció que la versión 9 de su navegador Internet Explorer (IE9) admitiría la etiqueta de vídeo, así como otros elementos HTML5, su tasa de migración de usuarios a versiones más recientes es inferior a la de los demás navegadores principales. Esto nos lleva a la siguiente sección:
+
+3. ¿Qué pasa con las versiones actuales de IE que no admiten la etiqueta de vídeo?
+
+Flash como alternativa
+
+Flash también puede ser una solución alternativa. Según cuál sea el formato del vídeo, es posible que haya que volver a codificarlo con un formato compatible para el reproductor Flash. La buena noticia es que Adobe se ha comprometido a admitir el formato WebM en su reproductor Flash, aunque no se sabe con certeza cuándo se podrá empezar a utilizar. Sin embargo, el mayor inconveniente que tiene esta solución en comparación con la del complemento Chrome Frame es que se obtiene el reproductor Flash como versión degradada de la interfaz de usuario personalizada o de las funciones mejoradas que se hayan utilizado para la etiqueta de vídeo. En el tutorial Guía rápida de implementación de la etiqueta de audio de HTML5, se ofrece información detallada sobre esta técnica.
+
+4. Codificación de los vídeos
+
+Si necesitas codificar tus vídeos en los formatos mencionados en la sección anterior, puedes utilizar el conversor Miro Video Converter para Windows y Mac para conseguir fácilmente el formato que necesites. El programa no permite hacer muchos cambios de configuración, pero ofrece los formatos más comunes de la Web, incluidos los tres formatos utilizados en este tutorial. En realidad, este software es un contenedor de ffmpeg y ffmpeg2theora que se puede utilizar en Windows, Mac y Linux desde la línea de comandos (especificando más parámetros en caso necesario). En divintohtml5.org, se ofrece más información sobre esta herramienta.
+
+5. La parte divertida
+
+Como se indicó en la introducción, la principal ventaja de la pertenencia de la etiqueta de vídeo a la familia HTML5 es la posibilidad de integración con las demás capas de la pila de desarrollo web. En los siguientes ejemplos se ofrece una visión general de lo que se puede hacer con ella.
+
+5.1. Vídeo + otros elementos HTML
+
+Todos los atributos HTML comunes se pueden utilizar ahora en el reproductor de vídeo. Por ejemplo, en el fragmento que aparece a continuación, se utiliza tabindex para poder acceder a los controles del reproductor. Hay algunos atributos nuevos que se pueden utilizar en la etiqueta de vídeo que también son comunes a la etiqueta de audio, como el atributo de reproducción continua (loop) y el de reproducción automática (autoplay). El atributo poster indica qué imagen se mostrará durante la carga inicial del vídeo y al final de su reproducción, mientras que controls se utiliza para indicar que, en lugar de crear controles personalizados, queremos que el navegador muestre los controles automáticamente. También hay un atributo preload, que se puede utilizar para descargar el vídeo en segundo plano en cuanto se carga la página aunque no haya empezado a reproducirse.
+
+<video poster="star.png" autoplay loop controls tabindex="0">
+  <source src="movie.webm" type='video/webm; codecs="vp8, vorbis"' />
+  <source src="movie.ogv" type='video/ogg; codecs="theora, vorbis"' />
+</video>
+El nivel completo de integración de la etiqueta de vídeo como elemento nativo del navegador acaba con algunos problemas que se podían presentar antes con los reproductores externos insertados, como la superposición de iframes y menús desplegables en el reproductor o una apariencia extraña cuando se ajustaba de forma dinámica el tamaño de los otros elementos HTML que rodeaban el vídeo.
+
+Al no tratarse el vídeo como un elemento ajeno insertado, el usuario tiene otras ventajas. Por ejemplo, aunque el foco de atención se encuentre en el reproductor, se pueden realizar perfectamente acciones como desplazarse por la página o pulsar teclas del teclado.
+
+Nota: si intentas crear documentos políglotas para mantener la sintaxis de XHTML en el contexto de HTML5, los atributos de tu código deben estar definidos del siguiente modo:
+
+<video poster="star.png" autoplay="autoplay" loop="loop" controls="controls" tabindex="0">
+  <source src="movie.webm" type='video/webm; codecs="vp8, vorbis"' />
+  <source src="movie.ogv" type='video/ogg; codecs="theora, vorbis"' />
+</video>
+5.2. Vídeo + JavaScript
+
+La etiqueta de vídeo incluye una serie de atributos y de métodos que permiten tener un buen control del vídeo mediante el código JavaScript utilizado. Puedes verlos en tiempo real en este ejemplo.
+
+Al igual que ocurre con los demás elementos HTML, se pueden añadir eventos comunes a la etiqueta de vídeo (por ejemplo, eventos del ratón, eventos de arrastre, enfoque, etc.), pero el elemento de vídeo incluye una serie de nuevos eventos que permiten detectar (y controlar) el momento de reproducción, pausa o finalización del vídeo. Como la carga de un recurso de vídeo puede tener muchas condiciones, hay múltiples eventos que permiten llevar a cabo el debido control del proceso de carga, tanto en la red (loadstart, progress, suspend, abort, error, emptied, stalled) como en el búfer (loadedmetadata, loadeddata, waiting, playing, canplay, canplaythrough).
+
+En su nivel más básico, se puede añadir el evento "canplay" para empezar a hacer cosas con el vídeo.
+
+video.addEventListener('canplay', function(e) {
+  this.volume = 0.4;
+  this.currentTime = 10;
+  this.play();
+}, false);
+Actualmente, hay varios controles de reproductores personalizados disponibles en Internet. En el ejemplo que aparece a continuación, se utilizan algunos elementos para controlar dos vídeos de forma simultánea y se emula el efecto de avance rápido con el atributo playbackRate. Utiliza el control deslizante para cambiar el volumen entre los vídeos.
+
+     
+ 
+5.3. Vídeo + CSS
+
+Como podrás imaginarte, se puede aplicar estilo a la etiqueta de vídeo con propiedades CSS tradicionales (p. ej., bordes, opacidad, etc.), ya que esta etiqueta es uno de los elementos principales del DOM, pero lo mejor es que también se le pueden aplicar las últimas propiedades CSS3, como reflejos, máscaras, gradientes, transformaciones, transiciones y animaciones.
+
+Coloca el cursor sobre el siguiente vídeo para ver cómo funcionan algunas de estas propiedades.
+
+ #video-css.enhanced {
+  border: 1px solid white;
+  -moz-box-shadow: 0px 0px 4px #ffffff; /* FF3.5+ */
+  -webkit-box-shadow: 5px 44px 28px #333; /* Saf3.0+, Chrome */
+  box-shadow: 0px 0px 4px #ffffff; /* Opera 10.5, IE 9.0 */
+
+  -moz-transform: translate(0, 10px);  /* FF3.5+ */
+  -o-transform: translate(0, 10px);  /* Opera 10.5 */
+  -webkit-transform: translate(0, 10px);  /* Saf3.1+, Chrome */
+}
+5.4. Vídeo + canvas
+
+El elemento canvas es otro elemento HTML5 que ofrece muchas posibilidades cuando se utiliza junto con la etiqueta de vídeo.
+
+En el ejemplo que aparece a continuación, se utilizan dos funciones del elemento <canvas> para importar y exportar imágenes. La primera es el método drawImage, que permite importar imágenes de tres fuentes diferentes: un elemento de imagen, otro elemento canvas y un elemento <video>. Esto significa que, cada vez que se ejecute este método, el marco actual del vídeo se importará y se mostrará en el elemento canvas.
+
+La segunda función de la etiqueta <canvas> que se utiliza es el método toDataURL, que permite exportar el contenido del elemento canvas a una imagen. Haz clic en el botón de reproducción del vídeo que aparece a continuación para ver cómo se crea una imagen a partir del vídeo cada 1,5 segundos. En realidad, el elemento canvas utilizado para la importación/exportación está oculto.
+
+
+0:00
+
+
+
+En el código que aparece a continuación, se puede ver que simplemente se ha creado un intervalo que se ejecuta cada 1,5 segundos con el método drawImage que utiliza el elemento de vídeo como fuente.
+
+video_dom.addEventListener('play', function() {
+  video_dom.width = canvas_draw.width = video_dom.offsetWidth;
+  video_dom.height = canvas_draw.height = video_dom.offsetHeight;
+  var ctx_draw = canvas_draw.getContext('2d');
+  draw_interval = setInterval(function() {
+    // import the image from the video
+    ctx_draw.drawImage(video_dom, 0, 0, video_dom.width, video_dom.height);
+    // export the image from the canvas
+    var img = new Image();
+    img.src = canvas_draw.toDataURL('image/png');
+    img.width = 40;
+    frames.appendChild(img);
+  }, 1500)
+}, false);
+En el siguiente ejemplo, daremos un paso más. Si se aumenta la frecuencia con la que se debe importar y mostrar la imagen del vídeo, se puede emular la misma frecuencia de vídeo en el elemento canvas. De esta forma, se pueden hacer todo tipo de transformaciones en el elemento canvas como si se estuvieran realizando en el propio vídeo.
+
+En la parte izquierda, se puede ver la reproducción de vídeo original. En el centro, aparece un elemento canvas que se utiliza para importar las imágenes cada 33 milisegundos. En la parte derecha, aparece otro elemento canvas que "sufrirá" todas las transformaciones al mismo tiempo que importa las imágenes del primer elemento canvas. El único motivo por el que se utilizan dos elementos canvas es porque así se consigue un rendimiento muy superior al que se puede conseguir utilizando un único elemento canvas que importe las imágenes y se transforme al mismo tiempo.
+
+
+Esta misma técnica de importación de imágenes se puede aplicar también a WebGL. Si utilizas WebGL, deberías poder importar los marcos de un vídeo y mostrarlos en un cubo giratorio en 3D, por ejemplo. En el sitio web de MDN, se ofrece más información sobre esta implementación.
+
+5.5. Vídeo + SVG
+
+SVG permite mostrar y manipular gráficos vectoriales mediante programación, pero también incluye más funciones, como los efectos de filtro SVG. Estos filtros permiten elegir un elemento DOM específico y aplicarle algunos efectos especiales como los de mosaicos, difuminado, composición, etc. En el momento de escribir este artículo (agosto de 2010), Firefox 4 e IE9 admiten la integración de SVG, que permite utilizar HTML y CSS en el elemento de vídeo (en este ejemplo, se utilizan JavaScript y el elemento canvas para garantizar también el funcionamiento en navegadores que aún no admitan la integración de SVG):
+
+<svg id='image' version="1.1" xmlns="http://www.w3.org/2000/svg"> 
+  <defs>
+    <filter id="myblur"> 
+      <feGaussianBlur stdDeviation="1" /> 
+    </filter>
+  </defs>
+</svg>
+<style>
+  video { filter:url(#myblur); border: 2px solid red; }
+</style>
+Haz clic en la imagen para cambiar el filtro de difuminado
+-->

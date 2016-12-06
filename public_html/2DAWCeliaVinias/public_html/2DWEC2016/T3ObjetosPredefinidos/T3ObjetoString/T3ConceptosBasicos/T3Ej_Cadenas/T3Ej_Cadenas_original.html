@@ -1,0 +1,29 @@
+<!--
+    @Created on : 05-dic-2016, 2:16:49
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://www.lawebdelprogramador.com/codigo/JavaScript/3762-Cadena-de-texto-aleatorio-onmousemove.html
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <p id="test" style="font:normal 240px/24px sans-serif;text-align:center"></p>
+    <script>
+      document.onmousemove = function init()
+      {
+        var str = '';
+        var ref = 'abcdefghijklmnñopqrstuvwxyz';
+        for (var i = 0; i < 4; i++)
+        {
+          str += ref.charAt(Math.floor(Math.random() * ref.length));
+          document.getElementById('test').innerHTML = str;
+        }
+      };
+    </script>
+  </body>
+</html>

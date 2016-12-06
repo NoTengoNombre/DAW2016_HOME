@@ -1,0 +1,34 @@
+<!--
+    @Created on : 06-dic-2016, 0:16:34
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p {background: crimson;}/*1 punto*/
+      .parrafo{background: pink;}
+      p.parrafo{background: maroon;}
+      #id-parrafo{background: orange;}
+      p#id-parrafo{background: red;}
+      p.parrafo#id-parrafo{background:green;}
+      p {background: red !important;background: crimson;}
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <p>El fondo de este parrafo sera color carmesi</p>
+    <p class="parrafo">El fondo de este parrafo sera color granate</p>
+    <div class="parrafo">Este div tendra el fondo de color rosa</div>
+    <p id="id-parrafo" class="parrafo">El fondo de este parrafo sera de color verde</p>
+    <p id="id-parrafo" style="background: black;">El fondo de este parrafo sera negro porque esta usando un atributo de estilo ( con peso 1000 ) dentro de la etiqueta</p>
+    <p id="id-parrafo">El fondo de este parrafo sera rojo</p>
+  </body>
+</html>

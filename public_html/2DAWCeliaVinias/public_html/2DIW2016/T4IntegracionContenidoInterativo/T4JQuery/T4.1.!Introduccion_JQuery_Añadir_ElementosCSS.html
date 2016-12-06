@@ -1,0 +1,102 @@
+<!--
+    @Created on : 22-nov-2016, 13:43:37
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.anieto2k.com/2008/10/02/crear-un-hover-animado-con-jquery/
+    @version    : 
+    @TODO       : relativo : Que guarda relación con alguien o con algo
+                           • Permite que un elemento se desplace 
+                            respecto a lo que hubiera 
+                            sido su posición normal; 
+                            el resto de elementos 
+                            continúan en su posición 
+                            ignorando al que se desplaza, 
+                            lo que puede crear superposiciones; 
+                            el espacio libre que deja 
+                            el elemento queda libre).
+                  absoluto : Entero , total , completo
+                             Independiente, ilimitado, que
+                             excluye cualquier relación.
+                            • Permite que un elemento se desplace 
+                             respecto al origen de coordenadas del primer 
+                             elemento contenedor posicionado 
+                             ó respecto a la esquina superior 
+                             izquierda de la ventana de 
+                             visualización; el resto de elementos   
+                             actúan como si el desplazado no existiera,
+                             por lo que su espacio será ocupado 
+                             por otros elementos; puede crear superposiciones)
+                              - La posición absoluta de un elemento 
+                                  que no está dentro de ningún 
+                                  otro se determina respecto a la 
+                                  parte superior izquierda del 
+                                  elemento html. 
+                                  (parte superior izquierda de 
+                                  la ventana donde se visualiza 
+                                  la página web; 
+                                  normalmente coincide 
+                                  con la parte superior 
+                                  izquierda del elemento body).
+                     fixed : • Permite fijar un elemento en una posición 
+                               respecto al origen de coordenadas del primer 
+                               elemento contenedor posicionado ó respecto 
+                               a la esquina superior de la ventana de 
+                               visualización; el elemento se mantendrá 
+                               en la ventana de visualización o viewport,
+                               siempre en una misma posición aunque 
+                               el usuario se desplace por la web haciendo scroll)
+                      inherit :
+                              • Se heredan las características del elemento padre.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+      ul.hover_block li{
+        list-style:none;
+        float:left;
+        background: #fff;
+        padding: 10px;
+        width:300px; position: relative;
+        margin-right: 20px; }
+
+      ul.hover_block li a {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        height: 150px;
+        width: 268px;
+        padding: 16px;
+        color: #000;
+        font: 1.6em/1.3 Helvetica, Arial, sans-serif;
+      }
+
+      ul.hover_block li a { text-decoration: none; }
+
+      ul.hover_block li img {
+        position: absolute;
+        top: 0;left: 0;
+        border: 0;
+      }
+    </style>
+    <script>
+      $(function () {
+        $('ul.hover_block li').hover(function () {
+          $(this).find('img').animate({top: '128px'}, {queue: false, duration: 500});
+        }, function () {
+          $(this).find('img').animate({top: '0px'}, {queue: false, duration: 500});
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul class="hover_block">
+      <li><a href=""><img src="mr.gif" alt="alt">Text 1</a></li>
+      <li><a href=""><img src="mr.gif" alt="alt">Text 2</a></li>
+    </ul>
+  </body>
+</html>

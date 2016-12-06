@@ -1,0 +1,56 @@
+<!--
+    @Created on : 08-nov-2016, 23:11:08
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.w3schools.com/tags/att_area_shape.asp
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+
+      img{
+        width: 520px;
+        height: 150px;
+      }
+
+      body{
+        background-color: #000000;
+        color : #ffffff;
+      }
+
+
+      area{
+        color: #ff0000;
+        background-color: transparent;
+        margin: 10px;
+        width: 300px;
+        height: 200px;
+        border: 3px solid #ff0000;
+      }
+
+  
+
+    </style>
+  </head>
+  <body>
+    <span>
+      Please select a shape: x1,y1,x2,y2
+    </span>
+    <p>
+      <img src="FondoBasico.png" usemap="#shapes" alt="img">
+      <map name="shapes">
+        <br>
+        <area shape=rect coords="25,25,125,125" href="share/cuadrado.png" alt="Red box.">Cuadrado
+        <area shape=circle coords="200,75,50" href="share/circulo.png" alt="Green circle.">Circulo
+        <area shape=poly coords="325,25,262,125,388,125" href="share/triangulo.png" alt="Blue triangle.">Triangulo
+        <area shape=poly coords="450,25,435,60,400,75,435,90,450,125,465,90,500,75,465,60" href="share/estrella.png" alt="Yellow star.">Estrella
+      </map>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!--
+    @Created on : 02-dic-2016, 1:58:40
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style media="screen"></style>
+    <style>
+      body{
+        background-color: #cccccc;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var funcionqueManeja = function () {
+          if ($(this).css("color") != "rgb(255,0,0)") {
+            $(this).css("color", "rgb(255,0,0)");
+          } else {
+            $(this).css("color", "rgb(0,0,255)");
+          }
+          $("p").bind("click mouseenter mouseleave", funcionqueManeja());
+          $("#desactivar-evento").bind("click", function () {
+            $("p").unbind("click", funcionqueManeja);
+          });
+        };
+      });
+    </script>
+  </head>
+  <body>
+    <p>Valor</p>
+
+  </body>
+</html>

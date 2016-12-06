@@ -1,0 +1,43 @@
+<!--
+    @Created on : 27-nov-2016, 12:05:17
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://javascript-tutor.net/jSample/kidmath.htmls
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Sum of two numbers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="">
+    <script src="kidmath.js"></script>
+  </head>
+  <body onload="randomFunction()">
+    <h3>Addition of two Numbers</h3>
+    <p>Please calculate the sum of the numbers</p>
+    <form id="MyForm">
+
+      Number 1: <b id="num1"></b><br><br>
+      Number 2: <b id="num2"></b>
+
+      <p id="ans">Calculate the sum of two numbers</p><br>
+      <input type="button" name="Calculate" value="Calculate" onclick="myFunction()"><br><br>
+      <input type="button" name="Next Question"  value="Next" onclick="nextQuestion()">
+
+    </form>
+    <script>
+      function nextQuestion() {
+        location.reload();
+      }
+    </script>
+    <script>
+      function randomFunction() {
+        document.getElementById("num1").innerHTML = parseInt(Math.random() * 100);
+        document.getElementById("num2").innerHTML = parseInt(Math.random() * 100);
+      }
+    </script>
+  </body>
+
+</html>

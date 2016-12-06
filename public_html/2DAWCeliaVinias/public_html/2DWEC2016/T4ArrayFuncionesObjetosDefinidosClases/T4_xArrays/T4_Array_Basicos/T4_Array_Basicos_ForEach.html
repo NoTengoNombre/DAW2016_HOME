@@ -1,0 +1,69 @@
+<!--
+    @Created on : 23-nov-2016, 22:28:45
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://manojsinghnegi.com/blog/2016/11/18/Working-with-arrays-in-javascript-Part-2/
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ARRAYS BASICOS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <p>ForEach</p>
+    <script>
+//    Elementos del array
+      var arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+      /**
+       * Basico 
+       * 
+       * @param {type} elem
+       * @param {type} index
+       * @returns {undefined}
+       */
+      function output(elem, index) {
+        console.log(elem + ' is present at ' + (index + 1) + ' position');
+      }
+
+      /**
+       * Implementado
+       * 
+       * @param {type} elem
+       * @param {type} index
+       * @returns {undefined}
+       */
+      function output1(elem, index) {
+        console.log(elem + ' is present at ' + (index + 1) + ' position');
+        document.write("<br>" + elem);
+      }
+
+      /**
+       * Implementado : probar con calculos
+       * 
+       * @param {type} elem
+       * @param {type} index
+       * @returns {undefined}
+       */
+      function output2(elem, index) {
+        console.log(elem + ' is present at ' + (index + 1) + ' position');
+        var valor = elem * 2;
+        document.write("<br>" + valor);
+      }
+
+// Recorrer los elementos del arrays
+      document.write('<hr>');
+      arr.forEach(output);
+// Recorrer los elementos del arrays
+      arr.forEach(output1);
+      document.write('<hr>');
+      arr.forEach(output2);
+
+
+
+    </script>
+  </body>
+</html>

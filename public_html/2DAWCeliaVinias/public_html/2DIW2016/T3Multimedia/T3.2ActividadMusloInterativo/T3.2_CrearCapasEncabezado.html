@@ -1,0 +1,196 @@
+<!--
+    @Created on : 08-nov-2016, 23:11:08
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      /*cuerpo*/
+      div#body{
+        margin: auto;
+        width: 710px;  /*ancho del estilo*/
+        clear: left;
+      }
+
+      /*cabecera*/
+      div#header{
+        margin: auto;
+        width: 710px;
+        border: solid 3px #815608;
+        border-radius: 15px; /*redondea el radio*/
+      }
+
+      div#sidebar{
+        display: none; /*este  div no lo hace visible*/
+        border: solid 1px #CFC;
+        padding-left: 15px; /*Se modifica el ancho*/
+      }
+      body.sidebar-main 
+      div#footer{ 
+        /*Define identificador 'footer' asociado elemento <div> */
+        margin: 25px auto 25px auto;
+        width: 710px;
+        border: solid 3px #815608;
+        border-radius: 15px; /*borde redondeado de radio 15px*/
+        clear: right; /*Ya que el 'div' encima es tipo float:right 
+        es necesario decirle ahora que coloque este div cuando no hay 
+        ningun div que este flotando a la derecha*/
+      }
+
+      /*Define un identificador 'footer'
+      asociado a un elemento <div>.
+      Es la posicion del pie de pagina'*/
+      body.main-sidebar div#footer{
+        margin:15px auto 15px auto;
+        width: 710px;
+        border:solid 3px #815608;
+        border-radius: 15px; /*borde redondeado de radio 15px*/
+        clear: left; /*Ya que el div encima es tipo float:left es necesario decirle ahora que coloque este 'div' cuando no hay ningun div que este flotando a la izquierda '*/
+      }
+
+      body.main-sidebar div#main ,
+      body.sidebar-main div#main{
+        width: 490px;
+        border: solid 4px green;
+      }
+
+      body.main-sidebar div#body, 
+      body.sidebar-main div#body{
+        margin: auto auto auto auto;
+        width: 710px;
+        border: solid 4px #FFF;
+      }
+
+      body.main-sidebar div#sidebar , 
+      body.sidebar-main div#sidebar{
+        padding-top:10px;
+        display: block;
+        width:200px;
+        border:solid 1px #CCC;
+      } 
+      /*Main-sidebar - Este estilo coloca el sidebar a la derecha y el main a la izquierda*/
+      body.main-sidebar div#main, 
+      body.main-sidebar div#sidebar{
+        float: left;
+        border : dotted 1px green;
+      }
+
+      body.sidebar-main div#main,
+      body.sidebar-main 
+      div#sidebar{
+        float : right;
+        border : dotted 1px green;
+      }
+
+      div#header 
+      div#logo{
+        margin-bottom: inherit;
+        border:dotted 1px green;
+        /*Hago las cajas flotantes 
+        las siguientes cajas que esten en la misma posicion
+        tambien seran flotantes a la izquierda
+        No hace falta ponerle a 
+        div#header 
+        div#main-title
+        tambien esta propiedad*/
+        float:left;
+      }
+
+      /*Es el titulo del encabezado
+      Al ser el logo flotante este tambiene
+      lo sera*/
+      div#header 
+      div#main-title{
+        width: 600px;
+        margin-bottom: inherit;
+        border: dotted 1px blue;
+        padding-bottom: 10px;
+      }
+
+      /*Se define el reproductor a la derecha*/
+      .reproductor{
+        margin-left:500px;
+        margin-bottom:inherit;
+        clear: left;
+        position:relative;
+      }
+
+      /*Define los enlaces de menu*/
+      /*link no visitado*/
+      a.menus:link{ 
+        text-decoration: none;
+        color: #000000;
+        background-color: #815608;
+        border: #FFFFFF 1px solid;
+      }
+
+      /*link visitado*/
+      a.menus:visited{
+        text-decoration:none;
+        color:#cccccc;
+      }
+
+      a.menus:active{
+        text-decoration:none;
+        color: #003399;
+        background: green;
+        border: #FFFFFF 1px solid;
+      }
+
+      a.menus:hover{
+        text-decoration:underline;
+        color:#003399;
+        background: #ff0000;
+        border: #ffffff 1px solid;
+      }
+    </style>
+    <script>
+
+    </script>
+  </head>
+  <body class="sidebar-main">
+    <div id="header">
+      <div id="logo">
+        <img src="http://4.bp.blogspot.com/-uzFeiF2XiuA/VgAzS8Dtr9I/AAAAAAAAAA0/_7WG8jXfa24/s1600/2000px-Yin_yang.svg.png" alt="video" width="100" height="100">
+      </div>
+
+      <div id="main-title">
+        <h1>&nbsp;&nbsp; El Club </h1>
+      </div>
+
+      <div class="reproductor">
+        <audio id="player">
+          <source src="http://www.noiseaddicts.com/free-samples-mp3/?id=4045" type="audio/mp3" />
+          <source src="http://www.noiseaddicts.com/free-samples-mp3/?id=4238" type="audio/mp3" />
+        </audio>
+        <img src="https://image.freepik.com/free-icon/play-button_318-42541.jpg" width="30" alt="play" onclick="document.getElementById('player').play()">
+        <img src="https://image.freepik.com/free-icon/pause-button-outline_318-40569.jpg" width="30" alt="pause" onclick="document.getElementById('player').pause()">
+        <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/96806-200.png"  width="30" alt="volumen+" onclick="document.getElementById('player').volumen += 0.1">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Volume_down_font_awesome.svg/512px-Volume_down_font_awesome.svg.png" alt="volumen-" width="30" onclick="document.getElementById('player').volumen -= 0.1">
+      </div>
+      <p>&nbsp;</p>
+    </div>
+
+    <div id="body">
+      <div id="main">
+        <img src="http://www.decalsmania.com/FitxersWeb/104800/RADIOACTIVE_2_FOTOLLISTAT_portada.png" alt="" width="300">
+        <div id="sidebar">
+          <div><a href="#" class="menus">Inicio</a></div>
+          <div><a href="#" class="menus">¿ Donde estamos ? </a></div>
+          <div><a href="#" class="menus">Nuestra Presentacion</a></div>
+          <div><a href="#" class="menus">Horarios</a></div>
+        </div>
+      </div>
+
+      <div id="footer">Pie de pagina</div>
+    </div>
+  </body>
+</html>

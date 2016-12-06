@@ -1,0 +1,76 @@
+<!--
+    @Created on : 04-dic-2016, 13:14:25
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://javascript-tutor.net/Javascript_Samples/clock/clock.html
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<HTML>
+  <HEAD>
+    <TITLE>JavaScript Digital Clock</TITLE>
+    <SCRIPT LANGUAGE="JavaScript">
+      var Temp;
+      setClock();
+
+      function setClock() {
+        var OpenImg = '<IMG SRC="' + pathOnly(location.href) + 'dg';
+        var CloseImg = '.gif" HEIGHT=21 WIDTH=16>';
+        Temp = "";
+        now = new Date();
+        var CurHour = now.getHours();
+        var CurMinute = now.getMinutes();
+        now = null;
+        if (CurHour >= 12) {
+          CurHour = CurHour - 12;
+          Ampm = "pm";
+        } else
+          Ampm = "am";
+        if (CurHour == 0) {
+          CurHour = "12";
+        }
+        if (CurMinute < 10) {
+          CurMinute = "0" + CurMinute;
+        } else {
+          CurMinute = "" + CurMinute;
+        }
+
+        CurHour = "" + CurHour;
+        for (Count = 0; Count < CurHour.length; Count++) {
+          Temp += OpenImg + CurHour.substring(Count, Count + 1) + CloseImg;
+        }
+        Temp += OpenImg + "c" + '.gif" HEIGHT=21 WIDTH=9>';
+        for (Count = 0; Count < CurMinute.length; Count++) {
+          Temp += OpenImg + CurMinute.substring(Count, Count + 1) + CloseImg;
+        }
+        Temp += OpenImg + Ampm + CloseImg;
+      }
+
+      /**
+       * Slash - corte , Barra Oblicua
+       * 
+       * @param {type} InString
+       * @returns {OutString}
+       */
+      function pathOnly(InString) {
+        LastSlash = InString.lastIndexOf('/', InString.length - 1);
+        OutString = InString.substring(0, LastSlash + 1);
+        return (OutString);
+      }
+    </SCRIPT>
+    <!--Actualizar cada 60'-->
+    <meta http-equiv="refresh" content="60">
+
+  <BODY>
+    <H1 ALIGN=CENTER>The JavaScript Clock</H1>
+    <b>Your current time is: 
+      <SCRIPT>document.write(Temp);</SCRIPT>
+      <img src="http://javascript-tutor.net/Javascript_Samples/clock/dg1.gif" height="21" width="16">
+      <img src="http://javascript-tutor.net/Javascript_Samples/clock/dg2.gif" height="21" width="16">
+    </b>
+    <HR>
+    <P>This is an example of displaying a digital clock using only JavaScript.</P>
+    <br>
+    &nbsp;
+  </BODY>
+</HTML>

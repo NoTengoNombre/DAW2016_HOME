@@ -1,0 +1,70 @@
+<!--
+    @Created on : 04-dic-2016, 0:50:34
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      div.a {
+        position: relative;
+        background-color: green;
+        left: 25px;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        cursor: pointer;
+      }
+      div.b {
+        position: absolute;
+        background-color: blue;
+        top: 25px;
+        left: 25px;
+        width: 100px;
+        height: 100px;
+      }
+      div.c {
+        position: absolute;
+        background-color: red;
+        top: 25px;
+        left: 25px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0;
+      }
+      body {
+        line-height: 25px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">1
+      <div class="b">2
+        <div class="c">3
+        </div>
+      </div>
+    </div>
+    <script>
+      var elems = document.querySelectorAll('div');
+      
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].addEventListener("click", highlightThis, true);
+      }
+
+      function highlightThis() {
+        this.style.backgroundColor = 'yellow';
+        alert(this.tagName + ' - ' + i);
+        this.style.backgroundColor = '';
+      }
+    </script>
+  </body>
+</html>

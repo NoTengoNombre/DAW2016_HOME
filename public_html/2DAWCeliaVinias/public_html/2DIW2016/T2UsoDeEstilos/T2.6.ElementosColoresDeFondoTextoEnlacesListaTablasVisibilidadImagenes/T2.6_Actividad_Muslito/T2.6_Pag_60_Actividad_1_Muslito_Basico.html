@@ -1,0 +1,66 @@
+<!--
+    @Created on : 01-dic-2016, 23:32:59
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" type="text/css" href="micss.css">
+    <style>
+
+      div#body {
+        margin: auto;
+        width: 710px;
+      }
+
+      div#header{
+        margin: 10px auto 10px auto;
+        width: 710px;
+        border: dotted 1px #ccc;
+      }
+
+      div#sidebar{
+        display: none;
+        border: solid 1px #CCC;
+      }
+
+      /*agrupamiento*/
+      body.main-sidebar div#main , body.sidebar-main div#main{
+        width: 490px;
+      }
+
+      /*main-sidebar estilo */      
+      body.main-sidebar div#sidebar , body.sidebar-main, div#sidebar{
+        display: block;
+        width: 200px;
+        border : solid 1px #CCC;
+      }
+
+      body.main-sidebar div#main, body.main-sidebar div#sidebar{
+        float: left;
+        border : solid 1px #CCC;
+      }
+
+      body.sidebar-main div#main , body.sidebar-main div#sidebar{
+        float: right;
+        border: solid 1px #CCC;
+      }
+
+    </style>
+  </head>
+  <body class="main-sidebar">
+  <!--<body class="sidebar-main">-->
+    <div id="header">Cabecera. Restaurante : El muslito</div>
+    <div id="body">
+      <div id="main">Este restaurante es una de las referencias gastronomicas del esta zona</div>
+      <div id="sidebar">Menu principal</div>
+    </div>
+  </body>
+</html>

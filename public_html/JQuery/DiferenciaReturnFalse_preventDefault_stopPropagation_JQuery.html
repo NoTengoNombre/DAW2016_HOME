@@ -1,0 +1,131 @@
+<!--
+    @Created on : 04-dic-2016, 1:10:55
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://qbit.com.mx/blog/2013/01/07/la-diferencia-entre-return-false-preventdefault-y-stoppropagation-en-jquery/
+    @version    :
+    @TODO       :  jQuery sobre elementos en el DOM y menos como detienen su ejecución.
+                   e.PreventDefault() se utiliza para detener una acción por omisión, 
+                   utilizada comunmente sobre etiquetas (a) o botones input:submit    
+                   e.stopPropagation() en cambio detiene la propagación de un evento, 
+                   con el objetivo de q no se realice otra ejecución u otro listener lo escuche a través del DOM.
+                   esto se conoce como bubbling : 
+                   https://github.com/iliakan/javascript-tutorial/tree/ru/2-ui/2-events-and-interfaces/4-event-bubbling
+                   y es algo que quizás no hayan notado antes.. 
+                   pero al dar click a un elemento, 
+                   ese evento de click lo pueden escuchar los padres de ese elemento..
+                   
+
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      .articulo{
+        width: 300px;
+        background-color: #66ff66;
+      }
+
+      .contenido{
+        width: 200px;
+        background-color: #ff6633;
+      }
+
+      h2{
+        width: 100px;
+        background-color: violet;
+      }
+
+      a{
+        width: 50px;
+        background-color: #ff99ff;
+      }
+
+    </style>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+    <!--<script src="jquery-3.1.1.min.js"></script>-->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <script>
+//      FORMA ERRONEA : No puede salir con return false
+//      $("div.articulo a").click(function () {
+//        $.get($(this).attr('href'), function (data) {
+//          $(this).next().html(data);
+//        });
+//        return false;
+//      });
+//      FORMA e.preventdefault - Solo cancela el enlace "este metodo se utiliza al inicio"
+//      $("div.post h2 a").click(function (e) {
+//        e.preventDefault();
+//        $.get($(this).attr('href'), function (data) {
+//          $(this).next().html(data);
+//        });
+//      });
+//      FORMA stopPropagation no cancela el enlace 
+//            pero detiene la propagacion del evento
+//            No sirve de mucho si estamos en una etiqueta 'a'
+//            o etiquetas de ejecucion
+
+      $("div.post h2 a").click(function (e) {
+        $.get($(this).attr('href'), function (data) {
+          ($(this).next().html(data));
+        });
+        e.stopPropagation();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="articulo">
+      <a href="#">Titulo</a>
+      <div class="contenido">
+        Este código cambiará por algo que se pide vía ajax
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+Y explicándolo en el mismo orden que como escribí los ejemplos..
+– Utilizando return false no alcanzaría a agregar el estilo al div.articulo, porque recuerden que utilizar esta forma agrupa 3 métodos (prevent, default y return)…
+– Con preventDefault lo hará (detendrá el enlace y agregará la clase de estilos “activo” al div.articulo).
+– Y con stopPropagation, quizás haga la petición para cargar el contenido, pero al finalizar cambiará de página.
+
+Lo que ocurre con preventDefault es que al no detener la propagación del evento click, como antes lo había mencionado ese evento lo puede escuchar el padre que para este caso el padre de la etiqueta (a) es (div.articulo).. Ese es el motivo de que aparte de entrar al click de la etiqueta (a), tambien entre al click de la etiqueta (div.articulo) y se agregue una clase de estilos.
+
+Conclusión
+Creo que ha quedado bastante claro como detener un evento de forma correcta.. no olviden que al final de lo que trata esto es de mejorar nuestras prácticas de programación, escribiendo código legible y lo más flexible posible
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

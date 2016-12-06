@@ -1,0 +1,38 @@
+<!--
+    @Created on : 06-nov-2016, 12:03:47
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <h1> Relative Sizes</h1>
+    <script>
+      function recorrer(element, index) {
+        document.write('<br>' + element + " -  " + index);
+      }
+
+      var array = new Array();
+      document.write('<hr> Todos los elementos : ');
+      array = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+      array.forEach(recorrer);
+
+      document.write('<hr> Primer elemento eliminado : ');
+      array.shift();
+
+      array.forEach(recorrer);
+
+
+
+    </script>
+  </body>
+</html>
