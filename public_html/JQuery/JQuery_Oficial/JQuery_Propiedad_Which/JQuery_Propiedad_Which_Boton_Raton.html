@@ -1,0 +1,45 @@
+<!--
+    @Created on : 07-dic-2016, 10:27:52
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : https://api.jquery.com/event.which/
+    @version    :
+    @TODO       : Event.which -> especifica que tecla / boton se ha pulsado
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Event.which demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        border: 1px solid #55ffff;
+        background-color: #000000;
+        color: #ccc;
+      }
+      input{
+        border: 5px solid #00ff00;
+        width: 300px;
+        height: 50px;
+      }
+      div{
+        border: 3px dotted #ff00ff;
+        width: 300px;
+        height: 30px;
+      }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+    <div>Captura Raton : Pulsa dentro del input</div>
+    <input id="whichkey" value="click here">
+    <div id="log">Elemento Capturado</div>
+    <script>
+      $("#whichkey").on("mousedown", function (event) {
+        $("#log").html(event.type + ": " + event.which);
+      });
+    </script>
+  </body>
+</html>

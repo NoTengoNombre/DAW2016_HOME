@@ -1,0 +1,48 @@
+<!--
+    @Created on : 06-dic-2016, 19:28:10
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://techslides.com/sample-webm-ogg-and-mp4-video-files-for-html5
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        background-color: #000000; 
+      }
+
+      p{
+        text-align: center;
+        background-color: #ffffff; 
+        width: 400px;
+      }
+
+      video{
+        background-color: #ff0000; 
+      }
+
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <p>Look at my video:</p>
+    <video controls="" width="360" height="240"> 
+      <!--<source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm>--> 
+      <!--<source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg>--> 
+      <!--<source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>-->
+      <!--<source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>-->
+      <object type="application/x-shockwave-flash" data="player_flv_maxi.swf" height="240" width="360">
+        <param name="movie" value="player_flv_maxi.swf">
+        <param name="FlashVars" value="flv=videos/fflv.flv">
+        <embed type="application/x-shockwave-flash" width="360" height="240" src="player_flv_maxi.swf" flashvars="flv=videos/fflv.flv">
+      </object>
+    </video>
+  </body>
+
+</html>

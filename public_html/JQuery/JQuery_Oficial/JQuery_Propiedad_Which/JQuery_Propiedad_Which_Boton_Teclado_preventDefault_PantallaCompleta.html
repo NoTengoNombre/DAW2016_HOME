@@ -1,0 +1,48 @@
+<!--
+    @Created on : 07-dic-2016, 10:27:52
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : https://api.jquery.com/event.which/
+    @version    :
+    @TODO       : Event.which -> especifica que tecla / boton se ha pulsado
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Event.which demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        background-color: #ccc;
+      }
+      div{ 
+        position: fixed;
+        background-color: #ffffff;
+        color: #FF0011;
+      }
+      span{
+        position: static;
+        width: 300px;
+        height: 300px;
+      }
+      input{
+        position: static;
+        border: 1px solid #ff0000;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body id="whichkey">
+    <span>Captura de Teclado: </span>
+    <!--<input id="whichkey" value="">-->
+    <br>
+    <script>
+      $("#whichkey").on("keydown", function (event) {
+        $("#log").html(event.type + " : " + event.which + " ASCII");
+        $("#log").html(event.preventDefault());
+      });
+    </script>
+    <div id="log"></div>
+  </body>
+</html>

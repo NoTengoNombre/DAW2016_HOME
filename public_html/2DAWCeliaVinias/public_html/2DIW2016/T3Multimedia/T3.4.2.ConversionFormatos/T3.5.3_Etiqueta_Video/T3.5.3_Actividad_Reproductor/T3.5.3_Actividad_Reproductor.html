@@ -1,0 +1,42 @@
+<!--
+    @Created on : 06-dic-2016, 23:10:06
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      div.reproductor-video{
+        margin: 0 auto 0 auto;
+        width: 390px;
+      }
+
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <div id="main">
+      <div class="reproductor-video">
+        <video controls="" width="360" height="240">
+          <source src="../fflv.flv" type="video/flv">
+          <source src="../fflv.ogv" type="video/ogv">
+          <source src="../f.webm" type="video/webm">
+          <object type="application/x-shockwave-flash" data="player_flv_maxi.swf" height="240" width="360">
+            <param name="movie" value="player_flv_maxi.swf">
+            <param name="FlashVars" value="flv=videos/fflv.flv">
+            <embed type="application/x-shockwave-flash" width="360" height="240" src="player_flv_maxi.swf" flashvars="flv=videos/fflv.flv">
+          </object>
+        </video>
+        <iframe src="../fflv.flv" width="360" height="240" frameborder="0" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </body>
+</html>

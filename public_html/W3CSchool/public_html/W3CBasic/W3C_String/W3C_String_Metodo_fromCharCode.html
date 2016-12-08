@@ -1,0 +1,64 @@
+<!--
+    @Created on : 19-nov-2016, 12:13:39
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        background-color: #000000;
+        color: #ffffff;
+      }
+
+      p#demo{
+        position: fixed;
+        background-color: #000ccc;
+        color: #ffffff;
+      }
+
+      p#demo1{
+        position: fixed;
+        top: 50px;
+        background-color: #f00;
+        color: #ffffff;
+      }
+
+
+    </style>
+    <script>
+      /**
+       * Va dividiendo dependiendo del caracter pasado por split
+       * 
+       * @returns {undefined}
+       */
+      function  myFunction() {
+        var str = "How are you doing today ? - Coge los espacios en blanco";
+        var res = str.split(" ");
+//        Salida del elemento 'demo'
+        document.getElementById("demo").innerHTML = res;
+      }
+
+      function get_cadenaCaracteres() {
+        var cadena = String.fromCharCode(112, 97, 98, 108, 111);
+//        var cadena = String.fromCharCode("H","E","L","L","O"); // No funciona con caracteres ""
+//        var cadena = String.fromCharCode('a', 'b', 'c'); // No funciona con caracteres ''
+//        var cadena1 = String.toUpperCase(cadena); // No funciona
+        document.getElementById('demo').innerHTML = cadena;
+        document.getElementById('demo1').innerHTML = cadena;
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="get_cadenaCaracteres()">Boton</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+  </body>
+</html>

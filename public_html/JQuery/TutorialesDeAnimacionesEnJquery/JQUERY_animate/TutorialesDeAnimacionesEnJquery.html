@@ -1,0 +1,88 @@
+<!--
+    @Created on : 07-dic-2016, 1:47:26
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      *{
+        margin:0;
+        padding:0;
+      }
+      body {
+        text-align: center;
+        background: #A4CAEF;
+        text-align: center;
+        padding: 20px;
+      }
+      /*Container for the image frame aka the top image*/
+      .frame{
+        position: absolute;
+        z-index: 2;
+      }
+      /*The container the character goes in for easy placement*/
+      #dude{
+        height: 575px;
+        width: 300px;
+        margin: 0px auto;
+      }
+      /*Adds padding around image to make border. Needed only for pngs.*/
+      img.loadpic{
+        margin: 10px;
+      }
+      /*Prevents spillover from middle layer moving up*/
+      #dudecontainer{
+        position: relative;
+        overflow: hidden;
+        height: 575px;
+        width: 300px;
+        background: #FFF;
+      }
+      /*The middle layer container, hiding base image initially*/
+      #dudeoverlay{
+        position: absolute;
+        z-index: 1;
+      }
+      /*White div in #dudeoverlay that fill space the edge image doesn't*/
+      #dudeblock{
+        height: 625px;
+        width: 300px;
+        background: #FFF;
+      }
+      /*Image that adds effect the fill, in this case slanted*/
+      #dudeedge{
+        height: 90px;
+        width: 300px;
+        background: url('slash.png');
+      }
+    </style>
+    <script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+    <script>
+      $(document.ready(function () {
+        $("#dudeoverlay").stop().animate({top: '-665px'}, {queue: false, duration: 3500});
+      }),
+    </script>
+  </head>
+  <body>
+    <div id="dude">
+      <div id="dudecontainer">
+        <div class="frame">
+          <img src="https://s-media-cache-ak0.pinimg.com/originals/85/b4/72/85b472fdf2545aa24f7d2e8c2040c890.jpg" width="100" alt="img1">
+        </div>
+        <div id="dudeoverlay">
+          <div id="dudeblock"></div>
+          <div id="dudeedge"></div>
+        </div>
+        <img src="https://www.colourbox.com/preview/4191172-candle-on-a-black-background.jpg" width="100" alt="img1">
+      </div>
+    </div>
+  </body>
+</html>

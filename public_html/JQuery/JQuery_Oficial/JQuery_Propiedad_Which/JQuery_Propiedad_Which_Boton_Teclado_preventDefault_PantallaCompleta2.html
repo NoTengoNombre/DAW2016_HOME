@@ -1,0 +1,63 @@
+<!--
+    @Created on : 07-dic-2016, 10:27:52
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : https://api.jquery.com/event.which/
+    @version    :
+    @TODO       : Event.which -> especifica que tecla / boton se ha pulsado
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Event.which demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        font-size: 30px;
+        height: 500px;
+        border: 3px solid #ff0000;
+        background-color: #ccc;
+      }
+      div#log{
+        position: static;
+        background-color: #ffffff;
+        color: #FF0011;
+      }
+      div#log1{
+        /*sale fuera del body*/
+        /*position: fixed;*/ 
+        position: static;
+        top: 50px;
+        background-color: #ffffff;
+        color: #0000ff;
+      }
+      span{
+        border: 1px solid #00ff00;
+        color: #FF0011; 
+        background-color: #9999ff;
+        position: static;
+        width: 1300px;
+        height: 1300px;
+      }
+      input{
+        position: static;
+        border: 1px solid #ff0000;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body id="whichkey">Body - Linea Roja : toda el Area de captura 
+    <script>
+      $("#whichkey").on("keydown", function (event) {
+        $("#log").html(event.type + " : " + event.which + " ASCII ");
+        $("#log").html(event.preventDefault());
+      });
+      $("#whichkey").on("mousedown", function (event) {
+        $("#log1").html(event.type + ": " + event.which);
+      });
+    </script>
+    <div id="log"></div>
+    <div id="log1"></div>
+  </body>
+</html>

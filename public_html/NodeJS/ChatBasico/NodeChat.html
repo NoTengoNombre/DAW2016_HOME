@@ -1,0 +1,40 @@
+<!--
+    @Created on : 07-dic-2016, 22:41:25
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://nosoyundibujoanimado.blogspot.com.es/2015/07/nodejs-socketio-creando-nuestro-propio.html
+                  http://nosoyundibujoanimado.blogspot.com.es/2015/06/nodejs-socketio-creando-nuestro-propio.html
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>WhatsChat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="">
+    <link href="NodecssChat.css" rel="stylesheet">
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/js/client.js"></script>
+  </head>
+  <body>
+    <ul class="pages">
+      <li class="chat page">
+        <div class="chatTitle"></div>
+        <div class="chatArea">
+          <ul class="messages">
+          </ul>
+        </div>
+        <input class="inputMessage" placeholder="Escribe aquí"/>
+      </li>
+      <li class="login page">
+        <div class="form">
+          <h3 class="title">Nombre de usuario</h3>
+          <input class="usernameInput" type="text" maxlength="14" />
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

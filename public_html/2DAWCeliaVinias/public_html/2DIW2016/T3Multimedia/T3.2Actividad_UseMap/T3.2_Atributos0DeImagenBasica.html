@@ -1,0 +1,69 @@
+<!--
+    @Created on : 08-nov-2016, 23:11:08
+    @Author     : RVS - N.F.N.D
+    @Pag        : http://www.w3schools.com/tags/att_area_shape.asp
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        color: white;
+        background-color: #000000;
+      }
+      #cadena{
+        position: absolute;
+        top: 50px;
+        left: 250px;
+      }
+      #cadena1{
+        position: static;
+        top: 50px;
+        left: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <span>
+      Please select a shape: x1,y1,x2,y2
+    </span>
+    <p>
+      La siguiente imagen <br>
+      muestra cómo se toman<br>
+      las coordenadas de un <br>
+      punto cualquiera de una forma.<br>
+      Se ve claramente como <br>
+      para cada punto de la forma <br>
+      se toman dos coordenadas: <br>
+      una horizontal (x=50px)<br>
+      y otra vertical (y=160px)<br>
+      de la primera forma y (x=253px)<br>
+      y (y=206px)<br>
+      de la segunda forma; <br>
+      siempre se debe empezar a calcular <br>
+      desde el punto 0 (cero) <br>
+      de la imagen <br>
+      tanto en horizontal (latitudinal) <br>
+      como en vertical (longitudinal).<br>
+    </p>
+    <img id="cadena" src="http://www.html5.showbizreal.com/Columnas/Fotos/map2.png" alt="Poligono"> 
+    <img id="cadena1" src="http://www.html5.showbizreal.com/Columnas/Fotos/map8.png" alt="Poligono"> 
+    <p>
+      <img src="usemap_shade.png" usemap="#shapes" alt="img">
+      <map name="shapes">
+        <br>
+        <area shape=rect coords="50,50,100,100"> <!-- the hole in the red box -->
+        <area shape=rect coords="25,25,125,125" href="share/cuadrado.png" alt="Red box.">
+        <area shape=circle coords="200,75,50" href="share/circulo.png" alt="Green circle.">
+        <area shape=poly coords="325,25,262,125,388,125" href="share/triangulo.png" alt="Blue triangle.">
+        <area shape=poly coords="450,25,435,60,400,75,435,90,450,125,465,90,500,75,465,60" href="share/estrella.png" alt="Yellow star.">
+      </map>
+
+  </body>
+</html>

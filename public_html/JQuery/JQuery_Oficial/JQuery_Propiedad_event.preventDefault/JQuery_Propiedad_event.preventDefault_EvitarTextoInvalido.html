@@ -1,0 +1,44 @@
+<!--
+    @Created on : 07-dic-2016, 12:24:24
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : https://developer.mozilla.org/es/docs/Web/API/Event/preventDefault
+    @version    : 
+    @TODO       : 2º parte 
+                  El siguiente ejemplo demuestra cómo puede evitarse 
+                  que un texto invalido entre en un campo 
+                  de formulario mediante preventDefault().
+evento.charCode = Get the Unicode value of the pressed keyboard key;
+
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo event.preventDefault</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+    </style>
+    <script type="text/javascript">
+
+      function checkName(evt) {
+        var charCode = evt.charCode;
+        if (charCode != 0) { // distinto de 0
+          if (charCode < 97 || charCode > 122) {
+            evt.preventDefault();
+            alert("Por favor usa solo letras minusculas"
+                    + "\n" + "charCode: " + charCode + "\n");
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>&#5809;</p> 
+    <p>Por favor entra tu nombre en minusculas solamente ; </p>
+    <p>&#9775; </p>
+    <form>
+      <input type="text" onkeypress="checkName(event);"/>
+    </form>
+  </body>
+</html>

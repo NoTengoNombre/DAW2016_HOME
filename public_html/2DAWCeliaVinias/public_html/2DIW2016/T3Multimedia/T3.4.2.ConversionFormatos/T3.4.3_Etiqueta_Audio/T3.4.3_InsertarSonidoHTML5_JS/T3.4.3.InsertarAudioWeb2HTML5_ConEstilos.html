@@ -1,0 +1,47 @@
+<!--
+    @Created on : 06-dic-2016, 17:33:04
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://www.w3schools.com/TAGS/tryit.asp?filename=tryhtml5_audio_src
+    @version    : 
+    @TODO       : http://www.lunerouge.org/sons/sf/LRWeird%205%20by%20Lionel%20Allorge.ogg
+                  http://www.stephaniequinn.com/Music/Commercial%20DEMO%20-%2001.mp3
+                  https://github.com/kolber/audiojs
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        background-color: #000000;
+        color : #ffffff;
+      }
+      #audio-fondo{
+        width: 300px;
+        height: 35px;
+        background-color: #ff0000;
+      }
+    </style>
+    <script>
+    </script>
+  </head>
+  <body>
+    <div>Con Estilos</div>
+    <audio id="audio-fondo" src="../../T3.4.3_Etiqueta_Audio/T3.4.3_InsertarSonidoHTML4/min.mp3" controls="controls" preload="auto">
+      <div>
+        <button onclick="document.getElementById('player').play()">Play</button>
+        <button onclick="document.getElementById('player').pause()">Pause</button>
+        <button onclick="document.getElementById('player').volume += 0.1">+Volumen</button>
+        <button onclick="document.getElementById('player').volume -= 0.1">+Volumen</button>
+      </div>
+    </audio>
+    <br>
+    <div>Sin Estilos</div>
+    <audio src="../../T3.4.3_Etiqueta_Audio/T3.4.3_InsertarSonidoHTML4/min.mp3" controls="controls" preload="auto">
+    </audio>
+
+  </body>
+</html>

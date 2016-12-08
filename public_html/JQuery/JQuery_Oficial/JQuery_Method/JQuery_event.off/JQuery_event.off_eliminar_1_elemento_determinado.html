@@ -1,0 +1,62 @@
+<!--
+    @Created on : 08-dic-2016, 13:50:31
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://www.anerbarrena.com/jquery-on-off-4767/
+    @version    :
+    @TODO       : jQuery on() y off(): Asignar de eventos a elementos del DOM
+                  Vamos a repasar las funciones
+                  de jQuery on() y off() 
+                  para la asignación y eliminación 
+                  de eventos a los diferentes elementos del DOM.
+
+Desde la versión 1.7 de jQuery la función on() 
+suple perfectamente a las similares funciones bind(), live() y delegate().
+
+Lo mismo sucede con la función off(), 
+suple a las funciones unbind(), die() and undelegate().
+
+Sintaxis de jQuery on()
+$(selector).on(evento, childSelector, parametros, funcion, mapeo)
+
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      div{
+        border : 1px solid #ff0000;
+        background-color: #000000;
+        color: #00ff00;
+      }
+    </style>
+    <script type="text/javascript" src="../../../jquery-3.1.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#elementocontrolado").on({
+          click: function () {
+            $("p").off("click", function () {
+              alert("click change");
+            });
+          }
+        });
+      });
+    </script> 
+  </head>
+  <body>
+    <div>
+      <!--<input type="number" id="elementocontrolado">--> 
+      <!--Eliminar 1 determinado evento asignado-->
+      <p id="elementocontrolado">Otro</p>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+

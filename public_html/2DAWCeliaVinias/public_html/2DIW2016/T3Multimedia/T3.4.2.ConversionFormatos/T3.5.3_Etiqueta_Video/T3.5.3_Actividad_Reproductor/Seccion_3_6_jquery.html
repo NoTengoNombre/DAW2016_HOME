@@ -1,0 +1,60 @@
+<!--
+    @Created on : 06-dic-2016, 23:10:06
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       : Ejemplo adaptado de http://www.incg.nl/blog/2008/hover-block-jquery/ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <title>Ejemplo de animacion con jQuery</title>
+    <script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('ul.hover_block li').hover(function () {  //cuando se baja
+          $(this).find('img').animate({top: '182px'}, {queue: false, duration: 500});
+        }, function () { //cuando se recoge
+          $(this).find('img').animate({top: '0px'}, {queue: false, duration: 500});
+        });
+      });
+    </script>
+    <style media="screen">
+      body { background: #666; }
+      ul.hover_block { display: block; overflow: hidden; height: 1%; padding-bottom: 15px; }
+      ul.hover_block li {
+        list-style:none;
+        float:left;
+        background: #fff;
+        padding: 10px;
+        width:300px; position: relative;
+        margin-right: 20px; }
+      ul.hover_block li a{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        height: 150px;
+        width: 268px;
+        padding: 16px;
+        color: #000;
+        font: 1.6em/1.3 Helvetica, Arial, sans-serif;
+      }
+      ul.hover_block li a { text-decoration: none; }
+      ul.hover_block li img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="hover_block">
+      <li><a href="http://misrecetas.com"><img src="images/imagen_pollo.jpg" alt="Pollo Chilindron" /> Pollo al Chilindron</a></li>
+      <li><a href="http://misrecetas.com"><img src="images/imagen_habichuelas.jpg" alt="Habichuelas" /> Habichuelas con almejas</a></li>
+    </ul>
+  </body>
+</html>
+

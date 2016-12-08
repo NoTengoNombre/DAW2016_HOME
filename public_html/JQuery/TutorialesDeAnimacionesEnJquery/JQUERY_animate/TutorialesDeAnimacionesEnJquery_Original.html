@@ -1,0 +1,96 @@
+<!--
+    @Created on : 07-dic-2016, 1:47:26
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Build Internet! | Animate Image Filling Up Using jQuery</title>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#dudeoverlay").stop().animate({top: '-665px'}, {
+          queue: false, duration: 3500});
+      });
+    </script>
+    <style type="text/css">
+      *{
+        margin:0;
+        padding:0;
+      }
+      body {
+        text-align: center;
+        background: #A4CAEF;
+        text-align: center;
+        padding: 20px;
+      }
+      .frame{
+        position: absolute;
+        z-index: 2;
+      }
+
+      #dude{
+        height: 575px;
+        width: 300px;
+        margin: 0px auto;
+      }
+      img.loadpic{
+        margin: 10px;
+      }
+      /*---Dude CSS---*/
+      #dudecontainer{
+        position: relative;
+        overflow: hidden;
+        height: 575px;
+        width: 300px;
+        background: #FFF;
+      }
+      #dudeoverlay{
+        position: absolute;
+        z-index: 1;
+      }
+      #dudeblock{	
+        height: 590px;
+        width: 300px;
+        background: #FFF;
+      }
+      #dudeedge{
+        height: 90px;
+        width: 300px;	
+        background: url('slash.png');
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="dude">
+      <div id="dudecontainer">
+        <div class="frame">
+          <img src="dudeframe.png" alt="cadena0">
+        </div>
+        <div id="dudeoverlay">
+          <div id="dudeblock">&nbsp;</div>
+          <div id="dudeedge">&nbsp;</div>
+        </div>
+        <img class="loadpic" src="dude.jpg" alt="cadena1">
+      </div>
+    </div>
+
+    <!--Posicionamiento GOOGLE-->
+    <!--<script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-6444047-1");
+        pageTracker._trackPageview();
+      } catch (err) {
+      }</script>
+    -->
+  </body>
+</html>

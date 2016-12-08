@@ -1,0 +1,41 @@
+<!--
+    @Created on : 08-dic-2016, 12:02:58
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        border: 1px solid #0000FF;
+        background-color: #000000;
+        color: #ff0000;
+      }
+      a{
+        color: #00FF00;
+      }
+    </style>
+    <script type="text/javascript" src="../../../jquery-3.1.1.min.js"></script>
+  </head>
+  <body>
+    <!--3º Invocar JQUERY-->
+    <a href="#">Enlace</a>
+    <script>
+      var i = 0;
+      $("a").click(function (event) {
+        $("<div>").append("default " + event.type + " - " + ++i).appendTo("#log");
+        if (i == 3) {
+          $("<div>").off("click");
+        }
+      });
+    </script>
+    <div id="log"></div>
+  </body>
+</html>

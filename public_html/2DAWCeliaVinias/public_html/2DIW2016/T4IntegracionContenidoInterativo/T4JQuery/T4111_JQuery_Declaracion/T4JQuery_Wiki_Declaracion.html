@@ -1,0 +1,64 @@
+<!--
+    @Created on : 08-dic-2016, 10:18:26
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       : jQuery 
+Es una biblioteca de JavaScript, 
+creada inicialmente por John Resig, que permite simplificar 
+la manera de interactuar con los documentos HTML, manipular 
+el árbol DOM, manejar eventos, desarrollar animaciones 
+y agregar interacción con la técnica AJAX a páginas web
+• Uso 
+jQuery consiste en un único fichero JavaScript que contiene 
+las funcionalidades comunes de DOM, eventos, efectos y AJAX.
+
+• Función $()
+La característica principal de la biblioteca es que permite 
+cambiar el contenido de una página web sin necesidad de 
+recargarla, mediante la manipulación del árbol DOM y peticiones AJAX. 
+Para ello utiliza las funciones $() o jQuery().
+
+• Función $()
+La forma de interactuar con la página es mediante 
+la función $(), 
+un alias de jQuery(), 
+que recibe como parámetro una expresión CSS 
+o el nombre de una etiqueta HTML y devuelve 
+todos los nodos (elementos) que concuerden con la expresión. 
+Esta expresión es denominada "selector" en la terminología de jQuery.6
+
+$("#tablaAlumnos"); // Devolverá el elemento con id="tablaAlumnos"
+$(".activo");       // Devolverá una matriz de elementos con class="activo"
+Una vez obtenidos los nodos, se les puede aplicar cualquiera de las funciones que facilita la biblioteca.
+
+// Se elimina el estilo (con removeClass()) y se aplica uno nuevo (con addClass()) a todos los nodos con class="activo"
+$(".activo").removeClass("activo").addClass("inactivo");
+O por ejemplo, efectos gráficos:
+
+// Anima todos los componentes con class="activo"
+$(".activo").slideToggle("slow");
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <!--1º HACER LA LLAMADA A LA LIBRERIA -->
+    <script type="text/javascript" src="../jquery-1.2.6.min.js"></script>
+    <script>
+      JQuery(); // Declaracion Basica  
+      $(""); // Declaracion Basica Alias JQuery - recibe como parametro una expresion en CSS o etiqueta HTML -> devuelve todos los nodos(elementos) que concuerden con la expresion - La expresion se denomina 'SELECTOR' en JQuery 
+      $("#tablaAlumnos"); // Devuelve el elemento con id='tablaAlumnos'
+      $(".activo"); // Devuelve una matriz de elementos con class="activo"
+//      Obtenidos los nodos le podemos aplicar cualquier funcion de la library
+      $(".activo").removeClass("activo").addClass("inactivo");//Elimina estilo (con removeClass) y aplica uno nuevo (con addClass()) a todos los nodos con class="activo"
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

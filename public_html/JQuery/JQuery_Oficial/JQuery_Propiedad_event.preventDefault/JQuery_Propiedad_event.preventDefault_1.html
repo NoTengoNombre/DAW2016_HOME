@@ -1,0 +1,33 @@
+<!--
+    @Created on : 07-dic-2016, 12:24:24
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : https://developer.mozilla.org/es/docs/Web/API/Event/preventDefault
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo event.preventDefault</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script type="text/javascript">
+
+      function stopDefAction(evt) {
+        evt.preventDefault();
+      }
+    </script>
+  </head>
+  <body>
+
+    <p>Por favor, haz click sobre la caja de seleccion.</p>
+
+    <form>
+      <!--Si pones otra cosa que no sea (event) DA ERROR -->
+      <input type="checkbox" onclick="stopDefAction(event);"/>
+      <label for="checkbox">Seleccion</label>
+    </form>
+
+  </body>
+</html>

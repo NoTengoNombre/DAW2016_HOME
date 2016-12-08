@@ -1,0 +1,88 @@
+<!--
+    @Created on : 07-dic-2016, 21:12:19
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://tutorials.jenkov.com/svg/g-element.html
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        background-color: #000;
+        color: #ffffff;
+      }
+
+      svg{
+        background-color: #fff;
+      }
+
+      g{
+        background-color: #ccc;
+      }
+
+      line{
+        background-color: #00f;
+      }
+
+      text{
+        background-color: #0f0;
+      }
+
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g>
+    <!--stroke : pincelada-->
+    <line x1="10" y1="10" x2="85" y2="10" style="stroke: #ff0000;"/>
+
+    <!--stroke : pincelada-->
+    <rect x="10" y="20" height="50" width="75" style="stroke: #00FF00; fill: #ff0000" />
+
+    <!--stroke : pincelada-->
+    <text x="10" y="90" style="stroke: #660000; fill: #660000">Text grouped with shapes</text>
+    </g>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g style="stroke: #0000ff; stroke-width: 4px; fill: #ff0000">
+    <rect    x="10"  y="10" width="100" height="50" />
+    <circle cx="150" cy="35" r="25" />
+    <circle cx="250" cy="35" r="25"
+            style="stroke: #009900; fill: #00ff00;"/>
+    </g>
+    </svg>
+
+    <svg x="100">
+    <g transform="rotate(45 50 50)">
+    <line x1="10" y1="10" x2="85" y2="10" style="stroke: #006600;"/>
+
+    <rect x="10" y="20" height="50" width="75" style="stroke: #006600; fill: #006600"/>
+
+    <text x="10" y="90" style="stroke: #660000; fill: #660000">Text grouped with shapes</text>
+    </g>
+    </svg>  
+
+    <svg x="100">
+    <g transform="rotate(45 50 50)">
+    <svg x="100">
+    <line x1="10" y1="10" x2="85" y2="10" style="stroke: #006600;"/>
+
+    <rect x="10" y="20" height="50" width="75" style="stroke: #006600; fill: #006600"/>
+
+    <text x="10" y="90" style="stroke: #660000; fill: #660000">Text grouped with shapes</text>
+    </svg>
+    </g>
+    </svg>
+
+
+  </body>
+</html>
+

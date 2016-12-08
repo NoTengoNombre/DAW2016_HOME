@@ -1,0 +1,96 @@
+<!--
+    @Created on : 08-dic-2016, 10:18:26
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       : jQuery 
+Es una biblioteca de JavaScript, 
+creada inicialmente por John Resig, que permite simplificar 
+la manera de interactuar con los documentos HTML, manipular 
+el árbol DOM, manejar eventos, desarrollar animaciones 
+y agregar interacción con la técnica AJAX a páginas web
+• Uso 
+jQuery consiste en un único fichero JavaScript que contiene 
+las funcionalidades comunes de DOM, eventos, efectos y AJAX.
+
+• Función $()
+La característica principal de la biblioteca es que permite 
+cambiar el contenido de una página web sin necesidad de 
+recargarla, mediante la manipulación del árbol DOM y peticiones AJAX. 
+Para ello utiliza las funciones $() o jQuery().
+
+• Función $()
+La forma de interactuar con la página es mediante 
+la función $(), 
+un alias de jQuery(), 
+que recibe como parámetro una expresión CSS 
+o el nombre de una etiqueta HTML y devuelve 
+todos los nodos (elementos) que concuerden con la expresión. 
+Esta expresión es denominada "selector" en la terminología de jQuery.6
+
+$("#tablaAlumnos"); // Devolverá el elemento con id="tablaAlumnos"
+$(".activo");       // Devolverá una matriz de elementos con class="activo"
+Una vez obtenidos los nodos, se les puede aplicar cualquiera de las funciones que facilita la biblioteca.
+
+// Se elimina el estilo (con removeClass()) y se aplica uno nuevo (con addClass()) a todos los nodos con class="activo"
+$(".activo").removeClass("activo").addClass("inactivo");
+O por ejemplo, efectos gráficos:
+
+// Anima todos los componentes con class="activo"
+$(".activo").slideToggle("slow");
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        color: #ffffff;
+        background-color: #000000;
+      }
+
+      .activo{
+        border: 1px solid #ff0000;
+        background-color: #ffffff;
+      }
+
+      div img{
+        border: 1px solid #ff0000;
+        position: relative;
+        left: 500px;
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+    <!--1º HACER LA LLAMADA A LA LIBRERIA -->
+    <script type="text/javascript" src="../jquery-1.2.6.min.js"></script>
+    <script>
+      $(document).ready(function (/*event*/) {
+        // Anima todos los componentes con class="activo"
+        $(".activo").slideToggle("slow");
+//        $(".activo") + event.preventDefault();
+      });
+
+      $(document).click(function (event) {
+        $("#book").slideToggle("slow", function () {
+//          Detiene la animacion
+          $(this) + event.preventDefault();
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <div class="activo">
+      <img src="mr.jpg" width="100" height="100" alt="1">
+    </div>
+
+    <div id="clickme">
+      <img id="book" src="mrl.jpg" alt="100" height="123">
+    </div>
+
+  </body>
+</html>

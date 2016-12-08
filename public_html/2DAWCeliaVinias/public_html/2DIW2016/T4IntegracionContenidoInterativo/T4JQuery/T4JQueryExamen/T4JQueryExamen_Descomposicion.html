@@ -1,0 +1,53 @@
+<!--
+    @Created on : 07-dic-2016, 11:40:07
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :  
+                event.which -   
+                For key or mouse events, this property indicates the specific key or button that was pressed
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+
+      var contador = 0;
+
+      $(document).ready(function () { // Creado el arbol DOM
+        $("#objetivo").keypress(function (evento) { // Captura lo que entra por Input
+          var cadena = "0123456789";
+//          which - Indica que tecla ha sido pulsada
+//          fromCharCode - Devuelve -1 si no es un numero - 
+//          • Dentro de la cadena busca el caracter devuelto por teclado
+          if (cadena.search(String.fromCharCode(evento.which)) >= 0) {
+            evento.preventDefault(); // Cancela el evento ! Sin detener el resto del funcionamiento
+          }
+          contador = contador + 1;
+//          which : Devuelve el caracter pulsado desde teclado o raton
+          $("#salidapress").html(evento.which);
+          $("#salidapress1").html(String.fromCharCode(evento.which));
+          $("#salidapress2").html(" Numero Introduccion " + contador);
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <label for="objetivo">Tecla Pulsada: </label>
+        <input type="text" id="objetivo">
+        <div id="salidapress">Salida de la tecla pulsada</div>
+        <div id="salidapress1">Salida de la tecla pulsada</div>
+        <div id="salidapress2">Salida de la tecla pulsada</div>
+      </fieldset>
+    </form>
+  </body>
+</html>

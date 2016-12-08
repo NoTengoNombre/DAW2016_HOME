@@ -1,0 +1,36 @@
+<!--
+    @Created on : 07-dic-2016, 1:15:20
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://www.lawebdelprogramador.com/codigo/JavaScript/3763-Editar-elementos-HTML-en-su-sitio-de-origen.html
+    @version    : 
+    @TODO       : toggle
+                  palanca
+                  fiador
+                  conmutador de palanca
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        color: #ffffff;
+        background-color: #000000;
+        border: 1px solid #ff0000;
+      }
+    </style>
+    <script>
+      function ToggleEdit() {
+        var elem = document.getElementById("elem");
+        elem.contentEditable = elem.contentEditable == "true" ? "false" : "true";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="elem" align="center" contenteditable="true">
+      <h2>Edita este texto</h2>
+      <h4>También este otro y la imagen</h4>
+      <img src="http://weknowyourdreams.com/images/cielo/cielo-05.jpg" width="40" height="40" alt="img">
+    </div>
+    <p align="center"><button id="button" onclick="ToggleEdit()">Toggle Edit</button></p>
+  </body>
+</html>
