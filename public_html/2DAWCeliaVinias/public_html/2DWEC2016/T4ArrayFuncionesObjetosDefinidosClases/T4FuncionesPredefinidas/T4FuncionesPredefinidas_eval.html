@@ -1,0 +1,39 @@
+<!--
+    @Created on : 12-dic-2016, 9:23:57
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+  </head>
+  <body>
+
+    <p>Click the button to evaluate/execute Javascript</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        var x = 10;
+        var y = 20;
+        var a = eval("x * y") + "<br>";
+        var b = eval("2 + 2") + "<br>";
+        var c = eval("x * 17") + "<br>";
+
+        var res = a + b + c;
+        document.getElementById("demo").innerHTML = res;
+      }
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!--
+    @Created on : 09-dic-2016, 21:18:26
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       : Dada 2 fechas calcular el numero de dias transcurridos
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+
+      function esBisiesto(n) {
+        var bisiesto = false;
+        if (n % 400 === 0) {
+          bisiesto = true;
+        } else if (n % 4 === 0 || n % 100 !== 0) {
+          bisiesto = true;
+        }
+        return bisiesto;
+      }
+
+      var day = parseInt(prompt("Introduce 1 dia"));
+      var month = parseInt(prompt("Introduce 1 mes"));
+      var year = parseInt(prompt("Introduce 1 anio"));
+      var day2 = parseInt(prompt("Introduce 2 dia "));
+      var month2 = parseInt(prompt("Introduce 2 mes "));
+      var year2 = parseInt(prompt("Introduce 2 anio "));
+      var total = 0;
+
+      if (year2 - year > 1) {
+        for (var i = year + 1; i < year2; i++) {
+          if (esBisiesto(i)) {
+            total = total + 366;
+          } else {
+            total = total + 365;
+          }
+        }
+      }
+
+      if (year2 == year) {
+        for (var i = month; i < month2; i++) {
+          if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12) {
+            total = total + 31;
+          } else if (i == 4 || i == 6 || i == 9 || i == 11) {
+            total = total + 30;
+          } else if (esBisiesto(year)) {
+            total = total + 29;
+          } else {
+            total = total + 28;
+          }
+        }
+        total = total - day + day2;
+      } else {
+        for (var i = month; i < 13; i++) {
+          if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12) {
+            total = total + 31;
+          } else if (i == 4 || i == 6 || i == 9 || i == 11) {
+            total = total + 30;
+          } else if (esBisiesto(year)) {
+            total = total + 29;
+          } else {
+            total = total + 28;
+          }
+        }
+        total = total - day;
+
+        for (var i = 1; i < month2; i++) {
+          if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12) {
+            total = total + 31;
+          } else if (i == 4 || i == 6 || i == 9 || i == 11) {
+            total = total + 30;
+          } else if (esBisiesto(year)) {
+            total = total + 29;
+          } else {
+            total = total = +28;
+          }
+          total = total + day2;
+        }
+
+      }
+      alert("Han transcurrido " + total + " dias");
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

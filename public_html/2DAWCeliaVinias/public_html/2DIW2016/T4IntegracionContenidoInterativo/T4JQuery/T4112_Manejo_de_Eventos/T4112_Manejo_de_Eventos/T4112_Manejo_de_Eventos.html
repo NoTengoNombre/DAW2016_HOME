@@ -1,0 +1,40 @@
+<!--
+    @Created on : 08-dic-2016, 22:03:05
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        background-color: #000000;
+        color: #ffffff;
+      }
+      p{
+        background-color: #00ff00;
+        color: #f00;
+      }
+    </style>
+    <!--1º Llamar a la libreria JQUERY -->
+    <script type="text/javascript" src="../jquery-1.2.6.min.js"></script>
+    <script>
+//  2º - Seleccionar el documento - despues de que se haya formado el arbol dom
+      $(document).ready(function () {
+//  3º - Seleccionar el elemento y editar el codigo
+        $("p").click(function () {
+          alert($(this).text());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>Parrafo</p>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!--
+    @Created on : 11-dic-2016, 16:08:52
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+      var idGlobal = 33;
+      var msg = 'Variable Global';
+
+      function ejemplo(numero) {
+        var miVarLocal = "Soy una variable local";
+        var msg = 'idGlobal es conocido en la funcion ejemplo. idGlobal vale : ' + idGlobal;
+        msg = msg + "<br>Ejemplo el valor de numero es recibido como parametro (local). numero es : " + numero;
+        msg = msg + "<br>Variable local miVarLocal contiene " + miVarLocal;
+//        alert(msg); // Es el ambito de la funcion
+        document.write(msg);
+        ejemplo2();
+      }
+
+
+      function ejemplo2() {
+        var msg = "<br><br>idGlobal es conocido en la funcion ejemplo2. idGlobal vale: " + idGlobal;
+        if (typeof miVarLocal != 'undefined') {
+          msg = msg + "<br>Ejemplo2 desconoce que es miVarLocal porque es local a otra funcion: aqui miVarLocal es : " + miVarLocal;
+        } else {
+          msg = msg + "<br>miVarLocal No existe en el ambito de la funcion ejemplo2";
+        }
+        document.write(msg);
+//        alert(msg); // Es el ambito de la funcion
+      }
+
+    </script>
+  </head>
+  <body onload="ejemplo(5)">
+    <div id="cabecera">
+      <h2>Cursos</h2>
+    </div>
+  </body>
+</html>

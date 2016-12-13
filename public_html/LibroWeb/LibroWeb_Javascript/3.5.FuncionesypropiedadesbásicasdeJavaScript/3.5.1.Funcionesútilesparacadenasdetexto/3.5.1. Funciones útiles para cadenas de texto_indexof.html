@@ -1,0 +1,65 @@
+<!--
+    @Created on : 12-dic-2016, 13:56:57
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+
+      var mensaje = "Lorem ipsum dolor sit amet";
+
+      var longitud = mensaje.length;
+      document.write("longitud: " + longitud);
+      document.write('<br>');
+
+      var posicion = mensaje.indexOf('a');
+      document.write(posicion);
+      document.write('<br>');
+
+      var posicion = mensaje.indexOf('x');
+      document.write(posicion);
+      document.write('<br>');
+
+
+      var divide_cadena = mensaje.split("");
+      var valor = divide_cadena.lastIndexOf('x');
+      document.write("posicion x : " + valor);
+      document.write("<br>");
+
+      if (valor === -1) {
+        document.write("no existe 'x' ");
+      } else {
+        document.write("\n\existe");
+      }
+
+      var nueva_cadena = divide_cadena.toString();
+      var une_cadena = nueva_cadena.concat("x");
+
+      document.write('<br>');
+
+      for (var i = 0; i < une_cadena.length; i++) {
+        document.write(une_cadena[i]);
+      }
+
+      var ultima_cadena = String(une_cadena);
+      document.write('<br>' + ultima_cadena);
+
+
+
+    </script>
+  </head>
+  <body>
+
+
+
+  </body>
+</html>

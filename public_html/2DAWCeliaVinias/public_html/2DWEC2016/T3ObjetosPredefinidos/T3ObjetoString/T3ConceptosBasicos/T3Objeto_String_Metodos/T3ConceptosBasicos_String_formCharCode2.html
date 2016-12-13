@@ -1,0 +1,41 @@
+<!--
+    @Created on : 18-oct-2016, 23:03:46
+    @Author     : RVS - N.F.N.D
+    @Pag        : DWEC Sev - 14
+    @version    : 
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+//                  01234567890
+      var cadena = "abcdefghijklmnopqrstuvwxyz";
+      document.write('<b>' + cadena.length + '</b><hr>');
+
+// Posicion del caracter
+      var p0 = cadena.charAt(0);
+      document.write(p0);
+      document.write('<br>');
+      document.write('tipo de caracter : ' + typeof p0);
+      var c1 = cadena.charCodeAt(9);
+//      document.write('<br>');
+//      document.write('<br> soy un : ' + typeof c1);
+//      document.write('<br>');
+      document.write("<br> ! " + c1);
+
+      var c2 = String.fromCharCode(c1);
+      document.write('<hr>');
+      document.write(c2);
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!--
+    @Created on : 10-dic-2016, 18:59:12
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+
+      /**
+       * 
+       * @returns {undefined}
+       */
+      function myFunction() {
+        var d = Date.parse('March 21,2012');
+//      --------------------------------------  
+        var minutes = 1000 * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var y = Math.round(d / years);
+        document.getElementById("demo").innerHTML = y;
+      }
+    </script>
+  </head>
+  <body>
+
+    <button onclick="myFunction()">B</button>
+
+    <p id="demo"></p>
+
+
+
+  </body>
+</html>

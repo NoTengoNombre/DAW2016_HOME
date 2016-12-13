@@ -1,0 +1,40 @@
+<!--
+    @Created on : 10-dic-2016, 22:18:16
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+    <script>
+    </script>
+  </head>
+  <body>
+    <form name="formulario2">
+      <input type="text" size="100" name="datos" id="datos" value="Escribe lo que quieras pasar a la ventana principal"/>
+    </form>
+    <a href="javascript:close();" title="Pasar el valor"
+       onclick="window.opener.document.formulario1.resultado.value = window.document.formulario2.datos.value;">
+      Pasar el valor a la ventana principal
+    </a>
+  </body>
+</html>
+
+
+
+
+
+
+

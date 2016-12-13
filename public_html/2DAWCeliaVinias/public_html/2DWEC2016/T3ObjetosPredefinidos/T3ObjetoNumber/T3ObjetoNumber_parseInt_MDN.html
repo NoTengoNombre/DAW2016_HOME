@@ -1,0 +1,58 @@
+<!--
+    @Created on : 05-nov-2016, 17:12:19
+    @Author     : RVS - N.F.N.D
+    @Pag        : https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/parseInt
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var x = parseInt("F", 16);
+      document.write(x);
+      document.write('<br>');
+      var x = parseInt("17", 8);
+      document.write(x);
+      document.write('<br>');
+      var x = parseInt("15", 10);
+      document.write(x);
+      document.write('<br>');
+      var x = parseInt(15.99, 10);
+      document.write(x);
+      document.write('<br>');
+      var x = parseInt("FXX123", 16);
+      document.write(x);
+      document.write('<br>');
+      var x = parseInt("1111", 2);
+      document.write(x);
+      document.write('<br>');
+      var x = parseInt("15*3", 10);
+      document.write(x);
+      document.write('<br>');
+      var x = parseInt("12", 13);
+      document.write(x);
+      document.write('<br>');
+      document.write('<br>Todos los siguientes ejemplos devuelven 15:');
+      document.write('<br>');
+      var x = parseInt("Hello", 8); // No es un número en absoluto
+      document.write(x);
+      document.write('<br>');
+      var x = parseInt("0x7", 10);  // No es de base 10 
+      document.write(x);
+      document.write('<br>');
+      var x = parseInt("546", 2);
+      document.write(x);
+      document.write('<br>');
+
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

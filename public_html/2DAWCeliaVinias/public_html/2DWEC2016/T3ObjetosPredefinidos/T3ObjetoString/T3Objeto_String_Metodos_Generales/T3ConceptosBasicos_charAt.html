@@ -1,0 +1,40 @@
+<!--
+    @Created on : 18-oct-2016, 23:03:46
+    @Author     : RVS - N.F.N.D
+    @Pag        : DWEC Sev - 14
+    @version    : 
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      function myFunction() {
+        var str = "Hello friend";
+        var res = str.charAt(str.length - 1);
+        document.getElementById("demo").innerHTML = res;
+      }
+
+      function myFunction2() {
+        var str = "0123456789";
+        var res = str.charAt(str.length - 5);
+        document.getElementById("demo2").innerHTML = res;
+      }
+    </script>
+  </head>
+  <body>
+
+    <p id="demo"></p>
+
+    <button onclick="myFunction()">B</button>
+
+    <p id="demo2"></p>
+
+    <button onclick="myFunction2()">B2</button>
+
+  </body>
+</html>

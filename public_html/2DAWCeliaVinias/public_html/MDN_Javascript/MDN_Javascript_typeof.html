@@ -1,0 +1,47 @@
+<!--
+    @Created on : 11-dic-2016, 15:00:25
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/typeof
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, +initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script type="text/javascript">
+      function ejemplo() {
+        var miString = 'cosa';
+        var miNumeroEntero = 33;
+        var miNumeroDecimal = 23.65;
+        var miBooleano = true;
+
+//        var miFuncion = new function (a, b) {
+//          return (a + b);
+//        };
+//        
+
+        msg = 'Tipo de miString: ' + typeof miString + '\nTipo de miNumeroEntero: ' + typeof miNumeroEntero;
+        msg = msg + '\nTipo de miNumeroDecimal: ' + typeof miNumeroDecimal + '\nTipo de miBooleano: ' + typeof miBooleano;
+//        msg = msg + '\nTipo de miFuncion: ' + typeof miFuncion + '\nTipo de Math: ' + typeof Math;
+        msg = msg + '\nTipo de Date: ' + typeof Date + '\nTipo de algoIndefinido: ' + typeof algoIndefinido;
+
+        if (typeof miNumeroEntero == 'string') {
+          msg = msg + 'miNumeroEntero es de tipo string';
+        } else {
+          msg = msg + '\nmiNumeroEntero no es de tipo string';
+        }
+        alert(msg);
+      }
+    </script>
+  </head>
+  <body>
+
+    <button onclick="ejemplo()">B</button>
+
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!--
+    @Created on : 11-dic-2016, 19:49:01
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+  </head>
+  <body>
+
+    <p>Click "Try it" to display the first array element, after a string split.</p>
+
+    <button onclick="myFunction()">Intentalo1</button>
+    <p id="demo"></p>
+    
+    <button onclick="myFunction2()">Intentalo2</button>
+    <p id="demo1"></p>
+
+    <script>
+      function myFunction() {
+        var str = "a,b,c,d,e,f";
+        var arr = str.split(",");
+        document.getElementById("demo").innerHTML = arr[0];
+      }
+      function myFunction2() {
+        var str = "a|b|c|d|e|f";
+        var arr = str.split("|");
+        document.getElementById("demo1").innerHTML = arr[0];
+      }
+    </script>
+  </body>
+</html>

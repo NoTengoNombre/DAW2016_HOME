@@ -1,0 +1,46 @@
+<!--
+    @Created on : 12-dic-2016, 9:23:57
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      var fecha = new Date();
+      var fechaString = String(fecha);
+      document.write("La fecha actual es : " + fechaString + "<br>");
+      var cadena = "";
+      cadena.split(fechaString, "|");
+      document.write('--> ' + typeof cadena);
+      document.write('<br>');
+
+      var x = cadena.split(fechaString, "|");
+      document.write('--> ' + typeof x);
+      document.write('<br>');
+
+      var xx = 2;
+      document.write("Soy un numero : " + typeof xx);
+      document.write('<br>');
+
+      if (isNaN(x)) {
+        document.write("No es un numero" + x);
+      } else {
+        document.write("Es un numero" + x);
+      }
+
+      document.write('<br> Soy un arrays : ' + Array.isArray(x));
+      document.write('<br> --> ' + typeof x);
+      document.write('<br> No soy un numero : ' + isNaN(x));
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

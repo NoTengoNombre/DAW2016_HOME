@@ -35,16 +35,17 @@
       });
 
       var t = "";
-      for (var key in alumnos) {
-        document.write(t + alumnos[key].apellidos);
-        document.write(t + alumnos[key].nombre);
-        document.write(t + alumnos[key].ciudad);
-        document.write(t + alumnos[key].edad);
+      for (var indice in alumnos) {
+        document.write(t + alumnos[indice].apellidos);
+        document.write(t + alumnos[indice].nombre);
+        document.write(t + alumnos[indice].ciudad);
+        document.write(t + alumnos[indice].edad);
         document.write("<br>");
-        if (alumnos[key].nombre === "Alvaro") {
+
+        if (alumnos[indice].nombre === "Alvaro") {
           document.write("<h1>Hola Alvaro</h1>");
         }
-        if (alumnos[key].edad === 20) {
+        if (alumnos[indice].edad === 20) {
           document.write("<h1>edad 20</h1>");
         }
       }

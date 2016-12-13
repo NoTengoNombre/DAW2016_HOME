@@ -1,0 +1,49 @@
+<!--
+    @Created on : 18-oct-2016, 23:03:46
+    @Author     : RVS - N.F.N.D
+    @Pag        : DWEC Sev - 14
+    @version    : 
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var cadena = "abcdefghijklmnopqrstuvwxyz";
+      document.write('<b>' + cadena.length + '</b><hr>');
+
+      document.write('Posicion charAt(25)<br>');
+      document.write(cadena.charAt(25));
+      document.write('<hr>');
+      document.write('Posicion charCodeAt(25)<br>');
+      document.write(cadena.charCodeAt(25));
+      document.write('<hr>');
+      document.write("!!");
+      var c0 = String.fromCharCode(25);
+      document.write('<hr> -> ' + c0);
+
+      for (var i = 0; i < cadena.length; /*Longitud*/ i++) {
+        var cadena2 = cadena.charCodeAt(i); //Recorro
+        document.write('<div> ' + cadena2 + '</div>');
+      }
+
+//      document.write(typeof cadena2);
+//      document.write('<br>');
+//      document.write(typeof cadena);
+      document.write('<hr>');
+      for (var i = 0; i < cadena.length; i++) {
+        var x = String.fromCharCode(cadena.charCodeAt(i));
+        document.write('<div> ' + x + '</div>');
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

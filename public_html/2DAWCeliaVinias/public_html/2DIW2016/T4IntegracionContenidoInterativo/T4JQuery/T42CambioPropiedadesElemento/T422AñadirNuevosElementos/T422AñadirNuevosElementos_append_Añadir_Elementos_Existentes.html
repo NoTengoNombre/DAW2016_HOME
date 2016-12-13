@@ -1,0 +1,57 @@
+<!--
+    @Created on : 09-dic-2016, 0:25:51
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : The prepend() method inserts specified content at the beginning of the selected elements.
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ejemplo uso append </title>
+    <style media="screen">
+      body { 
+        background: #666; 
+      }
+      #misdivs {
+        border: 2px solid #000;
+        height: 50px;
+        width: 300px;
+        background: #623; 
+      }
+
+      h1{
+        color : #00cc00;
+      }
+
+      p{
+        border: 11px solid #000;
+        height: 50px;
+        width: 130px;
+        background: #625; 
+      }
+
+
+      #valor{
+        border: 1px solid #000;
+        height: 50px;
+        width: 130px;
+        background: #623; 
+      }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".misdivs").on("click", function (e) {
+          $(".misdivs").append($("h1"));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Titulo</h1>
+    <div class="misdivs">Mi div 1</div>
+    <div class="misdivs">Mi div 2</div>
+  </body>
+</html>

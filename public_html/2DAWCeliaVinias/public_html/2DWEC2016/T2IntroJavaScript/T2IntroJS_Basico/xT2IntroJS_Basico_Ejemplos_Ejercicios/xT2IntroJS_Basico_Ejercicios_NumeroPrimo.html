@@ -1,0 +1,41 @@
+<!--
+    @Created on : 09-dic-2016, 18:08:29
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://numeroscompuestos.com/divisores?
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+      var num = parseInt(prompt("Introduce numero"));
+      var primo = true;
+      if (num == 1 || num == 0) {
+        primo = false;
+      } else if (num <= 3) {
+        primo = true;
+      } else if (num % 2 == 0) {
+        primo = false;
+      } else {
+        var i = 3;
+        while (primo && i < num / 2) {
+          if (num % i == 0) {
+            primo = false;
+          }
+          i = i + 2;
+        }
+      }
+      alert("El numero " + num + " es primo ? " + primo);
+    </script>
+  </head>
+  <body>
+    <h1>0 y 1 No son primos</h1>
+    <h1>Primos son 2 divisores del numero , 3 -> 1 y 3 </h1>
+  </body>
+</html>

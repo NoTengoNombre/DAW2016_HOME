@@ -1,0 +1,28 @@
+<!--
+    @Created on : 09-dic-2016, 12:49:30
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://jquery.com/
+                  https://developers.google.com/speed/libraries/
+    @version    : 
+    @TODO       : fade : apagarse , descolorar , disminuir lentamente , ocultarse
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#misdivs").fadeOut(2000).css({
+          background: "blue"}).fadeIn(2000);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="misdivs">Capa</div>
+  </body>
+</html>

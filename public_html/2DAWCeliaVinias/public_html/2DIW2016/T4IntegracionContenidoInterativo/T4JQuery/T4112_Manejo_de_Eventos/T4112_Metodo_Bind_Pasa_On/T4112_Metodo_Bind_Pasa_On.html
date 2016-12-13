@@ -1,0 +1,37 @@
+<!--
+    @Created on : 08-dic-2016, 22:55:41
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        background-color: #666;
+      }
+    </style>
+    <script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("p").bind("click mouseenter mouseleave", function () {
+          if ($(this).css("color") != "rgb(255,0,0)") {
+            $(this).css("color", "rgb(255,0,0)");
+          } else
+            $(this).css("color", "rgb(0,0,255)");
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <p>Salida datos :  El texto cambia de color al entrar o salir con el ratón o hacer click</p>
+
+  </body>
+</html>

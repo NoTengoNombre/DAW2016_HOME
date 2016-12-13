@@ -1,0 +1,38 @@
+<!--
+    @Created on : 09-dic-2016, 21:18:26
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       : Dada 2 fechas calcular el numero de dias transcurridos
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+
+      var n = Math.random() * 2400;
+
+      var n1 = parseInt(n);
+
+      document.write(n1);
+
+      var bisiesto = false;
+      if (n1 % 400 == 0) {
+        bisiesto = true;
+      } else if (n1 % 4 == 0 && n1 % 100 != 0) {
+        bisiesto = true;
+      }
+
+      document.write(" - Numero : " + n1 + " ¿ Es bisiesto ? : " + bisiesto);
+
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

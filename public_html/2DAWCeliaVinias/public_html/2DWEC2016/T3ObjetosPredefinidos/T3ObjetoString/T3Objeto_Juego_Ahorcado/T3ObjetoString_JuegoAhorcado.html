@@ -1,0 +1,160 @@
+<!--
+    @Created on : 12-dic-2016, 1:47:31
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>El Ahorcado 2ºDAW</title>
+    <style type="text/css">
+      body{
+        color:white;
+        background-color:#880000;
+        padding : 20px;
+        margin : 10px;
+        font-size:20px;
+      }
+      form{
+        position:absolute;
+        top:100px;
+      }
+      img{
+        position:absolute;
+        right:100px;
+        border: solid 5px black;
+        border-radius:10px;
+      }
+      .cajadetexto{
+        border-radius:15px;
+        border:2px solid black;
+        padding:5px;
+      }
+      .boton{
+        font-size:20px;
+        background-color:white;
+        border:2px solid black;
+        padding:5px;
+        border-radius:20px;
+      }
+      .boton:hover{
+        background-color:#440000;
+        color:white;
+      }
+    </style>
+    <script type="text/javascript">
+      //SI NECESITAS ALGUNA VARIABLE GLOBAL O PRIVADA TE DEJO CREARLA :)
+      var peliculas = new Array();
+      var peli;
+      var n;
+      var fallos;
+      function reiniciar() {
+        fallos = 0;
+        imagen0.style.visibility = "visible";
+        imagen1.style.visibility = "hidden";
+        imagen2.style.visibility = "hidden";
+        imagen3.style.visibility = "hidden";
+        imagen4.style.visibility = "hidden";
+        imagen5.style.visibility = "hidden";
+        imagen6.style.visibility = "hidden";
+        document.formulario.estado.value = "";
+        document.formulario.usadas.value = "";
+        /*SELECCIONA UNA PELICULA ALEATORIAMENTE DEL ARRAY Y CONVIERTE LA CADENA DE TEXTO SELECCIONADA
+         A VALORES OCULTOS PARA PODER JUGAR AL AHORCADO CON ELLA...TEN EN CUENTA LOS ESPACIOS*/
+      }
+
+      function inicio() { /*Se declaran las posibles palabras que se utilizaran en el juego*/
+        peliculas[0] = "Cadena de Favores";
+        peliculas[1] = "La Guerra de las Galaxias La Amenaza Fantasma";
+        peliculas[2] = "La Guerra de las Galaxias El Ataque de los Clones";
+        peliculas[3] = "La Guerra de las Galaxias Una Nueva Esperanza";
+        peliculas[4] = "La Guerra de las Galaxias El Imperio Contraataca";
+        peliculas[5] = "La Guerra de las Galaxias El Retorno del Jedi";
+        peliculas[6] = "Alien El Octavo Pasajero";
+        peliculas[7] = "Aliens El Regreso";
+        peliculas[8] = "Gangs of New York";
+        peliculas[9] = "Alien 4 Resurreccion";
+        peliculas[10] = "Pulp Fiction";
+        peliculas[11] = "Deep Blue Sea";
+        peliculas[12] = "El Señor de los Anillos Las Dos Torres";
+        peliculas[13] = "El Señor de los Anillos El Retorno Del Rey";
+        peliculas[14] = "Alguien Volo Sobre el Nido del Cuco";
+        peliculas[15] = "El Señor de los Anillos La Comunidad del Anillo";
+        peliculas[16] = "Los Vengadores";
+        peliculas[17] = "Austin Powers";
+        peliculas[18] = "Todo Sobre mi Madre";
+        peliculas[19] = "Hable con Ella";
+        reiniciar();
+      }
+
+      function comprobar() {
+        var ok = false;
+        var fin = false;//recuerda convertir esto a 'true' cuando se hayan descubierto todas las letras.
+        if (document.formulario.letra.value != "") { //si se introduce algun caracter.
+          //COMPRUEBA SI ESE CARACTER SE ENCUENTRA EN LA CADENA DE TEXTO.SI ES CORRECTO CONVIERTE "OK" A 'TRUE' PARA SEGUIR.
+          if (!ok) {//si te has equivocado hay un fallo y se muestra la siguiente imagen
+            fallos++;
+          }
+          switch (fallos) {//lo cerca que estas de palmar.
+            case 1:
+              imagen0.style.visibility = "hidden";
+              imagen1.style.visibility = "visible";
+              break;
+            case 2:
+              imagen1.style.visibility = "hidden";
+              imagen2.style.visibility = "visible";
+              break;
+            case 3:
+              imagen2.style.visibility = "hidden";
+              imagen3.style.visibility = "visible";
+              break;
+            case 4:
+              imagen3.style.visibility = "hidden";
+              imagen4.style.visibility = "visible";
+              break;
+            case 5:
+              imagen4.style.visibility = "hidden";
+              imagen5.style.visibility = "visible";
+              break;
+            case 6:
+              imagen5.style.visibility = "hidden";
+              imagen6.style.visibility = "visible";
+              if (confirm("Lo siento. Has perdido. ¿Otra partida?")) {
+                reiniciar();
+              } else {
+                alert("Autor: Eduardo García Alegre. Codigo Arreglado por:Joaquin Sanchez Belmonte");
+              }
+          }
+        }
+        /*REVISA SI QUEDA ALGUNA LETRA POR DESCUBRIR ANTES DE OTORGAR LA VICTORIA*/
+        if (fin) {//si has descubierto todo has ganado.
+          if (confirm("Enhorabuena. Has ganado. ¿Otra partida?")) {
+            reiniciar();
+          } else {
+            alert("Autor: Eduardo García Alegre. Codigo Arreglado por:Joaquin Sanchez Belmonte");
+          }
+        }
+        document.formulario.letra.value = "";
+        document.formulario.letra.focus();
+      }
+    </script>
+  </head>
+  <body onLoad="inicio();">
+    <img src="aho1.gif" name="imagen0" alt="1">
+    <img src="aho2.gif" name="imagen1" alt="2" style="visibility:hidden">
+    <img src="aho3.gif" name="imagen2" alt="3"  style="visibility:hidden">
+    <img src="aho4.gif" name="imagen3" alt="4"  style="visibility:hidden">
+    <img src="aho5.gif" name="imagen4" alt="5"   style="visibility:hidden">
+    <img src="aho6.gif" name="imagen5" alt="6"  style="visibility:hidden">
+    <img src="aho7.gif" name="imagen6" alt="7"  style="visibility:hidden">
+    <form name="formulario">
+      Adivina el nombre de la pelicula : <input type="text" name="estado" size="45" class="cajadetexto"></br></br>
+      Introduce letra :  <input type="text" name="letra" size="1" class="cajadetexto"></br></br>
+      Letras usadas :<input type="text" name="usadas" size="30" class="cajadetexto"></br></br>
+      <input type="button" value="COMPROBAR" class="boton" onclick="comprobar();">
+      <input type="button" value="REINICIAR" class ="boton" onclick="reiniciar();">
+    </form>
+  </body>
+</html>

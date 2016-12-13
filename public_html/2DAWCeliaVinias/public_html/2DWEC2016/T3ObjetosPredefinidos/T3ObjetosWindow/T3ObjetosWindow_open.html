@@ -1,0 +1,62 @@
+<!--
+    @Created on : 10-dic-2016, 22:18:16
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+    <script>
+      function get_elemento_li() {
+        var x = document.getElementsByTagName("li");
+        document.getElementById("demo").innerHTML = x[0].innerHTML;
+        document.getElementById("demo1").innerHTML = x[1].innerHTML;
+        document.getElementById("demo2").innerHTML = x[2].innerHTML;
+      }
+    </script>
+
+    <script>
+      var texto = prompt("Ingresa un titulo para cada nueva ventana");
+      var ventanaNueva = window.open();
+      ventanaNueva.document.write("<h1>" + texto + "</h1>");
+    </script>
+
+
+  </head>
+  <body>
+
+    <button onclick="get_elemento_li()">Try it</button>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+

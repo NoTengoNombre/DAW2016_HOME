@@ -1,0 +1,56 @@
+
+<!--
+  Fecha : 27-sep-2016, 0:08:54
+  Author     : RVS
+  Pag : 
+  Version : 1   
+  Enlaces : http://validator.w3.org/ 
+  Recomendaciones Tecnicas : https://www.w3.org/TR/WCAG10-CSS-TECHS/
+  Colores : https://www.w3.org/TR/CSS21/syndata.html#value-def-color
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" />
+    <script type="text/javascript">
+
+// Variable almacena la cantidad de valores que se van a usar
+      var digitos = parseInt(prompt("Introduce cantidad de numero"));
+//      Variable a usar
+      var numero = 0;
+      var media = 0.0;
+// Captura de teclado
+      numero = parseInt(prompt("Introduce un numero"));
+// Varible almacenar valores
+      var mayor = numero;
+      var menor = numero;
+      media = numero;
+//var mayor=Number.MIN_VALUE;
+//var menor=Number.MAX_VALUE;
+      var valores = " ";
+      for (var i = 1; i < digitos; i++) {
+        numero = parseInt(prompt("Introduce un numero"));
+        if (numero > mayor) {
+          mayor = numero;
+        } else if (numero < menor) {
+          menor = numero;
+        }
+        media = media + numero;
+        valores = valores + numero + " ";
+      }
+      document.write("Numero de digitos: " + digitos +
+              "\nValores" + valores
+              + "\nMedia: " + (media / digitos)
+              + "\nValor Max: " + mayor
+              + "\nValor Min: " + menor);
+
+//      location.reload(10);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

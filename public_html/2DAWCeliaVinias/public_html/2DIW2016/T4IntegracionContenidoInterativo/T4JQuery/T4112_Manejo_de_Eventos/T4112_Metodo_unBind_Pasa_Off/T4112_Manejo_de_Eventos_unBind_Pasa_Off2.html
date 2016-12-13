@@ -1,0 +1,48 @@
+<!--
+    @Created on : 08-dic-2016, 22:03:05
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style media="screen">
+      body{
+        /*        background-color: #000000;
+                color: #ffffff;*/
+        color: #666;
+      }
+      p{
+        /*        background-color: #00ff00;
+                color: #f00;*/
+      }
+    </style>
+    <!--1º Llamar a la libreria JQUERY -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var funcionqueManeja = function () {
+          if ($(this).css("color") != "rgb(255, 0, 0)") {
+            $(this).css("color", "rgb(255, 0, 0)");
+          } else {
+            $(this).css("color", "rgb(0, 0, 255)");
+          }
+        };
+        $("p").bind("click mouseenter mouseleave", funcionqueManeja);
+        $("#desactivar-evento").bind("click", function () {
+          $("p").unbind("click", funcionqueManeja);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>Parrafo</p>
+    <input id="desactivar-evento" type="button" value="Quitar el cambio de color cuando se hace click">
+  </body>
+</html>

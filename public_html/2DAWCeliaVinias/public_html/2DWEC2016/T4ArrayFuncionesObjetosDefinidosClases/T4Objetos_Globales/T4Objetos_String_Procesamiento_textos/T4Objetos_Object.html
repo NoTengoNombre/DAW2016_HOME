@@ -1,0 +1,37 @@
+<!--
+    @Created on : 12-dic-2016, 11:32:51
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+      Object.is('foo', 'foo');     // true
+      Object.is(window, window);   // true
+
+      Object.is('foo', 'bar');     // false
+      Object.is([], []);           // false
+
+      var test = {a: 1};
+      Object.is(test, test);       // true
+
+      Object.is(null, null);       // true
+
+// Special Cases
+      Object.is(0, -0);            // false
+      Object.is(-0, -0);           // true
+      Object.is(NaN, 0 / 0);         // true
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

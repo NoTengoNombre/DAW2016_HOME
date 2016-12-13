@@ -1,0 +1,49 @@
+<!--
+    @Created on : 11-dic-2016, 17:04:27
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+  </head>
+  <body>
+    <p>Replace </p>
+
+    <button onclick="myFunction()">Try it 1</button>
+    <button onclick="myFunction2()">Try it 2</button>
+
+    <p id="demo">Please visit Microsoft</p>
+
+    <script>
+      function myFunction() {
+        var str = document.getElementById("demo").innerHTML;
+        var txt = str.replace("Microsoft", "W3Schools");
+        document.getElementById("demo").innerHTML = txt;
+      }
+
+      function myFunction2() {
+        var str = document.getElementById("demo").innerHTML;
+        var txt = str.replace("W3Schools", "Microsoft");
+        document.getElementById("demo").innerHTML = txt;
+      }
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

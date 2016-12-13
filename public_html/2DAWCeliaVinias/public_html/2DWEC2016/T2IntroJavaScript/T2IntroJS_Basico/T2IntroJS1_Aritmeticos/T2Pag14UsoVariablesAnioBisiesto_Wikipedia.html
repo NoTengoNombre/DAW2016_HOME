@@ -1,0 +1,37 @@
+<!--
+    @Created on : 10-dic-2016, 17:59:48
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : https://es.wikibooks.org/wiki/Algoritmo_bisiesto#M.C3.A9todo_programado_en_Javascript
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+
+      function es_Bisiesto(year) {
+        return ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0) ? true : false);
+      }
+
+
+      for (var i = 0; i < 2100; i++) {
+        var x = "Anio : " + i + " - " + es_Bisiesto(i);
+        if (es_Bisiesto(i) === true) {
+          document.write('<br><b style="color:red;"> • ' + x + " </b>");
+        } else {
+          document.write('<br><b style="color:blue;">: ' + x + "</b>");
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

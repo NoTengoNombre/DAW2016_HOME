@@ -1,0 +1,51 @@
+<!--
+    @Created on : 12-dic-2016, 9:23:57
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+      var fecha = new Date();
+      document.write(typeof fecha);
+      document.write('<br>');
+      var fechaString = String(fecha);
+      document.write(typeof fechaString);
+      document.write('<br>---<br>');
+      document.write(fechaString);
+
+      document.write('<br>');
+      document.write('<br>');
+
+      var x = fechaString.split("");
+
+      var corte = fechaString.slice(0, 10);
+      document.write(typeof corte);
+      var corte2 = String(corte);
+      document.write('<br>');
+      document.write(corte);
+      document.write('<br>');
+      document.write(corte2);
+      document.write('<br>');
+      document.write(typeof corte2);
+
+      document.write('<br>');
+      document.write(Array.isArray(x));
+      document.write('<br>');
+      document.write(Array.isArray(corte));
+      document.write('<br>');
+      document.write(Array.isArray(corte2));
+
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

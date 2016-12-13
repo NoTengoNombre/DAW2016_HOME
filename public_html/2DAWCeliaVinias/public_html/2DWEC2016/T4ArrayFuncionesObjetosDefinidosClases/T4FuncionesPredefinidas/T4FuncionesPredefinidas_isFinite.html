@@ -1,0 +1,42 @@
+<!--
+    @Created on : 12-dic-2016, 9:23:57
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+  </head>
+  <body>
+    <script>
+//                       012345678
+      var obj = {pasta: "spaghetti", length: 10};
+// Freeze the object, and verify that it is frozen.
+      Object.freeze(obj);
+      document.write(obj.isFrozen());
+// Try to add a new property, and then verify that it is not added. 
+      obj.newProp = 50;
+      document.write(obj.newProp);
+      document.write("<br/>");
+// Try to delete a property, and then verify that it is still present.
+      delete obj.length;
+      document.write(obj.length);
+      document.write("<br/> ");
+// Try to change a property value, and then verify that it is not changed.
+      obj.pasta = "linguini";
+      document.write(obj.pasta);
+// Output:
+// true
+// undefined
+// 10
+// spaghetti
+    </script>
+  </body>
+</html>

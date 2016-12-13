@@ -1,0 +1,48 @@
+<!--
+    @Created on : 10-dic-2016, 22:18:16
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+    <script>
+      function get_elemento_li() {
+        var x = document.getElementsByTagName("li");
+        document.getElementById("demo").innerHTML = x[1].innerHTML;
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="get_elemento_li()">Try it</button>
+
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>MilkS</li>
+    </ul>
+
+    <p id="demo"></p>
+
+
+  </body>
+</html>
+
+
+
+
+
+
+

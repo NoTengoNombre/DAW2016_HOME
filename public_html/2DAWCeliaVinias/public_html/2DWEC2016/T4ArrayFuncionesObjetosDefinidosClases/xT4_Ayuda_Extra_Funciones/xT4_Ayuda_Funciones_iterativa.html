@@ -1,0 +1,48 @@
+<!--
+    @Created on : 10-dic-2016, 11:37:43
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://es.slideshare.net/jcremiro/javascript-funciones
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+
+//Convierto numero entero
+      var numero = parseInt(Math.random() * 10);
+      document.writeln("num1 : " + numero);
+
+      /**
+       * Cantidad que resulta de la multiplicación de determinado 
+       * número natural por todos los números naturales 
+       * que le anteceden "excluyendo" el cero; se representa por n!
+       * 
+       * @param {type} numero
+       * @returns {Number|Number.resultado}
+       */
+      function factorial(numero) {
+        var resultado = 1;
+        while (numero !== 0) {
+          resultado = resultado * numero;
+          numero = numero - 1;
+        }
+        return resultado;
+      }
+
+      document.writeln("<br> Valor : " + factorial(numero));
+
+    </script>
+  </head>
+  <body>
+
+
+
+  </body>
+</html>

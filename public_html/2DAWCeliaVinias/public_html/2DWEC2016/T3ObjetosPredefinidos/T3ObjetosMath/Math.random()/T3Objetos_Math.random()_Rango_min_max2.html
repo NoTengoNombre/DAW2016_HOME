@@ -1,0 +1,38 @@
+<!--
+    @Created on : 11-dic-2016, 20:16:15
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+  </head>
+  <body>
+    <h1>JavaScript Math.random()</h1>
+
+    <p>Every time you click the button, getRndInteger(min, max)returns a random number between 0 (included) and 10 (excluded):</p>
+
+    <button onclick="document.getElementById('demo').innerHTML = getRndInteger(0, 10)">Boton</button>
+
+    <p style="background-color: blue;" id="demo"></p>
+
+    <p style="background-color: red;" id="demo2"></p>
+
+    <script>
+      function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+
+      document.getElementById("demo2").innerHTML = Math.floor((Math.random() * (0, 10)));
+
+    </script>
+
+  </body>
+</html>

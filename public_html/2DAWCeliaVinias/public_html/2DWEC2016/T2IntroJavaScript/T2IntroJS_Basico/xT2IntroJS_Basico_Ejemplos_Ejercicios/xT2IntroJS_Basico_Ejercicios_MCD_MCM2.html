@@ -1,0 +1,38 @@
+<!--
+    @Created on : 09-dic-2016, 18:08:29
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://numeroscompuestos.com/divisores?
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+
+      var num1 = parseInt(prompt("Valor num1 :"));
+      var num2 = parseInt(prompt("Valor num2 :"));
+         
+      var mcm = num1 * num2;
+      var resto = num1 % num2;
+      while (resto != 0) {
+        num1 = num2;
+        num2 = resto;
+        resto = num1 % num2;
+      }
+      mcm = mcm / num2;
+      alert("MCD " + num2 + "\n\MCM " + mcm);
+      
+      
+      
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

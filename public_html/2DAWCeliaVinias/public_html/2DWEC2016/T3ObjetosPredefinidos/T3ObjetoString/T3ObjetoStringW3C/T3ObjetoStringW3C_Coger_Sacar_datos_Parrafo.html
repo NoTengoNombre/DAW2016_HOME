@@ -1,0 +1,37 @@
+<!--
+    @Created on : 11-dic-2016, 14:36:39
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+      function get_funcion() {
+//lo que tiene dentro el parrafo p -> coge lo que hay dentro del parrafo con el identificador
+        var str = document.getElementById("dentro").innerHTML;
+//        busca la posicion
+        var pos = str.indexOf("Entrada");
+//        muestra la salida
+        document.getElementById("salida").innerHTML = pos;
+      }
+    </script>
+  </head>
+  <body>
+    <!-------------0123456789123456-->
+    <p>Muestra la cadena</p>
+    <p id="dentro">Coger la Entrada</p>
+
+    <button onclick="get_funcion()">B</button>
+
+    <p>Devuelve la posicion :  </p>
+    <p style="background-color : #000; color: #fff;" id="salida"></p>
+  </body>
+</html>

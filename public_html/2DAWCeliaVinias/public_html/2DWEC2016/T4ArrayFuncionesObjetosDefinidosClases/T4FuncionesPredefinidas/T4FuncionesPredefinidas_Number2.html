@@ -1,0 +1,33 @@
+<!--
+    @Created on : 12-dic-2016, 9:23:57
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+
+    <p id="demo"> Valor </p>
+    <br>
+    <p id="demo1"> Valor </p>
+    <br>
+    <p id="demo2"> Valor </p>
+    <script>
+      var x = 123;
+      var y = new Number(123);
+      var xx = Object.is(y, x);
+      var xxx = Object.is("a", "a");
+      document.getElementById("demo").innerHTML = y;
+      document.getElementById("demo1").innerHTML = xx;
+      document.getElementById("demo2").innerHTML = xxx;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!--
+    @Created on : 09-dic-2016, 12:49:30
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://jquery.com/
+                  https://developers.google.com/speed/libraries/
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("p").hide("slow", function () {
+            alert("The paragraph is now hidden");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>This is paragraph with little content</p>
+    <button>Hide</button>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!--
+    @Created on : 18-oct-2016, 23:03:46
+    @Author     : RVS - N.F.N.D
+    @Pag        : DWEC Sev - 14
+    @version    : 
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var str1 = "Hello";
+      var str2 = "World";
+
+      var res = str1.concat(str2);
+
+      for (var i = 0; i < res.length; i++) {
+        document.writeln(res[i]);
+//        document.writeln();
+      }
+
+      document.writeln(res);
+
+
+      var str1 = "Hello ";
+      var str2 = "world!";
+      var str3 = " Have a nice day!";
+      var res = str1.concat(str2, str3);
+
+      function get_mensaje() {
+        document.getElementById('demo').innerHTML = res;
+      }
+
+    </script>
+  </head>
+  <body>
+
+    <input type='button' onclick="get_mensaje()" value="b">
+
+    <p id='demo'></p>
+
+
+  </body>
+</html>

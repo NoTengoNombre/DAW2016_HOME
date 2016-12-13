@@ -1,0 +1,47 @@
+<!--
+    @Created on : 10-dic-2016, 22:18:16
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+    <script>
+    </script>
+  </head>
+  <body>
+    <h1>Apertura ventanas</h1>
+   	<input type="Button" value="Abre una ventana" onclick="
+        myWindow1 = window.open('', 'Ventana', 'top=0,left=0,width=400,height=400');
+        myWindow1.document.write('<html>');
+        myWindow1.document.write('<head>');
+        myWindow1.document.write('<title>Ubicar una ventana</title>');
+        myWindow1.document.write('</head>');
+        myWindow1.document.write('<body>');
+        myWindow1.document.write('top=0<br>left=0<br>width=400<br>height=400');
+        myWindow1.document.write('<br>');
+        myWindow1.document.write('<input type=\'button\' value=\'cerrar\' onclick=\'window.close()\'>');
+        myWindow1.document.write('</body>');
+        myWindow1.document.write('</html>');
+           "/>
+  </body>
+</html>
+
+
+
+
+
+
+

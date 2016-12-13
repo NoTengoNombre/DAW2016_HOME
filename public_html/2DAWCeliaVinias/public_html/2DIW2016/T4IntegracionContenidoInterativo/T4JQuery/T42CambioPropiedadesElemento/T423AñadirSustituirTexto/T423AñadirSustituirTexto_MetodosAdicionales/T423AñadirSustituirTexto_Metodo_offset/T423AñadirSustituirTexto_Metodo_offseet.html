@@ -1,0 +1,49 @@
+<!--
+    @Created on : 09-dic-2016, 12:14:26
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://jquery.com/
+                  https://developers.google.com/speed/libraries/
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style type="text/css">
+      body{
+        border: 1px solid #f00;
+        /*background-color: #000;*/
+        /*color: #fff;*/
+      }
+      p{ 
+        margin-left: 10px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+// "p:last" --> Selecciona el ultimo elemento
+// offset --> compensar
+        var p = $("p:last");
+        var offset = p.offset();
+        p.html("left: " + offset.left + ", top: " + offset.top);
+        $("p:last").css("background-color", "yellow");
+      });
+    </script>
+
+  </head>
+  <body>
+    <p>Hello1</p>
+    <p>Friend1</p>
+    <p>Hello2</p>
+    <p>Friend2</p>
+    <p>Hello3</p>
+    <p>Friend3</p>
+    <p>Hello4</p>
+    <p>Friend4</p>
+  </body>
+</html>

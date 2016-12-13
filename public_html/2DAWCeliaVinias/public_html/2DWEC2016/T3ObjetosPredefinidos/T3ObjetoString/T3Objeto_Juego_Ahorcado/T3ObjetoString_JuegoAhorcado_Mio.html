@@ -1,0 +1,159 @@
+<!--
+    @Created on : 12-dic-2016, 1:47:31
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        color:white;
+        background-color:#880000;
+        padding : 20px;
+        margin : 10px;
+        font-size:20px;
+      }
+      form{
+        position:absolute;
+        top:100px;
+      }
+      img{
+        position:absolute;
+        right:100px;
+        border: solid 5px black;
+        border-radius:10px;
+      }
+      .cajadetexto{
+        border-radius:15px;
+        border:2px solid black;
+        padding:5px;
+      }
+      .boton{
+        font-size:20px;
+        background-color:white;
+        border:2px solid black;
+        padding:5px;
+        border-radius:20px;
+      }
+      .boton:hover{
+        background-color:#440000;
+        color:white;
+      }
+    </style>
+    <script type="text/javascript">
+      var peliculas = new Array();
+      var peli;
+      var n;
+      var fallos;
+
+      function reiniciar() {
+        fallos = 0;
+        imagen0.style.visibility = "visible";
+        imagen1.style.visibility = "hidden";
+        imagen2.style.visibility = "hidden";
+        imagen3.style.visibility = "hidden";
+        imagen4.style.visibility = "hidden";
+        imagen5.style.visibility = "hidden";
+        imagen6.style.visibility = "hidden";
+        document.formulario.estado.value = "";
+        document.formulario.usadas.value = "";
+      }
+
+      function inicio() {
+        peliculas[0] = "Cadena de Favores";
+        peliculas[1] = "La Guerra de las Galaxias La Amenaza Fantasma";
+        peliculas[2] = "La Guerra de las Galaxias El Ataque de los Clones";
+        peliculas[3] = "La Guerra de las Galaxias Una Nueva Esperanza";
+        peliculas[4] = "La Guerra de las Galaxias El Imperio Contraataca";
+        peliculas[5] = "La Guerra de las Galaxias El Retorno del Jedi";
+        peliculas[6] = "Alien El Octavo Pasajero";
+        peliculas[7] = "Aliens El Regreso";
+        peliculas[8] = "Gangs of New York";
+        peliculas[9] = "Alien 4 Resurreccion";
+        peliculas[10] = "Pulp Fiction";
+        peliculas[11] = "Deep Blue Sea";
+        peliculas[12] = "El Señor de los Anillos Las Dos Torres";
+        peliculas[13] = "El Señor de los Anillos El Retorno Del Rey";
+        peliculas[14] = "Alguien Volo Sobre el Nido del Cuco";
+        peliculas[15] = "El Señor de los Anillos La Comunidad del Anillo";
+        peliculas[16] = "Los Vengadores";
+        peliculas[17] = "Austin Powers";
+        peliculas[18] = "Todo Sobre mi Madre";
+        peliculas[19] = "Hable con Ella";
+        reiniciar();
+      }
+
+      function comprobar() {
+        var ok = false;
+        var fin = false;
+        if (document.formulario.letra.value != "") { // si se introduce algun valor
+
+          if (!ok) {
+            fallos++;
+          }
+          switch (fallos) {
+            case 1:
+              imagen0.style.visibility = "hidden";
+              imagen1.style.visibility = "visible";
+              break;
+            case 2:
+              imagen1.style.visibility = "hidden";
+              imagen2.style.visibility = "visible";
+              break;
+            case 3:
+              imagen2.style.visibility = "hidden";
+              imagen3.style.visibility = "visible";
+              break;
+            case 4:
+              imagen3.style.visibility = "hidden";
+              imagen4.style.visibility = "visible";
+              break;
+            case 5:
+              imagen4.style.visibility = "hidden";
+              imagen5.style.visibility = "visible";
+              break;
+            case 5:
+              imagen5.style.visibility = "hidden";
+              imagen6.style.visibility = "visible";
+              if (confirm("Lo siento , Has perdido , ¿ Otra partida ?")) {
+                reiniciar();
+              } else {
+                document.write('<h1>Game Over</h1>');
+              }
+          }
+        }
+        if (fin) {
+          if (confirm("Has ganado")) {
+            reiniciar();
+          } else {
+            document.write('<h1>Game Over</h1>');
+          }
+        }
+        document.formulario.letra.value = "";
+        document.formulario.letra.focus();
+      }
+    </script>
+  </head>
+  <body onload="inicio();">
+    <img src="Aho1.gif" name="imagen1" style="visibility:hidden" alt="imagen1">
+    <img src="Aho2.gif" name="imagen2" style="visibility:hidden" alt="imagen2">
+    <img src="Aho3.gif" name="imagen3" style="visibility:hidden" alt="imagen3">
+    <img src="Aho4.gif" name="imagen4" style="visibility:hidden" alt="imagen4">
+    <img src="Aho5.gif" name="imagen5" style="visibility:hidden" alt="imagen5">
+    <img src="Aho6.gif" name="imagen6" style="visibility:hidden" alt="imagen6">
+    <img src="Aho7.gif" name="imagen7" style="visibility:hidden" alt="imagen7">
+    <form name="formulario">
+      <input type="text" name="estado" size="45" class="cajadetexto">
+      <input type="text" name="letra" size="1" class="cajadetexto"><br><br>
+      <input type="button" value="comprobar" class="botton" onclick="comprobar()">
+      <input type="button" value="reiniciar" class="botton" onclick="reiniciar()">
+    </form>
+  </body>
+</html>

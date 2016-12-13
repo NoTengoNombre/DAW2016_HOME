@@ -1,0 +1,37 @@
+<!--
+    @Created on : 11-dic-2016, 13:56:45
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+
+      function myFunction() {
+        var str = document.getElementById("p1").innerHTML;
+        var pos = str.indexOf("'locate'");
+        document.getElementById("demo").innerHTML = pos;
+      }
+
+
+    </script>
+  </head>
+  <body>
+
+    <!--.......012345678901234567890123456789123456-->
+    <p id="p1">Please locate where 'locate' occurs!</p>
+
+    <button onclick="myFunction()">Try</button>
+
+    <p id="demo"></p>
+
+  </body>
+</html>

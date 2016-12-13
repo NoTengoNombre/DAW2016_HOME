@@ -1,0 +1,40 @@
+<!--
+    @Created on : 09-dic-2016, 1:49:24
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://api.jquery.com/text/
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+      p{
+        background-color: #000000;
+        color: #ffffff;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("p").text("<b> Some </b> new text - No interpreta html");
+      });
+
+      $(document).ready(function () {
+        $("div").html("<h1 style='background-color:#f00'><b> Interpreta el HTML </b></h1>");
+      });
+
+
+    </script>
+  </head>
+  <body>
+    <p></p>
+
+    <div></div>
+
+  </body>
+</html>

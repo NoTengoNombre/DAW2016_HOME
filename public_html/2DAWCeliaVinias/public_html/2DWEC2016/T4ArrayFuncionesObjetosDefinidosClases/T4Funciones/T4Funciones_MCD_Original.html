@@ -1,0 +1,74 @@
+<!--
+    @Created on : 13-dic-2016, 13:53:36
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      #content{
+        text-align:center;
+      }
+    </style>
+    <script>
+      var unJsPorDia = (function (window, undefined) {
+        function getModule(a, b) {
+          if (isNumber(a) && isNumber(b)) {
+            return (a - Math.floor(a / b) * b);
+          } else {
+            alert("No se puede obtener módulo de los datos proporcionados");
+            return null;
+          }
+        }
+        function isNumber(n) {
+          return (!isNaN(parseFloat(n)) && isFinite(n)) ? true : false;
+        }
+        function mcd(m, n) {
+          if (isNumber(m) && isNumber(n)) {
+            if (getModule(m, n) == 0) {
+              return n;
+            } else {
+              return mcd(n, getModule(m, n));
+            }
+          } else {
+            alert('Datos no validos');
+            return null;
+          }
+        }
+        return{
+          "mcd": mcd
+        };
+      })(window);
+      window.addEventListener("load", function () {
+        var mcd = document.getElementById('mcd');
+        mcd.addEventListener("click", function () {
+          var m = document.getElementById('m').value;
+          var n = document.getElementById('n').value;
+          var result = document.getElementById('result');
+          result.value = unJsPorDia.mcd(m, n);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id='content'>
+      <input type='text' id='m' placeholder='Ingresa un número'>
+      <br/>
+      <br/>
+      <input type='text' id='n' placeholder='Ingresa otro número'>
+      <br/>
+      <br/>
+      <input type='text' id='result' disabled>
+      <br/>
+      <br/>
+      <input type='button' id='mcd' value='Calcular MCD'>
+    </div>
+  </body>
+</html>

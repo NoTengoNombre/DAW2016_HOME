@@ -1,0 +1,73 @@
+<!--
+    @Created on : 09-dic-2016, 0:25:51
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : The prepend() method inserts specified content at the beginning of the selected elements.
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p#pa{
+        position: static;
+        background-color: #00ffff;
+      }
+      p#pb{
+        position: static;
+        background-color: #ff00ff;
+      }
+      body{
+        background-color: #473;
+        border: 2px solid #000;
+      }
+      #btn1{
+        position: static;
+        background-color: #000;
+        color : #fff;
+        border: 1px solid #000;
+      }
+      #btn2{
+        position: static;
+        background-color: #000;
+        color : #fff;
+        border: 1px solid #000;
+      }
+
+      li{
+        position: static;
+        background-color: #00ff67;
+        color : #ff0000;
+        font-weight: bolder;
+      }
+
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+//           prepend --> fingir; simular
+          $("p").prepend("<b>Prepended text<br></b>");
+        });
+        $("#btn2").click(function () {
+          $("ol").prepend("<li>Prepended item<br></li>");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="pa">This is a paragraph</p>
+    <p id="pb">This is a another paragraph</p>
+    <ol>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ol>
+    <button id="btn1">Boton 1 : prepend - text </button>
+    <button id="btn2">Boton 2 : prepend - list item </button>
+  </body>
+</html>

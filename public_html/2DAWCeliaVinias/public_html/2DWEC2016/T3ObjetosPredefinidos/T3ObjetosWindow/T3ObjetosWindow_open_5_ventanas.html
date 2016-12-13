@@ -1,0 +1,48 @@
+<!--
+    @Created on : 10-dic-2016, 22:18:16
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      p {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+    <script>
+    </script>
+  </head>
+  <body>
+    <h1>Apertura 5 ventanas</h1>
+    <input type="button" value="Abre multiples ventanas" onclick="
+        for (i = 0; i < 5; i++) {
+          myWindow = window.open('', '', 'width=200,height=200');
+          myWindow.document.write('<html>');
+          myWindow.document.write('<head>');
+          myWindow.document.write('<title>Ventana ' + i + ' </title>');
+          myWindow.document.write('</head>');
+          myWindow.document.write('<body>');
+          myWindow.document.write('Ventana ' + i);
+          myWindow.document.write('<input type=\'button\' value=\'cerrar\' onclick=\'window.close()\'>');
+          myWindow.document.write('</body>');
+          myWindow.document.write('</html>');
+        }
+           "/>
+  </body>
+</html>
+
+
+
+
+
+
+

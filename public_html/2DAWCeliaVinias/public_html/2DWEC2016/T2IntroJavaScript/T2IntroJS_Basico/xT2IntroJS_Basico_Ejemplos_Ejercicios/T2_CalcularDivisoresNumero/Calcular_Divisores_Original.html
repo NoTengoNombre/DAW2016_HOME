@@ -1,0 +1,46 @@
+<!--
+    @Created on : 09-dic-2016, 18:56:44
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       : USAR IE , FIREFOX
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script type="text/javascript">
+      function divisores() {
+        var a = document.getElementById('divisores-numero').value;
+        var b = a, c, i = 1, j = Math.floor(a / 2), output = '<strong>Divisores de ' + a + '</strong>: ', pf = '';
+        if (isNaN(a) || !(a % 1 == 0)) {
+          output = 'Entrada inválida, ';
+        } else if (a == 0) {
+          output = '<strong>Divisores de ' + a + '</strong>: Todos los números distinto de 0, ';
+        } else {
+          for (; i <= Math.abs(a); i++) {
+            c = Math.abs(a) / i;
+            if (c === Math.floor(c)) {
+              output += ' ±' + i + ', ';
+            }
+          }
+        }
+        output = output.substr(0, output.length - 2);
+        document.getElementById('divisores-resultado').innerHTML = output + pf.substr(0, pf.length - 3);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Pulsa el BOTON </h1>
+    <!--para que funcione en Chrome poner - action="#" o no-->
+    <form name="inputForm">
+      <input type="text" id="divisores-numero" value>
+      <input name="Button" value="Calcular Divisores" onclick="javascript:divisores()" type="button">
+      <div id="divisores-resultado"></div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!--
+    @Created on : 11-dic-2016, 15:00:25
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/typeof
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, +initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+
+      var miFuncion = new Function("5+2");
+      var forma = "redonda";
+      var tamano = 1;
+      var hoy = new Date();
+
+      typeof miFuncion == 'function';
+      document.writeln(miFuncion);
+      typeof forma == 'string';
+      document.writeln(forma);
+      typeof tamano == 'object';
+      document.writeln(tamano);
+      typeof hoy == 'object';
+      document.writeln(hoy);
+      typeof noExiste == 'undefined';
+      document.writeln(noExiste);
+
+      typeof true == 'boolean';
+      typeof null == 'object';
+
+      typeof 62 == 'number';
+      typeof 'Hola mundo' == 'string';
+
+      typeof document.lastModified == 'string';
+      typeof window.length == 'number';
+      typeof Math.LN2 == 'number';
+
+      typeof blur == 'function';
+      typeof eval == 'function';
+      typeof parseInt == 'function';
+      typeof shape.split == 'function';
+
+      typeof Date == 'function';
+      typeof Function == 'function';
+      typeof Math == 'object';
+      typeof Object == 'function';
+      typeof String == 'function';
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

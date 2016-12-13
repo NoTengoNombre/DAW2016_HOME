@@ -1,0 +1,61 @@
+<!--
+    @Created on : 11-dic-2016, 0:50:16
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prototype
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script></script>
+  </head>
+  <body>
+    <script>
+      /**
+       * 
+       * @param {type} name
+       * @param {type} jobtitle
+       * @param {type} born
+       * @returns {employee}
+       */
+      function employee(name, jobtitle, born) {
+        this.name = name;
+        this.jobtitle = jobtitle;
+        this.born = born;
+      }
+
+      function employee2(name, jobtitle, born) {
+        this.name = name;
+        this.jobtitle = jobtitle;
+        this.born = born;
+      }
+      var fred = new employee("Fred", "Caveman", 1970);
+      var fred2 = new employee2("Fred2", "Caveman2", 19702);
+
+      document.write(employee.name + "<br>");
+      document.write(employee.jobtitle + "<br>");
+      document.write(employee.born + "<br>");
+      document.write("<hr>");
+      document.write(fred.name + "<br>");
+      document.write(fred.jobtitle + "<br>");
+      document.write(fred.born + "<br>");
+
+      document.write("<hr>");
+      document.write('<br>' + fred.born);
+      document.write('<br>' + fred.jobtitle);
+      document.write('<br>' + fred.name);
+
+      document.write("<hr>");
+      document.write('<br>' + fred2.born);
+      document.write('<br>' + fred2.jobtitle);
+      document.write('<br>' + fred2.name);
+
+    </script>
+  </body>
+</html>

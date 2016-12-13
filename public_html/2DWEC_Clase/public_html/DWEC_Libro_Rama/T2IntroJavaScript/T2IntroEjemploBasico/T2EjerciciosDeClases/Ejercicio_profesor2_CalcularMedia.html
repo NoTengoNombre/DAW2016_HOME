@@ -14,38 +14,37 @@
 
 -->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <script type="text/javascript">
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <script type="text/javascript">
 
-            var nnum, num, menor, media, mayor;
+      var numero_de_nota, num, menor, media, mayor;
 
-            nnum = parseInt(prompt("Numero : "));
-            num = parseInt(prompt("Numero : "));
-            media = menor + mayor;
-            
-            mayor = num;
+      numero_de_nota = parseInt(prompt("Numero : "));
+//      num = parseInt(prompt("Numero : "));
+//      media = menor + mayor;
+
+//      mayor = num;
+//      menor = num;
+
+      for (var i = 1; i < numero_de_nota; i++) {
+        num = parseInt(prompt("Numero"));
+        media = media + num;
+        if (num > mayor) {
+          mayor = num;
+        } else {
+          if (num < menor) {
             menor = num;
+          }
+        }
+        document.write("Media " + media / numero_de_nota + " Mayor: " + mayor + " Menor: " + menor);
+      }
 
+    </script>
 
-            for (var i = 1; i < nnum; i++) {
-                num = parseInt(prompt("Numero"));
-                media = media + num;
-                if (num > mayor) {
-                    mayor = num;
-                } else {
-                    if (num < menor) {
-                        menor = num;
-                    }
-                }
-                document.writer("Media " + media / nnum + " Mayor: " + mayor + " Menor: " + menor);
-            }
-
-        </script>
-
-    </body>
+  </body>
 </html>

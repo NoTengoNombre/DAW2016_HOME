@@ -1,0 +1,79 @@
+<!--
+    @Created on : 12-dic-2016, 22:44:13
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+
+      var person = [];
+      person[0] = typeof "Jhon";
+      person[1] = typeof "Doe";
+      person[2] = typeof 46;
+      person[3] = "Peepe";
+
+      for (var i = 0; i < person.length; i++) {
+        document.write('<br>' + person[i]);
+        if (typeof person[i]) {
+          document.write('soy un numero = ' + person[i]);
+        } else {
+          document.write('<br>otra cosa');
+        }
+      }
+
+      document.write('<hr>');
+
+      var person1 = [];
+      person1[0] = "Jhon";
+      person1[1] = "Doe";
+      person1[2] = 46;
+      person1[3] = "Peepe";
+
+      var x = person1.length;
+      var y = person1[0];
+
+
+      for (i in person1) {
+        document.write(i);
+      }
+
+      document.write('<hr>');
+
+      for (i in person1) {
+        document.writeln(i + ' ' + person1 + '<br>');
+      }
+
+      document.write('<hr>');
+
+      for (var i = 0; i < person1.length; i++) {
+        document.writeln(person1[i]);
+      }
+
+      document.writeln('<br>' + typeof person1);
+
+      function isArray(x) {
+        return x.constructor.toString().indexOf("Array") > -1;
+      }
+
+
+      var message = isArray(person1);
+      document.writeln(message);
+
+      var x0 = person1 instanceof Array;
+      document.write('<br>' + x0);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

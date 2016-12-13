@@ -1,0 +1,60 @@
+<!--
+    @Created on : 10-dic-2016, 11:37:43
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://es.slideshare.net/jcremiro/javascript-funciones
+    @version    :
+    @TODO       : Numero primo es : Divisible por el mismo y por 1 - solo 2 numeros 
+                  el 1 y 0 no son divisibles
+
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+
+//        floor() - redondeo hacia abajo 
+//        round() - redondeo hacia arriba 
+      /**
+       * Controla el 0 y 1 como no Primos.
+       * 
+       * @param {type} numero
+       * @returns {Boolean}
+       */
+      function es_primo(numero) {
+        //cota, elemento de un conjunto que limita los elementos de una sucesión.
+        var cota = Math.floor(numero / 2);
+        var candidato = 2;
+        var primo = true;
+        if (cota == 0) {
+          primo = false;
+        }
+        while (primo && candidato <= cota) {
+          if (numero % candidato == 0) {
+            primo = false;
+          }
+          candidato = candidato + 1;
+        }
+        return primo;
+      }
+
+      var resultado = "";
+      for (var i = 0; i < 1000; i++) {
+        if (es_primo(i)) {
+          document.write("<br>: " + i);
+        }1
+      }
+      document.write('<br>' + resultado);
+
+    </script>
+  </head>
+  <body>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!--
+    @Created on : 09-dic-2016, 12:49:30
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://jquery.com/
+                  https://developers.google.com/speed/libraries/
+    @version    : 
+    @TODO       : fade : apagarse , descolorar , disminuir lentamente , ocultarse
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+
+      body{
+        border: 1px solid #ff0000;
+        background-color: #000000;
+        color: #ffffff;
+      }
+
+      div{
+        border: 1px solid #00ff00;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        float: left;
+      }
+      .first{
+        border: 1px solid #0000ff;
+        background-color: red;
+        left: 0;
+      }
+      .second{
+        border: 1px solid #00ffff;
+        background-color: blue;
+        left: 80px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("div.first").slideUp(300).delay(800).fadeIn(400);
+          $("div.second").slideUp(300).fadeIn(400);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button>B</button>
+    <div class="first">Capa</div>
+    <div class="second">Capa</div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!--
+    @Created on : 10-dic-2016, 17:59:48
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+      var anyo = parseInt(Math.random() * 2100);
+      var bisiesto = anyo % 4;
+      document.write("Bisiesto : " + bisiesto);
+      document.write("<br>");
+      var bisiesto2 = anyo % 400;
+      document.write("Bisiesto : " + bisiesto2);
+      document.write("<br>");
+
+      if (bisiesto === 0 && (bisiesto2 == 0 || bisiesto2 != 100)) {
+        document.write("Bisiesto");
+      } else {
+        document.write("No bisiesto");
+      }
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

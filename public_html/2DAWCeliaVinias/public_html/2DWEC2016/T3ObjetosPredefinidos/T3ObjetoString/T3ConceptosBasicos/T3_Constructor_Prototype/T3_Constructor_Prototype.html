@@ -1,0 +1,46 @@
+<!--
+    @Created on : 11-dic-2016, 0:50:16
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prototype
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script></script>
+  </head>
+  <body>
+
+    <p id="demo"></p>
+
+    <script>
+      /**
+       * 
+       * @param {type} name
+       * @param {type} jobtitle
+       * @param {type} born
+       * @returns {employee}
+       */
+      function employee(name, jobtitle, born) {
+        this.name = name;
+        this.jobtitle = jobtitle;
+        this.born = born;
+      }
+      employee.prototype.salary = 2000;
+      var fred = new employee("Fred", "Caveman", 1970);
+      document.getElementById("demo").innerHTML = fred.name + " <br> " + fred.jobtitle + " <br> " + fred.salary;
+
+      for (var i = 0; i < employee; i++) {
+        document.write(employee[i]);
+      }
+
+
+    </script>
+  </body>
+</html>

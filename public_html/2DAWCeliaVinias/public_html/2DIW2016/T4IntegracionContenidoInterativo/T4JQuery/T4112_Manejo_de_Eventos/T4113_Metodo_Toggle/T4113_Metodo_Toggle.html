@@ -1,0 +1,39 @@
+<!--
+    @Created on : 08-dic-2016, 23:45:33
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ejemplo uso toggle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      var poner_Rojo = function () {
+        $(this).css("color", "rgb(255,0,0)");
+      };
+      var poner_Azul = function () {
+        $(this).css("color", "rgb(0,0,255");
+      };
+      $(document).ready(function () {
+        $("p").toggle(poner_Rojo, poner_Azul);
+      });
+    </script>
+    <style media="screen">
+      body{
+        background-color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <p>El texto cambia de color hacer click</p>
+
+
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!--
+    @Created on : 09-dic-2016, 18:08:29
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        : http://numeroscompuestos.com/divisores?
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+
+      var num1 = parseInt(prompt("Numero 1"));
+      var num2 = parseInt(prompt("Numero 2"));
+      var mcm;
+      var mcd;
+      if (num2 > num1) {
+        var num3 = num1;
+        num1 = num2;
+        num2 = num3;
+      }
+      if (num1 % num2 == 0) {
+        var mcm = num1;
+      } else {
+        var salir = false;
+        var i = 2;
+        while (!salir) {
+          if ((num1 * i) % num2 == 0) {
+            mcm = num1 * i;
+            salir = true;
+          }
+          i++;
+        }
+      }
+      i = 0;
+      do {
+        i = i + 1;
+        mcd = num2 / i;
+      } while (mcd != parseInt(mcd) || num1 % mcd != 0);
+
+      alert("Numeros:\n " + num1 + " \n " + num2 + "\nMCM: " + mcm + "\nMCD: " + mcd);
+
+      /*var mcm=num1*num2;
+       var resto=num1%num2;
+       while(resto!=0){
+       num1=num2;
+       num2=resto;
+       resto=num1%num2;
+       }
+       mcm=mcm/num2;
+       alert("MCD "+num2+"\nMCM "+mcm);
+       */
+
+
+
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
