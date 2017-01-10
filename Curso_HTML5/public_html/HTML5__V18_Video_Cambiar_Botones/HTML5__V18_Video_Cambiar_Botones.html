@@ -1,0 +1,42 @@
+<!--
+    @Created on : 10-ene-2017, 13:20:54
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>VIDEOS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      @import"../css/HTML5__V18_Video_Modificar_botones.css";
+    </style>
+  </head>
+  <body>
+    <section id="video"> 
+      <video id="mivideo" width="720" loop>
+        <source src="../video/videogato.mp4"> 
+        <source src="../video/sol.ogv"> 
+        <source src="../video/sol2.3g2">
+        <source src="../video/f.webm">
+      </video>
+
+      <!--Se crea una botonera con HTML y con la etiqueta NAV-->
+      <nav>
+        <div id="botones">
+          <button type="button" id="reproducir">PLAY</button>
+        </div>
+
+        <!--Barra de proceso : OTRO CONTENEDOR -->
+        <!--darle apariencia con CSS -->
+        <div id="barra">
+          <div id="proceso"></div>
+        </div>
+      </nav>
+    </section>
+  </body>
+</html>

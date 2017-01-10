@@ -1,0 +1,77 @@
+<!--
+    @Created on : 09-ene-2017, 23:03:50
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Pagina Programacion HTML5</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--rel : archivo que vamos a ingresar-->
+    <!--<link rel="stylesheet" href="css/micss7_cabecera.css">--> 
+    <!--enlazar incluir documentos externos , js , css-->
+    <style>
+
+      #principal{
+        width: 500px;
+        /*alinear el texto con la cabecera*/
+        text-align: center;
+        /*Separar 15px en todas las dimensiones */
+        margin: 15px auto;
+        /*Ancho 15px en todas las dimensiones del relleno */
+        padding: 15px;
+        /*Agregar Border */
+        border: 3px solid #f00;
+        /*nuevas reglas CSS*/
+        /*Redondear esquinas en medida pixeles*/
+        border-radius: 20px 5px 15px 40px;
+        /*crear sombreado 1º elemento 
+                      ()lateral , vertical (),
+                                  difuminado */
+        box-shadow: #ccc 45px 5px 5px;
+        /*sombreado texto */
+        /*HACER QUE EL DEGRADADO PARA TODOS */
+        background: radial-gradient(center,circle,#F00,#CF0); /*Standard*/
+        /*background: linear-gradient(bottom,#00F,#3FF);*/
+        /*rgba - alfa de transferencia 0 a 1  , 0 - transparente 0.1 0.2 0.5  ...  1 - opaco */
+        background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /*Standard*/
+      }
+
+
+
+      /*Si no tiene la fuente la subimos al servidor 
+      la subimos a la raiz */
+
+      @font-face{
+        /*tenemos que darle un nombre por defecto para identificarla y poderla usbir*/
+        font-family: 'MiPropiaFuente';
+        /* Subir la fuente al servidor */
+        src:url(SansationLight.ttf ); /*Subir la fuente al servidor*/
+      }
+
+      #titulo{
+        /*Las distintas fuentes se van usando dependiendo de si tiene 
+        instalada en el ordenador
+        si tiene verdana se ejecuta si no usa Geneva sino sans-serif */
+        /*font: bold 36px Verdana , Geneva , sans-serif;*/
+        font: bold 36px 'MiPropiaFuente';
+        text-shadow: #0F0 3px 3px 5px;
+        color: rgba(0,0,0,0.5);
+      }
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <header id="principal">
+      <span id="titulo">Estilos CSS3</span>
+    </header>
+
+  </body>
+</html>

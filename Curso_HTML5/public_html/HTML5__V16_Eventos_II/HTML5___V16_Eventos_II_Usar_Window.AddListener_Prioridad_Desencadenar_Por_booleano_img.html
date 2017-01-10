@@ -1,0 +1,65 @@
+<!--
+    @Created on : 10-ene-2017, 11:38:29
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>EVENTOS EN 2 CAJAS CON PRIORIDAD</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        background-color: #000;
+        color:#fff;
+      }
+      img{
+        border : 1px solid #f00;
+      }
+      p{
+        border : 1px solid #0f0;
+      }
+
+    </style>
+    <script>
+
+      function loseventos() {
+//        localizar los elementos
+//        Identificar a una parrafo " RECUERDA QUE ESTA DENTRO DE UN ARRAY "
+        var elemento = document.getElementsByTagName("p")[0];
+//        localizar los elementos
+        var elemento2 = document.getElementsByTagName("img")[0];
+//        elemento asociado a un evento asociado al onclick
+        /*INDICAR LA FUNCION A EJECUTAR*/
+        elemento.addEventListener("click", aviso2, false);
+//        ELEMENTO 2 ES LA IMAGEN
+//        CAMBIAR EL FALSE POR EL TRUE PARA DARLE PRIORIDAD
+//        1º CARGA LA IMAGEN
+        elemento2.addEventListener("click", aviso1, true);
+      }
+
+      function aviso1() {
+        alert("Hola soy una imagen");
+      }
+
+      function aviso2() {
+        alert("Hola soy EL PARRAFO");
+      }
+
+      window.onload = loseventos;
+
+    </script>
+  </head>
+  <body>
+    <!--Cuando ME PONGO ENCIMA DE LA IMAGEN Y PINCHO , DESENCADENO 2 EVENTO A LA VEZ
+    EL DEL PARRAGO Y EL DE LA IMAGEN Y-->
+    <!--LA IMAGEN GENERA UNA CAJA Y EL PARRAFO OTRA CAJA , SE UNEN AMBAS CAJAS Y EVENTOS-->
+    <p>
+      <!--pulso en el parrafo se desencadena un evento y llame una funcion --> 
+      <img src="../imagenes/flor.jpg" alt="1">Dentro de parrafos</p>
+  </body>
+</html>

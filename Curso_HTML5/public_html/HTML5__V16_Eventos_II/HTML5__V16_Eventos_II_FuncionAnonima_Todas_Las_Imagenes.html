@@ -1,0 +1,105 @@
+<!--
+    @Created on : 10-ene-2017, 11:38:29
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>FUNCION ANONIMA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+//1º      PARA QUE SE EJECUTE EN TODAS LAS IMAGEN : SE DECLARA COMO UN ARRAY
+      var imagen = new Array(3);
+
+      function tipoflor() {
+        alert("Pensamiento");
+      }
+
+      /**
+       * 6º AL Estar el OBJETO dentro addEventListener esta a la ESCUCHA del EVENTO
+       * 6º Esta fuera del bucle FOR porque en la ultima vuelta del bucle 
+       * 6º el valor de la variable del array seria [3] y no se almacena 
+       *    en las demas variables del array
+       */
+      function manejarflor() {
+        for (var i = 0; i < 4; i++) {
+//2º      En cada vuelta de la imagen se almacena en la variable ARRAY de ARRIBa
+          imagen[i] = document.getElementsByTagName("img")[i]; // este metodo devuelve un array , devuelve la 1º posicion del ARRAY
+        }
+//3º SE SACA FUERA PORQUE SINO SOlO SE EJECUTA UNA VEZ ; QUE ES EL ULTIMO ELEMENTO
+//4º  Sustituir la funcion "crecer" por una funcion 'anonima'
+//5º ESTO ES LA FUNCION ANONIMA : DENTRO DEL 2 PARAMETRO : METEMOS LOS PARAMETROS DE LA FUNCION A LA QUE SUSTITUYE
+//5º function(){imagen[0].width = 255, imagen[0].height = 255;}
+// LE ESTOY DANDO EL EFECTO EVENTO AL 1º ELEMENTO
+        imagen[0].addEventListener("mouseover", function () {
+          imagen[0].width = 255, imagen[0].height = 255;
+        }, false);
+        imagen[0].addEventListener("mouseout", function () {
+          imagen[0].width = 200, imagen[0].height = 200;
+        }, false);
+        imagen[0].addEventListener("click", tipoflor, false);
+
+        imagen[1].addEventListener("mouseover", function () {
+          imagen[1].width = 255, imagen[1].height = 255;
+        }, false);
+        imagen[1].addEventListener("mouseout", function () {
+          imagen[1].width = 200, imagen[1].height = 200;
+        }, false);
+        imagen[1].addEventListener("click", tipoflor, false);
+
+        imagen[2].addEventListener("mouseover", function () {
+          imagen[2].width = 255, imagen[2].height = 255;
+        }, false);
+        imagen[2].addEventListener("mouseout", function () {
+          imagen[2].width = 200, imagen[2].height = 200;
+        }, false);
+        imagen[2].addEventListener("click", tipoflor, false);
+
+// Asi con todas las imagenes que haya - ESTAN _DENTRO DEL ARRAY     
+//        imagen[0].addEventListener("mouseover", function () {imagen[0].width = 255, imagen[0].height = 255;}, false);
+//        imagen[0].addEventListener("mouseout", function(){imagen[0].width = 200 , imagen[0].height = 200;}, false);
+//        imagen[0].addEventListener("click", tipoflor, false);
+//     
+      }
+
+
+//4º VAMOS A CREAR UNA FUNCION ANONIMA : funciones QUE NO TIENE NOMBRE : Sirve para ahorrar codigo
+//      function crecer() {
+//        imagen.width = 255;
+//        imagen.height = 255;
+//      }
+//
+//      function menguar() {
+//        imagen.width = 200;
+//        imagen.height = 200;
+//      }
+
+//QUITAR LOS PARENTESIS
+      window.onload = manejarflor;
+
+
+
+    </script>
+  </head>
+  <body>
+
+    <p><img src="../imagenes/flor.jpg" alt="1">Dentro de parrafos</p>
+    <br>
+    <p><img src="../imagenes/flor.jpg" alt="2">Dentro de parrafos</p>
+    <br>
+    <figure>
+      <figcaption>FLOR CON EVENTO DENTRO Figure y Caption</figcaption>
+      <img src="../imagenes/flor.jpg" alt="3">
+    </figure>
+    <figure>
+      <figcaption>FLOR 2 SIN EVENTO DENTRO Figure y Caption</figcaption>
+      <img src="../imagenes/flor.jpg" alt="4">
+    </figure>
+  </body>
+</html>

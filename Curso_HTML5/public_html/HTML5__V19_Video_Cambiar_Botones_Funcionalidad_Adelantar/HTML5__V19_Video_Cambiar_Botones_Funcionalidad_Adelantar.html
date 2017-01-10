@@ -1,0 +1,46 @@
+<!--
+    @Created on : 10-ene-2017, 13:20:54
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>VIDEOS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      @import"HTML5__V19_Video_Modificar_botones_Adelantar.css";
+    </style>
+    <script src="HTML5__V19_Video_Cambiar_Botones_Funcionalidad_Adelantar.js">
+//<!--La funcionalidad de la recarga de la barra se hace con JAVASCRIPT-->
+
+    </script>
+  </head>
+  <body>
+    <p>EL PROBLEMA RESIDE QUE LA BARRA DE PROGRESO ESTA ASIGNADO AL OBJETO PROGRESO 
+    HAY QUE CAMBIARLO POR LA CAJA , CAPA DE LA BARRA</p>
+    <section id="video"> 
+      <video id="mivideo" width="720" loop>
+        <source src="../video/videogato.mp4"> 
+        <source src="../video/sol.ogv"> 
+        <source src="../video/sol2.3g2">
+        <source src="../video/f.webm">
+      </video>
+      <!--Se crea una botonera con HTML y con la etiqueta NAV-->
+      <nav>
+        <div id="botones">
+          <button type="button" id="reproducir">PLAY</button>
+        </div>
+        <!--Barra de proceso : OTRO CONTENEDOR -->
+        <!--darle apariencia con CSS -->
+        <div id="barra">
+          <div id="progreso"></div>
+        </div>
+      </nav>
+    </section>
+  </body>
+</html>

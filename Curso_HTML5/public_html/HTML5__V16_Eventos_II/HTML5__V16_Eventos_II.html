@@ -1,0 +1,61 @@
+<!--
+    @Created on : 10-ene-2017, 11:38:29
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script>
+//1º      PARA QUE SE EJECUTE EN TODAS LAS IMAGEN : SE DECLARA COMO UN ARRAY
+      var imagen = new Array(3);
+
+      function tipoflor() {
+        alert("Pensamiento");
+      }
+
+      function manejarflor() {
+        for (var i = 0; i < 4; i++) {
+//2º      En cada vuelta de la imagen se almacena en la variable ARRAY de ARRIBa
+          imagen[i] = document.getElementsByTagName("img")[i]; // este metodo devuelve un array , devuelve la 1º posicion del ARRAY
+        }
+//3º       SE SACA FUERA PORQUE SINO SOlO SE EJECUTA UNA VEZ ; QUE ES EL ULTIMO ELEMENTO
+//4º  Sustituir la funcion "crecer" por una funcion 'anonima' 
+        imagen.addEventListener("mouseover", crecer, false);
+        imagen.addEventListener("mouseout", menguar, false);
+        imagen.addEventListener("click", tipoflor, false);
+
+      }
+//4º VAMOS A CREAR UNA FUNCION ANONIMA : funciones QUE NO TIENE NOMBRE : Sirve para ahorrar codigo
+      function crecer() {
+        imagen.width = 255;
+        imagen.height = 255;
+      }
+
+      function menguar() {
+        imagen.width = 200;
+        imagen.height = 200;
+      }
+
+
+    </script>
+  </head>
+  <body>
+
+    <p><img src="../imagenes/flor.jpg" alt="1"></p>
+    <br>
+    <p><img src="../imagenes/flor.jpg" alt="2"></p>
+    <br>
+    <p><img src="../imagenes/flor.jpg" alt="3"></p>
+    <br>
+    <p><img src="../imagenes/flor.jpg" alt="4"></p>
+
+  </body>
+</html>

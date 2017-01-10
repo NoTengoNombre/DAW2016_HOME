@@ -1,0 +1,44 @@
+<!--
+    @Created on : 10-ene-2017, 18:16:41
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>AUDIO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      @import"HTML5__V20_Audio.css";
+    </style>
+    <script src="HTML5__V20_Audio.js"></script>
+  </head>
+  <body>
+    <section id="reproductor">
+      <h1>Reproductor</h1>
+      <!--<audio src="../audio/min.ogg" controls>-->
+      <!--<audio id="miaudio" controls>-->
+      <audio id="miaudio">
+        <!--explores no coge ogg-->
+        <source src="../audio/min.ogg">
+        <source src="../audio/rules.mp3"> 
+      </audio>
+
+      <!--Seccion de navegacion-->
+      <nav>
+        <!--Contenedor-->
+        <div id="botones">
+          <button type="button" id="play">Play</button>
+        </div>  
+
+        <div id="barra">
+          <div id="progreso"></div>
+        </div>
+      </nav>
+    </section>
+  </body>
+</html>

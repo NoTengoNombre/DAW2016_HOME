@@ -1,0 +1,64 @@
+<!--
+    @Created on : 10-ene-2017, 10:53:48
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        border: 1px solid #fff;
+        background: #000;
+        color: #f00;
+      }
+
+    </style>
+    <script>
+
+      function tipoflor() {
+        alert("Pensamiento");
+      }
+
+      /**
+       * CONSTRUIR MANEJADOR DE EVENTOS PARA PAGINAS MUY GRANDES
+       * 
+       * @returns {undefined}
+       */
+      function daTipoFlor() {
+//        1º argumento es el tipo evento que quiero que desencadene este OBJETO
+//        2º argumento la funcion que queremos q se ejecute cuando tenga lugar y se realice el evento
+//        3º argumento tipo booleano : solo true o false hace referencia a los elementos anidados
+        var imagen = document.getElementsByTagName("img")[0]; // esta linea declara una ARRAY
+// 1º argumento , evento que quiero que desencadene el evento
+// SE QUITA EL ON - click porque solo es para lo que van en linea
+// 2º argumento , la funcion que quiero que desencadene el evento
+// 3º booleano 
+// ESTO ES UN MANEJADOR DE EVENTOS : este elemento esta A LA ESCUCHA DEL DESENCADENADOR DE EVENTO
+        imagen.addEventListener("click", tipoflor, false);
+      }
+
+//LANZA EL EVENTO CUANDO SE CARGUE LA PAGINA
+      window.onload = daTipoFlor;
+
+    </script>
+  </head>
+  <body>
+    <p>Carga la pagina , cuando pulse en la imagen , lanza el evento</p>
+    <p><img src="flor.jpg"></p>
+
+
+    <p>metodo 3 argumentos </p>
+    <p>Nombre del evento</p>  
+    <p>Funcion a ejecutar </p>
+    <p>Valor Booleano </p>
+
+
+  </body>
+</html>

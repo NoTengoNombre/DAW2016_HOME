@@ -1,0 +1,20 @@
+/* 
+    @Created on : 10-ene-2017, 14:08:46
+    @Author     : RVS
+    @Pag        :
+    @version    :
+*/
+
+
+#video{
+  width:720px;
+  margin: 20px auto;
+  background: #09f;
+  padding : 5px;
+  border : 2px solid #f05;
+  /*Compatible con otros navegadores - firefox */
+/*  -moz-border-radius: 5px;*/
+  /*Compatible con otros navegadores - chrome*/
+  /*-webkit-border-radius: 5px;*/
+} 
+

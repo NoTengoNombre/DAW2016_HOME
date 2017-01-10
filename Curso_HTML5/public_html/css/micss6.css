@@ -1,0 +1,43 @@
+/* 
+    @Created on : 09-ene-2017, 21:13:33
+    @Author     : RVS
+    @Pag        :
+    @version    :
+*/
+
+#cabeceraweb{
+  background-color: #00f;
+}
+
+/**{
+  margin: 0;
+  padding : 0;
+}*/
+
+#navegacion_principal {
+  background-color: #f00;
+}
+
+#barralateral{
+  background-color: #0f0;
+  float: left;   /*se adapta al contenido de la pantalla*/
+  height: 600px;/*ocupar todo el alto de la pagina */
+
+}
+
+#contenido_principal{
+  background-color: #ff33cc;
+}
+
+#pieprincipal{
+  background-color: #ccc;
+}
+
+li{
+  background-color: #66ffff;
+  display: inline;
+}
+
+body{
+  background-color: #cccccc;
+}

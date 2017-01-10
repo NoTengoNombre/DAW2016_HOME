@@ -1,0 +1,59 @@
+/* 
+    @Created on : 10-ene-2017, 14:08:46
+    @Author     : RVS
+    @Pag        :
+    @version    :
+*/
+
+
+#video{
+  width:720px;
+  margin: 20px auto;
+  background: #09f;
+  padding : 5px;
+  border : 2px solid #f05;
+  /*Compatible con otros navegadores - firefox */
+  /*  -moz-border-radius: 5px;*/
+  /*Compatible con otros navegadores - chrome*/
+  -webkit-border-radius: 5px;
+} 
+
+/*empezamos con la seccion NAV*/
+
+nav{
+  /*distancia del contenedor hasta lo que le rodea*/
+  margin: 5px 0;
+}
+
+botones{
+  /*colocarlo a la izquierda*/ 
+  /*
+  tenemos un div para contenedor , debajo otro contenedor para la barra de proceso
+  que se podrna a la derecha del boton
+  */
+  float:left;
+  width: 100px;
+  height: 20px;
+}
+
+#barra{
+  background: #fff;
+  /*Este valor se usara para la carga de la barra de proceso*/ 
+  width: 600px; 
+  height: 16px;
+  border: 1px solid #666;
+  /*ancho de la barra y mover a la derecha*/
+  padding: 3px;
+  margin-left: 80px;
+} 
+
+#proceso{
+  /*posicion absoluta porque esta dentro de barra*/
+  position: absolute;
+  /*tiene 0px que va a empezar a 600px que es como terminara*/ 
+  /*simulara la barra de recarga*/
+  width: 0px;
+  height: 16px;
+  /*a es de alfa de la transparencia */
+  background: rgba(0,0,150,2);
+}

@@ -1,0 +1,34 @@
+<!--
+    @Created on : 10-ene-2017, 13:20:54
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>VIDEOS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      @import"../css/HTML5__V17_Video_con_Section_Controls_Poster_modificar_video_conCSS.css";
+    </style>
+  </head>
+  <body>
+    <!--Tengo que ajustar el ancho de la "<SECTION>" con el ancho del "<VIDEO>"-->
+    <section id="video"> 
+      <!--<h1>Video</h1>-->
+      <!--poster para que se vea una image antes de que carge el video -->
+      <!--ajustar el video tiene que tener ambos width iguales -->
+      <video id="mivideo" width="720" controls loop>
+        <source src="../video/sol.ogv"> 
+        <!--si el elemento no carga el 1º video prueba el siguiente -->
+        <source src="../video/sol2.3g2">
+      </video>
+    </section>
+
+
+  </body>
+</html>

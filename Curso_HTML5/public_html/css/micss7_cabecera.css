@@ -1,0 +1,48 @@
+/* 
+    @Created on : 09-ene-2017, 21:13:33
+    @Author     : RVS
+    @Pag        :
+    @version    :
+*/
+
+#cabeceraweb{
+  background-color: #00f;
+}
+
+#contenido_principal{
+  background-color: #ff33cc;
+}
+
+#nav {
+  background-color: #f00;
+}
+
+#barralateral{
+  background-color: #0f0;
+  float: left;   /*se adapta al contenido de la pantalla*/
+  height: 1074px;/*ocupar todo el alto de la pagina */
+
+}
+
+#contenido_principal{
+  background-color: #ff33cc;
+  margin-left: 200px;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+
+#pieprincipal{
+  margin-top: 50px;
+  background-color: #ffff33;
+  clear: both; 
+}
+
+li{
+  background-color: #66ffff;
+  display: inline;
+}
+
+body{
+  background-color: #cccccc;
+}

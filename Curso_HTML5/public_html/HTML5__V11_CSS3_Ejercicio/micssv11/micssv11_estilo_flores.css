@@ -1,0 +1,127 @@
+/* 
+    @Created on : 10-ene-2017, 0:50:09
+    @Author     : RVS
+    @Pag        :
+    @version    :
+*/
+
+/*Resetear los margenes basico */
+/**{
+  margin: 0px;
+  padding: 0px;
+}*/
+
+/*Resetear completo pero tiene etiquetas antiguas  */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+table { border-collapse: collapse; border-spacing: 0; }
+td, th, caption { font-weight: normal; text-align: left; }
+img, fieldset { border: 0; }
+ol { padding-left: 1.4em; list-style: decimal; }
+ul { padding-left: 1.4em; list-style:square; }
+q:before, q:after { content:''; }
+/* fin del reset css */
+
+body{
+  font-size: 62.5%;
+}
+
+/*nomenclatura abreviada */
+h1{
+  /*normal - fuente normal - 1em => es igual , 2em => el 2 doble de grande */
+  font: normal 2.4em Verdana , Geneva , sans-serif;
+  /*alineacion degradado lineal */
+  background: linear-gradient(top,#00F,#0CF);
+  /*modificar el porcentaje de ocupacion del titulo 35% */
+  width: 35%;
+  /*redondear los bordes*/
+  border-radius: 10px;
+  /*crear una margen ajustado por todos los lados */
+  /*margin: auto;*/
+  /*Al ancho del elemento lo que sobra por la izquierda y la derecha , se centra el elementos*/
+  margin: 15px auto;
+  /*centrar texto*/
+  text-align: center;
+  /*ajustar el relleno*/
+  padding: 15px;
+  color: #ccc;
+  /*crear el sombreado y difuminado con el ultimo parametro */
+  box-shadow: #00f 2px 2px 10px;
+  text-shadow: #fff;
+}
+
+h2{
+  font: bold 1.7em Verdana , Geneva , sans-serif;
+  margin : 0;
+  padding: 5px 0 5px 8px;
+  color: #000;
+}
+
+section{
+  /*para que no llegue hasta el maximo*/
+  width: 91%;
+  /*tenemos que centrar el contenido con 15px auto a todas las pantallas */
+  margin: 15px auto;
+  border-top: 1px dashed #000;
+}
+
+/*cambiar las imagenes para que no este una detras de otras , sino una debajo de otra
+aplicar float , todos los elementos que lo rodean , sube y se coloca rodeandolo 
+tambien el pie lo incluye */
+figure{
+  float: left;
+}
+
+/*redondear los bordes de las imagenes con sombras 
+aplicar propiedades a la etiquetas img - padre -> figure | hijas -> img*/
+
+figure img{
+  /*necesita espacio de 4px 
+  crear un marco sin borde y fondo 
+  agregar un sombreado gris para ver la sombra*/
+  padding : 4px; 
+  background: gray;
+  /*redondear las esquinas */
+  border-radius: 20px;
+  /*sombrear las imagenes 3 parametro difuminacion de la sombra*/ 
+  box-shadow: #33cc00 5px 5px 55px;
+} 
+
+/*efecto de levantar imagen con una seudo clase
+imagenes hijas de hover */
+figure img:hover{
+  -webkit-transform: scale(1.2);
+  /*aplicar a las transiciones que sean suaves*/
+  /* 1º parametro 0.1s es lo que tarda la imagen en levantarse  - 0.9 */
+  /* 2º parametro 0.1s es lo que tarda la imagne en reaccionar - 0.9 */
+  -webkit-transform: -webkit-transform 0.3s ease-in-out 0.9s;
+}
+
+/*modificar el pie*/
+figure img:hover {
+  -webkit-transform: scale(1.2);
+  /*separar el margen*/
+  margin-top: 5px;
+}
+
+/*la ultima tiene float entonces el pie lo rodea y se pone a la derecha por el flujo 
+  del float , para romper el flujo del float y poner el contenido debajo */
+footer{
+  /*romper el clear */
+  clear: both;
+  /*separar del contenido */
+  padding-top: 100px;
+}
+
+/*como el pie esta dentro de un parrafo*/
+footer p{
+  /*multiplica el tamaño por 1.6em*/
+  font: 1.6em Georgia , "Time New Roman" , Times serif;
+  color: #666;
+  margin: 10px 8px;
+}
+

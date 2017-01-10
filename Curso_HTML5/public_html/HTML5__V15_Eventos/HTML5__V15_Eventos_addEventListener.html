@@ -1,0 +1,45 @@
+<!--
+    @Created on : 10-ene-2017, 10:53:48
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        border: 1px solid #fff;
+        background: #000;
+        color: #f00;
+      }
+
+    </style>
+    <script>
+
+      function tipoflor() {
+        alert("Pensamiento");
+      }
+
+      function daTipoFlor() {
+        document.getElementsByTagName("img")[0].onclick = tipoflor;
+      }
+
+//LANZA EL EVENTO CUANDO SE CARGUE LA PAGINA
+      window.onload = daTipoFlor;
+
+    </script>
+  </head>
+  <body>
+    <p>Carga la pagina , cuando pulse en la imagen , lanza el evento</p>
+    <p><img src="flor.jpg"></p>
+
+ 
+
+  </body>
+</html>
