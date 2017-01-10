@@ -1,0 +1,71 @@
+<!--
+    @Created on : 10-ene-2017, 19:04:18
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>FORMULARIO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script></script>
+  </head>
+  <body>
+    <section>
+      <h1>Formulario</h1>
+      <!--Atributos para validar datos sin usar JAVASCRIPT --> 
+      <!--
+      text : entrada de texto 
+      email : validar correo - comprueba la @ y el .com
+      search : casilla para buscar en la pagina web
+      url : introducir una pagina web 
+      tel : telefono
+      number : junto con min , max y step
+      range : junto con max , min m step 
+      date :
+      week :
+      month : 
+      time : 
+      datetime: 
+      -->
+      <form name="miformulario" id="miformulario" method="get" autocomplete="off">
+
+        <p>Texto</p>
+        <input type="text" name="Texto" id="Texto">
+        <p>Email</p>
+        <input type="email" name="Email" id="email">
+        <p>Buscar</p>
+        <input type="search" name="Buscar" id="buscar">
+        <p>URL</p>
+        <input type="url" name="URL" id="url">
+        <p>TEL</p>
+        <input type="tel" name="tel" id="tel">
+        <p>Number</p>
+        <input type="number" name="number" id="number" min="5" max="10">
+        <p>Number EDAD </p>
+        <input type="number" name="edad" id="edad" min="5" max="10" step="2" placeholder="Intro numero de 2 en 2">
+        <p>Range EDAD </p>
+        <input type="range" name="rango_edad" id="rango" min="10" max="20" step="2">
+        <p>Fecha - no muestra nada en Firefox ni explores </p>
+        <input type="date" name="fecha" id="fecha">
+        <p>Fecha - Month - no muestra nada en Firefox ni explores </p>
+        <input type="month" name="mes" id="mes">
+        <p>Fecha - semana - no muestra nada en Firefox ni explores </p>
+        <input type="week" name="semana" id="semana">
+        <p>Fecha - semana - no muestra nada en Firefox ni explores </p>
+        <input type="time" name="tiempo" id="tiempo">
+        <p>Zona_horaria - OPERA - no muestra nada en Chrome , Firefox ni explores </p>
+        <input type="datetime" name="zona_horaria" id="zona_horaria">
+
+        <input type="submit" value="Enviar">
+
+
+      </form> 
+    </section>
+  </body>
+</html>

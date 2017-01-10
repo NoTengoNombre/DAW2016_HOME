@@ -1,0 +1,158 @@
+<!--
+    @Created on : 10-ene-2017, 20:18:11
+    @Author     : RVS - N.F.N.D - Home
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Formulario</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      table{
+        text-align: center;
+        background-color: #f96;
+        width: 25%;
+        margin:auto;
+        border: 2px #F30 dashed;
+        padding: 15px;
+      }
+    </style>
+    <script>
+//variable global para almacenar la edad este en todos las 
+//partes del documento
+      var edad;
+
+      function comenzar() {
+//1º una linea para identificar el elemento
+        edad = document.getElementById("miedad");
+//2º linea para poner el evento a la escucha
+//change - cambia el cursor que se mueve de izq a derecha para elegir la edad
+        edad.addEventListener("change", cambia_rango, false); // cuando cambie algo - lanza este evento
+
+//        elemento invalid - se lanza cuando el formulario falle
+// formulario tiene que estar a la escucha 
+// 1º Le decimos : PON DENTRO DeL Documento "pagina" el FORMULARIO a escuchar 
+// bajo el elemento "invalid"
+// cada vez que falle la validacion del formulario porque hay algun dato erroneo 
+// hara una llamada a la funcion "validar" que este dentro.
+// 2º TRUE - porque tenemos elementos encadenados - la edad , esta encadenado con "change"
+//  que esta encima , TRUE - le doy prioridad al elemento propio del formulario y 
+//despues a la edad , determina la jerarquia de los elementos
+        ////4º se ejecuta cuando el formulario de error - construye un objeto llamado "error" tiene propiedades y metodos
+        document.datos_usuario.addEventListener("invalid", validar, true); // se lanza si el formulario tiene un elemento invalido
+
+// En 1 Linea que identifica el elemento y el elemento a la escucha en la misma linea
+//       Desencadena otro evento
+//PONEMOS A LA ESCUCHA EL ELEMENTO 'Enviar'
+        document.getElementById("Enviar").addEventListener("click", enviar, false); // si todo va bien se lanza
+      }
+
+      /**
+       * @returns {undefined}
+       */
+      function cambia_rango() {
+// llamar al output
+        var salida = document.getElementById("rango");
+// la edad por defecto es 30 por el input
+        var calculo = edad.value - 30; // cuando carga la pagina - el valor 30 por esta linea
+
+        if (calculo < 30) {
+          calculo = 0;
+          edad.value = 30; // nunca bajara de 30
+        }
+//      innerHTML - cambiar el texto desde js -  
+//      VALOR DE LA EDAD <- edad.value 
+        salida.innerHTML = calculo + " a " + edad.value;
+      }
+
+      /**
+       *  3º Crear la funcion validar : coger el elemento que produce el error
+       *  5º dentro de la variable 'error' del metodo 
+       *  LE ESTAMOS METIENDO EL OBJETO ERROR para que lo muestre por pantalla
+       * @param {type} error - OBJETO tiene metodos y propiedad - usamos propiedad 'target' 
+       nos dice la que da el error
+       */
+      function validar(error) {
+
+        var elemento = error.target;
+        elemento.style.background = "#f00";
+      }
+
+      /**
+       * datos_usuario - nombre del formulario
+       * 
+       * El metodo devuelve un booleano que nos dice si el objeto datos_usuario
+       * se ha ejecutado correctamente y almacena ese valor dentro de correcto
+       * @returns {True o false} 
+       * metodo checkValidity()  
+       * de la ApI form devuelve si la validacion es true o false
+       */
+      function enviar() {
+// comprueba si la validacion del formulario es correcta con checkValidity 
+        var correcto = document.datos_usuario.checkValidity();
+        if (correcto == true) {
+//          datos_usuario - name del formulario
+          document.datos_usuario.submit();
+        }
+      }
+
+
+// Carga al comenzar la pagina la funcion de validar
+      window.addEventListener("load", comenzar, false);
+    </script>
+  </head>
+  <body>
+    <section>
+      <h1>Uso del datalist - 2 casillas de texto <br>
+        Se valide cuando las 2 esten rellenas <br>
+        Si hay alguna que no este rellena que avise</h1>
+      <form name="datos_usuario" method="get">
+        <table>
+          <tr>
+            <td>
+              Usuario
+            </td>
+            <td>
+              <!--patron de entrada de datos-->
+              <input pattern="[A-Za-z]{3}" name="usuario" id="usuario" maxlength="10" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Email
+            </td>
+            <td>
+              <input type="email" name="miemail" id="miemail" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Edad
+            </td>
+            <td>
+              <input type="range" name="miedad" id="miedad" min="0" max="120" value="30" step="30">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!-- Texto que se modificara dinamicamente -->
+              <output id="rango">0 a 30</output>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit" id="Enviar" value="Registrar">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </section>
+  </body>
+</html>
+
+
