@@ -1,0 +1,46 @@
+<!--
+    @Created on : 24-ene-2017, 22:38:18
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Context Menu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="valor">
+    <script>
+    </script>
+  </head>
+  <body>
+    <div contextmenu="mymenu">
+      <p>Usa el botón izquierdo del ratón aquí para ver el menú contextual</p>
+      <menu type="context" id="mymenu">
+        <menuitem label="Recargar" onclick="window.location.reload();"></menuitem>
+        <menu label="Otro menú">
+          <menu label="Y otro más">
+            <menuitem label="Nivel 3"></menuitem>
+          </menu>
+          <menuitem label="opcion_1"></menuitem>
+          <menuitem label="opcion_2"></menuitem>
+          <menuitem label="opcion_3"></menuitem>
+          <menuitem label="opcion_4"></menuitem>
+          <menuitem label="opcion_5"></menuitem>
+        </menu>
+        <menuitem label="Envía esta página por correo electrónico" onclick="window.location = 'mailto:?body=' + window.location.href;"></menuitem>
+      </menu>
+    </div>
+    <div>
+      <form name="npc">
+        <label>Character name: <input name=char type=text contextmenu=namemenu required></label>
+        <menu type="context" id="namemenu">
+          <menuitem label="Pick random name" onclick="document.forms.npc.elements.char.value = getRandomName()">
+          <menuitem label="Prefill other fields based on name" onclick="prefillFields(document.forms.npc.elements.char.value)">
+        </menu>
+      </form>
+    </div>
+  </body>
+</html>

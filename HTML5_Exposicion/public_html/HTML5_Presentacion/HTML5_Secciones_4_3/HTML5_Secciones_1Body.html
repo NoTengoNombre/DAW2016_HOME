@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Comprobar estado navegador</title>
+    <script>
+      function update(online) {
+        document.getElementById('status').textContent = online ? 'Conectado' : 'Desconectado';
+      }
+    </script>
+  </head>
+  <body ononline="update(true)"
+        onoffline="update(false)"
+        onload="update(navigator.onLine)">
+    <p>Tú estás: <span id="status">(Desconocido)</span></p>
+  </body>
+</html>
