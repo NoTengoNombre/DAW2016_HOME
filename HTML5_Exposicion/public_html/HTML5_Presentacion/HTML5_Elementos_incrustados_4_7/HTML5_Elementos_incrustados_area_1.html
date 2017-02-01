@@ -1,0 +1,41 @@
+<!--
+    @Created on : 29-ene-2017, 12:40:11
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo del elemento &lt;area&gt;</title>
+    <style>
+      body{
+        margin: 0px;
+        padding: 0px;
+        /*border: 1px solid #000;*/
+      }
+      area{
+        /*border: 1px solid #000;*/
+      }
+    </style>
+  </head>
+  <body>
+    <img src ="areas/image-map-1.png"
+         width="316" height="131"
+         alt="Funny Shapes"
+         usemap ="#funny-shapes">
+
+    <map name="funny-shapes">
+      <area shape ="rect" coords ="9,10,62,123"
+            href ="#"
+            alt="Square" target="_blank">
+      <area shape ="circle" coords ="126,76,41"
+            href ="#"
+            alt="Circle">
+      <area shape ="poly" coords ="182,15,218,15,218,95,310,95,310,122,182,122"
+            href ="#" 
+            alt="L shape">
+    </map>
+  </body>
+</html>

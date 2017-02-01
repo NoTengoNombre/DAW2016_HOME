@@ -1,0 +1,30 @@
+<!--
+    @Created on : 29-ene-2017, 12:40:11
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ejemplo del elemento &lt;map&gt;</title>
+  </head>
+  <body>
+    <p>Mira mi vídeo:<br>
+      <object type="application/x-shockwave-flash">
+        <param name=movie value="http://adobe-flash-player.onlinegratis.tv/swf/flash.swf">
+        <param name=allowfullscreen value=true>
+        <!--Vídeo en FLASH para visualizar-->
+        <param name=flashvars value="https://player.vimeo.com/video/38514156"> 
+        
+        <!--Vídeo para visualizar en caso de no tener habilitado FLASH-->
+        <video controls src="https://player.vimeo.com/video/38514156">
+        <!--Referencia en caso de no tener ni FLASH ni VIDEO habilitado -->
+          <a href="hhttps://player.vimeo.com/video/38514156">Ver vídeo</a>.
+        </video>
+      </object>
+    </p>
+  </body>
+</html>
