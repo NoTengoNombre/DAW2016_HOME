@@ -9,11 +9,26 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Ejemplo del elemento &lt;map&gt;</title>
+    <title>Ejemplo del elemento iframe atributo allowfullscreen</title>
+    <style>
+      body{
+        border: 5px solid #0f0;
+        position: fixed;
+      }
+      article{
+        border: 3px solid #00f;
+        display: block;
+        text-align:center;
+      }
+      iframe{
+        border: 1px solid #f00;
+      }
+    </style>
   </head>
   <body>
     <article>
       <h2>Imagen</h2>
+      <p>Imaginate que tienes un pagina y quieres enlazar otros contenidos</p>
       <header>
         <p><img src="https://s-media-cache-ak0.pinimg.com/564x/2a/e0/19/2ae019d2701e97a189229bb07fefc9cf.jpg" width="200" alt='imagen'> <b><br>Simpatica Nube</b></p>
         <p><a href="/posts/3095182851" rel=bookmark>12:44</a> — <a href="#acl-3095182851">Mensaje privado</a></p>
@@ -21,8 +36,10 @@
     </article>
     <main>
       <p>Mira que vídeo más gracioso</p>
-      <iframe src="videogato.mp4" width="560" height="315" allowfullscreen></iframe>
-      <iframe src="cargando.gif" width="560" height="315" allowfullscreen></iframe>
+      <iframe title="Video" src="videogato.mp4"></iframe>
+      <!--<iframe src="videogato.mp4" allowfullscreen></iframe>-->
+      <br>
+      <iframe title="Gif" src="cargando.gif"  allowfullscreen></iframe>
     </main>
   </body>
 </html>

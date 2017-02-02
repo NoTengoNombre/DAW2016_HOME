@@ -1,0 +1,41 @@
+<!--
+    @Created on : 29-ene-2017, 0:50:26
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function escribe() {
+        escribir = document.getElementById("caja");
+        miTitulo = "<p> Saludos :  " + document.rellenar.titulo.value + "</p>";
+        miTexto = "<p> Sugerencias :" + document.rellenar.texto.value + "</p>";
+        escribir.innerHTML = miTitulo + miTexto;
+      }
+      window.onload = function () {
+        document.rellenar.ver.onclick = escribe;
+      };
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      <form name="rellenar" action="#" >
+        <h2>Formulario acceso</h2>
+        <p> Escribe Nombre : <input name="titulo" type="text"/> </p> 
+        <p>Escribe Clave: <input name="clave" type="password" /></p>
+        <p>Escribe Tus sugerencias</p>
+        <p><textarea name="texto"></textarea></p>
+        <p><input name="ver" type="button" value="ver" />
+      </form>
+      <div id="caja"></div>
+    </fieldset>
+  </body>
+</html>
