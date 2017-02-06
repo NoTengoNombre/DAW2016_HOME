@@ -1,0 +1,31 @@
+<!--
+    @Created on : 31-ene-2017, 1:19:10
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <div contextmenu="popup-menu">
+      Right-click to see the adjusted context menu
+    </div>
+    <menu type="context" id="popup-menu">
+      <menuitem type="checkbox" onclick="toggleOption()"
+                checked="true">Checkbox</menuitem>
+      <menuitem type="command" label="Command" icon="icon.png"
+                onclick="doSomething()">Checkbox</menuitem>
+      <menuitem type="radio" name="group1" onclick="option()"
+                checked="true">Radio button 1</menuitem>
+      <menuitem type="radio" name="group1"
+                onclick="option()">Radio button 2</menuitem>
+    </menu>
+  </body>
+</html>

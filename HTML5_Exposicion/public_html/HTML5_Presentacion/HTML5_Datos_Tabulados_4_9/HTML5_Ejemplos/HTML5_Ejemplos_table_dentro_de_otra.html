@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Tablas interiores</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <td>Celda 1 de la 1º Fila
+          <p>Esto es un parrafo</p>
+          <p>Esto es otro parrafo</p>
+        </td>
+        <th>
+          Celda 2 de la 1º Fila
+          <table border="1">
+            <tr>
+              <td>subfila 1</td>
+              <td>subfila 2</td>
+            </tr>
+            <tr>
+              <td>subfila 3</td>
+              <td>subfila 4</td>
+            </tr>
+          </table>
+        </th>
+      </tr>
+      <tr>
+        <td> Celda 3 de la 2º Fila
+          <ul>
+            <li>Lista 1</li>
+            <li>Lista 2</li>
+            <li>Lista 3</li>
+          </ul>
+        </td>
+        <td>
+          Celda 4 de la 2º Fila
+        </td>
+      </tr>
+      <tr>
+        <th>3º Fila Celda 5</th>
+        <th>3º Fila Celda 6</th>
+      </tr>
+      <tr>
+        <th colspan="2">4º Fila Celda 7</th>
+      </tr>
+
+      <tr>
+        <td>5º Fila Celda 8</td>
+        <td>6º Fila Celda 9</td>
+      </tr>
+
+      <tfoot>
+        <tr>
+          <td colspan="2">7º Fila Celda 10</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

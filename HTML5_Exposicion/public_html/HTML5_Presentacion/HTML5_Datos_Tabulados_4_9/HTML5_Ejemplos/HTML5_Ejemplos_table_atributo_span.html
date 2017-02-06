@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Tablas interiores</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style></style>
+    <script></script>
+  </head>
+  <body>
+
+    <h4>Celdas que abarcan 2 columnas</h4>
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th colspan="2">Telefono</th>
+      </tr>
+      <tr>
+        <td>Pepe</td>
+        <td>6661</td>
+        <td>6662</td>
+      </tr>
+    </table>
+
+    <h4>Celdas que abarcan 2 filas</h4>
+    <table border="1">
+      <tr>  
+        <th colspan="2"> F1 Celda 1</th>
+        <td> F2 Celda 2</td>
+      </tr>
+
+      <tr>
+        <th> F2 Celda 3</th>
+        <td> F2 Celda 4</td>
+        <td> F2 Celda 5</td>
+      </tr>
+
+      <tr>
+        <th colspan="2"> F3 Celda 6</th>
+        <td> F3 Celda 7</td>
+      </tr>
+
+      <tr>
+        <th colspan="3"> F4 Celda 8</th>
+      </tr>
+
+      <tr>
+        <td colspan="3">F4</td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <table border="1">
+      <tr>
+        <th>1 Fila Cabecera </th>
+        <!--<td rowspan="3">1 Fila Fila </td>-->
+        <td>1 Fila Fila </td>
+        <td>1 Fila Fila </td>
+      </tr>
+      <tr>
+        <th colspan="2">2 Fila Cabecera </th>
+        <td>2 Fila</td>
+      </tr>
+      <tr>
+        <td colspan="3">3 Fila</td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <table border="1">
+      <tr>
+        <th>cabecera</th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td colspan="4">Filas</td>
+      </tr>
+    </table>
+
+
+  </body>
+</html>

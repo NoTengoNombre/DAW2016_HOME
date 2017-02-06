@@ -11,11 +11,14 @@
     <title>Ejemplo del elemento &lt;area&gt;</title>
     <style>
       body{
-        margin: 0px;
+/*        margin: 0px;
         padding: 0px;
-        /*border: 1px solid #000;*/
+        border: 1px solid #000;*/
       }
       area{
+        border: 1px solid #000;
+      }
+      img{
         /*border: 1px solid #000;*/
       }
     </style>
@@ -27,18 +30,18 @@
          usemap ="#funny-shapes">
 
     <map name="funny-shapes">
-      <area shape ="circle" coords ="10,20,10"
+<!--      <area shape ="circle" coords ="10,20,10"
             href ="#" 
-            alt="Circle">
-      <area shape ="rect" coords ="20,10,40,70"
+            alt="Circle">-->
+<area shape ="poly" coords ="0,10,15,10,15,0"
             href ="#"  
             alt="RECT">
-      <area shape ="circle" coords ="50,20,10"
+      <!-- <area shape ="circle" coords ="50,20,10"
             href ="#" 
             alt="Circle">
       <area shape ="circle" coords ="30,80,10"
             href ="#" 
-            alt="Circle">
+            alt="Circle">-->
     </map>
   </body>
 </html>
