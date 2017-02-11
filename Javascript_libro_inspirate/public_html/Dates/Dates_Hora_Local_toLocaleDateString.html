@@ -1,0 +1,37 @@
+<!-- 
+    @Created on : 10-feb-2017, 18:43:41
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <script>
+      var ahora = new Date();
+      console.info(ahora.toLocaleString());
+
+      console.log(ahora.toLocaleString("de-DE"));
+
+      var opciones = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      };
+      console.log(ahora.toLocaleString("de-DE", opciones));
+
+    </script>
+  </body>
+</html>
+
+
+
+

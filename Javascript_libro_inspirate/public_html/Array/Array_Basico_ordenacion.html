@@ -1,0 +1,30 @@
+<!--
+    @Created on : 10-feb-2017, 20:49:12
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <button onclick="myFunction()">Boton</button>
+    <p id="demo">Valor</p>
+    <script>
+      var arreglo = [41, 82, 34, 5, 33, 53, 23, 42];
+
+      document.getElementById("demo").innerHTML = arreglo;
+
+      function myFunction() {
+        arreglo.sort();
+        document.getElementById("demo").innerHTML = arreglo;
+      }
+    </script>
+  </body>
+</html>

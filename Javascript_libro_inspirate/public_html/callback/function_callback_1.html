@@ -1,0 +1,39 @@
+<!--
+    @Created on : 11-feb-2017, 0:05:17
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var quieroCallback = function (p1, callback) {
+
+        if (callback) {
+          if (typeof callback === 'function') {
+            callback(p1);
+          } else {
+            console.log(p1, callback);
+          }
+        }
+      };
+
+      quieroCallback('a', 'b');
+
+      quieroCallback('a', function (val) {
+        console.log(val);
+      });
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

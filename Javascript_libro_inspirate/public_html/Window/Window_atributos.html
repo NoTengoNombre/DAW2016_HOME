@@ -1,0 +1,62 @@
+<!--
+    @Created on : 11-feb-2017, 1:00:09
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function conversorTimepo(segundos) {
+        var fecha = new Date(segundos * 1000);
+        var hh = fecha.getUTCHours();
+        var mm = fecha.getUTCMinutes();
+        var ss = fecha.getSeconds();
+        if (hh < 10) {
+          hh = "0" + hh;
+        }
+        if (mm < 10) {
+          mm = "0" + mm;
+        }
+        if (ss < 10) {
+          ss = "0" + ss;
+        }
+      }
+
+      function informacionSistema() {
+        console.log("appCodeName:", window.navigator.appCodeName);
+        console.log("appName", window.navigator.appName);
+        console.log("appVersion:", window.navigator.appVersion);
+        console.log("plataform", window.navigator.platform);
+        console.log("product:", window.navigator.product);
+        console.log("userAgent:", window.navigator.userAgent);
+        console.log("language:", window.navigator.language);
+        console.log("languages:", window.navigator.languages);
+        console.log("onLine:", window.navigator.onLine);
+        console.log("mimeTypes", window.navigator.mimeTypes);
+        console.log("plugins", window.navigator.plugins);
+        navigator.getBattery().then(function (bateria) {
+          console.log("Batería cargando?", bateria.charging);
+          if (bateria.charging) {
+            console.log("Tiempo de carga:", bateria.chargingTime);
+          }
+          console.log("Batería %:", bateria.level * 100);
+//          console.log("Tiempo restante:", conversorTiempo(bateria.dischargingTime));
+        });
+      }
+
+      informacionSistema();
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

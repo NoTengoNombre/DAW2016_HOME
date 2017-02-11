@@ -1,0 +1,35 @@
+<!--
+    @Created on : 11-feb-2017, 0:40:33
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function saludo(quien) {
+        return function () {
+          console.log("hola " + quien);
+        };
+      }
+
+      var saluda = saludo("Amigo");
+      saluda();
+
+      (function () {
+        console.log("hola");
+      })();
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

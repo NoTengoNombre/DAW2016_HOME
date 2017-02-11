@@ -1,0 +1,47 @@
+<!--
+    @Created on : 10-feb-2017, 20:49:12
+    @Author     : RVS - N.F.N.D
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <script>
+      var arreglo2 = new Array(10);
+
+      for (var i = 0; i < arreglo2.length; i++) {
+        arreglo2[i] = Math.round(Math.random() * (1 + 10));
+      }
+
+      for (var i = 0; i < arreglo2.length; i++) {
+        if (arreglo2[i] === 2) {
+          document.write("Se encontro el 2<br>");
+        }
+      }
+      document.write('<hr>');
+
+      document.write('Ordenacion ');
+      document.write(arreglo2.sort());
+      document.write('<hr>');
+      document.write('Ordenacion ');
+      for (var i = 0; i < arreglo2.length; i++) {
+        document.write(' ' + arreglo2[i]);
+      }
+
+      document.write('<hr>');
+
+      document.write(arreglo2.reverse() + '<br>');
+
+
+
+    </script>
+  </body>
+</html>
